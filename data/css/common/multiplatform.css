@@ -1,0 +1,192 @@
+@media (min-width: 992px) {
+    /* ------------------------------------------------ footer-block start*/
+    .parting-words-col {
+        display: none;
+    }
+    .parting-words-col-wide {
+        display: flex;
+        align-items: center;
+    }
+    /* ------------------------------------------------ footer-block end*/
+}
+@media (max-width: 992px) {
+    /* ------------------------------------------------ footer-block start*/
+    .parting-words-col {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .soul-data-row {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .parting-words-col-wide {
+        display: none;
+    }
+    /* ------------------------------------------------ footer-block end*/
+}
+
+
+/*  
+@media (min-width: 1200px) {
+    .class-block-item{
+        padding-right: 4px;
+        width: 20%;
+    }
+    table .long{
+        display: inline;
+    }
+    table .short{
+        display: none;
+    } 
+    .class-progress-table {
+        margin: 15px 8px;   
+        width: calc(100% - 16px);
+    }
+    .race-page-data-background-image img {
+        max-width: 750px;
+    }
+}  
+@media (min-width: 992px) {
+    .list-button {
+        display: none;
+    }    
+    .chapter-title-label {
+        display: flex;
+        align-items: center;
+    }
+    .chapter-title-label-mobile {
+        display: none;
+    }
+    .home-logo {
+        height: 37px;
+    }    
+    .list-logo, .dnd-su-logo {
+        width: 30px;
+    }
+    .parting-words {
+        display: none;
+    }
+    .parting-words-wide {
+        display: flex;
+        align-items: center;
+    }
+    .main-menu-back {
+        display: none;
+    }
+    content .container .main-menu-block {
+        width: 350px;
+        position: static;
+    }
+    body {
+        background: linear-gradient(90deg, rgba(2,0,36,0) 0%, rgba(0, 0, 0, 0.5) 40%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.5) 60%, rgba(0,212,255,0) 100%), url("../Images/back_vert.png");
+    }
+    .race-page-data-background-image {
+        display: block;
+    }
+    .race-page-data-background-image img {
+        max-width: 600px;
+    }
+}
+@media (max-width: 1200px) {
+    .class-block-item{
+        padding-right: 4px;
+        width: 25%;
+    }
+    table .long{
+        display: none;
+    }
+    table .short{
+        display: inline;
+    }
+    .class-progress-table {
+        margin: 15px 0px;   
+        width: 100%;
+    }
+}
+@media (max-width: 992px) {
+    content .container .active{
+        transform: translateX(0);
+        z-index: 30;
+    }
+    content .main-menu-back {
+        position: fixed;
+        top: 33px;
+        left: 0;
+        width: 100%;
+        height: calc(100vh - 30px);
+        transform: translateX(100%);
+        background-color: rgb(0, 0, 0);
+    }
+    content .main-menu-block {
+        position: fixed;
+        top: 40px;
+        left: 0;
+        width: 100%;
+        height: calc(100vh - 40px);
+        transform: translateX(100%);
+    }    
+    content .container .main-menu-block .container {
+        width: 350px;
+    }
+    .chapter-title-label {
+        display: none;
+    }
+    .chapter-title-label-mobile {
+        display: block;
+    }
+    .home-logo {
+        height: 30px;
+    }    
+    .list-logo, .dnd-su-logo {
+        width: 25px;
+    }
+    .parting-words {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .soul-data-row {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .parting-words-wide {
+        display: none;
+    }
+    body {
+        background: linear-gradient(90deg, rgba(2,0,36,0) 0%, rgba(0, 0, 0, 0.5) 50%, rgba(0,212,255,0) 100%), url("../Images/back_vert.png");
+        background-size: cover;
+    }
+    table .long{
+        display: inline;
+    }
+    table .short{
+        display: none;
+    }
+    .race-page-data-background-image {
+        display: none;
+    }
+}
+@media (max-width: 768px) {
+    .class-block-item{
+        padding-right: 4px;
+        width: 33%;
+    }
+    table .long{
+        display: none;
+    }
+    table .short{
+        display: inline;
+    }    
+}
+@media (max-width: 576px) {
+    .class-block-item{
+        width: 100%;
+    }
+    table.class-progress-table td {
+        padding-left: 2px;
+        padding-right: 2px;
+    }
+} */

@@ -1,0 +1,22 @@
+html body{
+    background-color: rgb(36, 88, 47);
+}
+.header-area{
+    background-color: rgb(73, 73, 73);
+    color: white;
+    border-bottom: 1px solid rgb(190, 190, 190);
+}
+.content-area{
+    background-color: rgb(105, 105, 218);
+}
+.footer-area{
+    background-color: rgb(73, 73, 73);
+    color: white;
+    border-top: 1px solid rgb(190, 190, 190);
+}
+
+.info-block{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
