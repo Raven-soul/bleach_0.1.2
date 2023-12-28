@@ -4,7 +4,7 @@ html body{
 .header-area{
     background-color: rgb(73, 73, 73);
     color: white;
-    border-bottom: 1px solid rgb(190, 190, 190);
+    border-bottom: 2px solid rgb(117, 117, 117);
 }
 .content-area{
     background-color: rgb(105, 105, 218);
@@ -12,9 +12,7 @@ html body{
 .footer-area{
     background-color: rgb(73, 73, 73);
     color: white;
-    border-top: 1px solid rgb(190, 190, 190);
-    padding-top: 5px;
-    padding-bottom: 5px;
+    border-top: 2px solid rgb(117, 117, 117);
 }
 
 /* ------------------------------------------------------------- tags start */
@@ -50,7 +48,7 @@ header .header-area {
     color: white;
     font-size: 22px;
     font-weight: 600;
-    border-left: 2px solid rgb(190, 190, 190);
+    border-left: 2px solid rgb(117, 117, 117);
     padding-top: 2px;
     padding-bottom: 2px;
 }
@@ -65,6 +63,11 @@ header .header-area {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+div.parting-words-col-wide{
+    border-left: 2px solid rgb(117, 117, 117);
+    padding-top: 2px;
+    padding-bottom: 2px;
 }
 /* ------------------------------------------------------------- bottom area end */
 
