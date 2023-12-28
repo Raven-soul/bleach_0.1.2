@@ -4,14 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>DnD 5e Bleach</title>
     <link href="data/css/common/common.css" rel="stylesheet">
     <link href="data/css/common/action.css" rel="stylesheet">
     <link href="data/css/common/multiplatform.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
-    <link rel="icon" href="data/img/common/logo_raven_3.png" type="image/x-icon">
+    <link rel="icon" href="data/img/common/logo/logo_raven_3.png" type="image/x-icon">
 </head>
 
 <body onload="awake()">
@@ -19,9 +19,29 @@
         <header>
             <div class="header-area">
                 <div class="container">
-                    <div class="row">
+                    <div class="row-2">
                         <div class="col">
-                            data
+                            <div class="row d-flex justify-content-between">
+                                <div class="col-auto d-flex align-items-center">
+                                    <a href="homeLink" class="home-link d-flex align-items-center">
+                                        <img src="data/img/common/button/home_button_logo_white.png" alt="home">
+                                    </a>
+                                </div>
+                                <div class="col-auto">
+                                    <div class="row">
+                                        <div class="col">
+                                            <a href="dndSuLink" class="dnd-su-link">
+                                                <img src="data/img/common/button/dnd_su_logo.png" alt="dnd.su">
+                                            </a>
+                                        </div>
+                                        <div class="col">
+                                            <a href="dndSuLink" class="dnd-su-link" >
+                                                <img src="data/img/common/button/list_button_ico.psd.png" alt="dnd.su">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -49,20 +69,23 @@
                             <div class="row-2">
                                 <div class="col">
                                     <div class="row soul-data-row">
-                                        <div class="col-auto soul-data d-flex align-items-center">raven-soul © 2023</div>
-                                        <div class="col-auto parting-words-col-wide">Пусть сияют твои черные крылья в небе, Карас )</div>
+                                        <div class="col-auto soul-data d-flex align-items-center">raven-soul © 2023
+                                        </div>
+                                        <div class="col-auto parting-words-col-wide">Пусть сияют твои черные крылья в
+                                            небе, Карас )</div>
                                     </div>
                                 </div>
                                 <div class="col parting-words-col">Пусть сияют твои черные крылья в небе, Карас )</div>
-                            </div>                    
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
             <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
             <script src="https://kit.fontawesome.com/a98fe6b196.js" crossorigin="anonymous"></script>
-
-            <script src="data/js/common/onload.js"></script>
+            
+            <script src="data/js/common/dataRepository.js"></script>
+            <script src="data/js/common/onload.js"></script>            
         </footer>
     </div>
 </body>

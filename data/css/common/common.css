@@ -5,6 +5,8 @@ html body{
     background-color: rgb(73, 73, 73);
     color: white;
     border-bottom: 1px solid rgb(190, 190, 190);
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 .content-area{
     background-color: rgb(105, 105, 218);
@@ -13,10 +15,23 @@ html body{
     background-color: rgb(73, 73, 73);
     color: white;
     border-top: 1px solid rgb(190, 190, 190);
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
+/* ------------------------------------------------------------- top area start */
+header .home-link img{    
+    height: 20px;
+}
+header .dnd-su-link img{
+    height: 30px;
+}
+/* ------------------------------------------------------------- top area end */
+
+/* ------------------------------------------------------------- bottom area start */
 .info-block{
     display: flex;
     justify-content: center;
     align-items: center;
 }
+/* ------------------------------------------------------------- bottom area end */
