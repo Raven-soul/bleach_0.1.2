@@ -5,8 +5,6 @@ html body{
     background-color: rgb(73, 73, 73);
     color: white;
     border-bottom: 1px solid rgb(190, 190, 190);
-    padding-top: 5px;
-    padding-bottom: 5px;
 }
 .content-area{
     background-color: rgb(105, 105, 218);
@@ -19,6 +17,17 @@ html body{
     padding-bottom: 5px;
 }
 
+/* ------------------------------------------------------------- tags start */
+li {
+    list-style-type:none;
+}
+content ol, content ul {
+    margin-left: 0; /* Отступ слева в браузере IE и Opera */
+    padding-left: 0; /* Отступ слева в браузере Firefox, Safari, Chrome */
+    margin-bottom: 0;
+}
+/* ------------------------------------------------------------- tags end */
+
 /* ------------------------------------------------------------- top area start */
 header .home-link img{    
     height: 20px;
@@ -26,7 +35,30 @@ header .home-link img{
 header .dnd-su-link img{
     height: 30px;
 }
+header .header-area {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 20;
+}
+.stub-header {
+    visibility: hidden;
+    padding: 6px;
+}
+.chapter-title{
+    color: white;
+    font-size: 22px;
+    font-weight: 600;
+    border-left: 2px solid rgb(190, 190, 190);
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
 /* ------------------------------------------------------------- top area end */
+
+/* ------------------------------------------------------------- content area start */
+
+/* ------------------------------------------------------------- content area end */
 
 /* ------------------------------------------------------------- bottom area start */
 .info-block{
@@ -35,3 +67,44 @@ header .dnd-su-link img{
     align-items: center;
 }
 /* ------------------------------------------------------------- bottom area end */
+
+/* ------------------------------------------------------------- menu area start */
+.menu-block-section{
+    margin-bottom: 5px;
+}
+.menu-block-section-name-button{
+    background-color: rgb(65, 65, 65);
+    border: rgb(90, 89, 85) solid 2px;
+    border-radius: 5px;
+    color: white;
+}
+.menu-block-section-name-button:hover {
+    background-color: rgb(90, 89, 85);
+    color: rgb(144, 197, 128);
+}
+.menu-block-section-name-button .label {
+    text-align: left;
+    font-size: 30px;
+}
+.menu-block-section-list {
+    border-left: rgb(90, 89, 85) solid 2px;
+    border-right: rgb(90, 89, 85) solid 2px;
+    border-bottom: rgb(90, 89, 85) solid 2px;
+    margin-left: 5px;
+    margin-right: 5px;
+    background-color: rgb(38, 38, 38);
+    padding-bottom: 5px;
+}
+.menu-block-section-list a{
+    color: white;
+    text-decoration: none;
+}
+.menu-block-section-list a:hover{
+    color: rgb(30, 161, 13);
+    text-decoration: none;
+}
+.menu-block-section-list .row {
+    padding-top: 5px;
+    padding-left: 20px;
+}
+/* ------------------------------------------------------------- menu area end */

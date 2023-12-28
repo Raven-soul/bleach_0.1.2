@@ -17,17 +17,27 @@
 <body onload="awake()">
     <div class="main-block" style="background-color: rgba(17, 197, 197, 0.493);">
         <header>
+            <div class="stub-header">data</div>
             <div class="header-area">
                 <div class="container">
                     <div class="row-2">
                         <div class="col">
                             <div class="row d-flex justify-content-between">
-                                <div class="col-auto d-flex align-items-center">
-                                    <a href="homeLink" class="home-link d-flex align-items-center">
-                                        <img src="data/img/common/button/home_button_logo_white.png" alt="home">
-                                    </a>
+                                <div class="col-auto ">
+                                    <div class="row">
+                                        <div class="col-auto d-flex align-items-center">
+                                            <a href="homeLink" class="home-link d-flex align-items-center">
+                                                <img src="data/img/common/button/home_button_logo_white.png" alt="home">
+                                            </a>
+                                        </div>
+                                        <div class="col-auto chapter-title">
+                                            <div class="chapter-title-label">
+                                                Онлайн-справочник Bleach D&D 5e
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="col-auto">
+                                <div class="col-auto d-flex align-items-center">
                                     <div class="row">
                                         <div class="col">
                                             <a href="dndSuLink" class="dnd-su-link">
@@ -35,7 +45,7 @@
                                             </a>
                                         </div>
                                         <div class="col">
-                                            <a href="dndSuLink" class="dnd-su-link" >
+                                            <a href="dndSuLink" class="dnd-su-link">
                                                 <img src="data/img/common/button/list_button_ico.psd.png" alt="dnd.su">
                                             </a>
                                         </div>
@@ -48,11 +58,127 @@
             </div>
         </header>
         <content>
-            <div class="content-area">
+            <div class="content-area my-2">
                 <div class="container content-container" style="background-color: rgb(9, 139, 37);">
                     <div class="row">
-                        <div class="col" style="background-color: rgb(141, 49, 77);">
-                            data
+                        <div class="col-auto main-menu-block px-2" style="background-color: rgb(141, 49, 77);">
+                            <div class="container">
+                                <div class="row-2">
+                                    <div class="col menu-block-section"><button
+                                            onclick="fill()"
+                                            class="col w-100 px-3 menu-block-section-name-button">
+                                            <div class="row d-flex justify-content-between">
+                                                <div class="col label">Справочники</div>
+                                                <div class="col-auto d-flex align-items-center">
+                                                    <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+                                                </div>
+                                            </div>
+                                        </button>
+                                        <div class="col menu-block-section-list"
+                                            style="display: block;">
+                                            <ul>
+                                                <li><a href="" class="w-100 p-0">
+                                                        <div class="row m-0">
+                                                            <div class="col-1 p-0 image-data"><i
+                                                                    class="fa-solid fa-fire" aria-hidden="true"></i>
+                                                            </div>
+                                                            <div class="col content-data"><strike>Кидо</strike></div>
+                                                        </div>
+                                                    </a></li>
+                                                <li><a href="" class="w-100 p-0">
+                                                        <div class="row m-0">
+                                                            <div class="col-1 p-0 image-data"><i
+                                                                    class="fa-solid fa-circle-notch"
+                                                                    aria-hidden="true"></i></div>
+                                                            <div class="col content-data"><strike>Магические предметы</strike></div>
+                                                        </div>
+                                                    </a></li>
+                                                <li><a href="" class="w-100 p-0">
+                                                        <div class="row m-0">
+                                                            <div class="col-1 p-0 image-data"><i
+                                                                    class="fa-solid fa-ghost" aria-hidden="true"></i>
+                                                            </div>
+                                                            <div class="col content-data"><strike>Бестиарий</strike></div>
+                                                        </div>
+                                                    </a></li>
+                                                <li><a href="" class="w-100 p-0">
+                                                        <div class="row m-0">
+                                                            <div class="col-1 p-0 image-data"><i
+                                                                    class="fa-solid fa-user-group"
+                                                                    aria-hidden="true"></i></div>
+                                                            <div class="col content-data"><strike>Расы и происхождения</strike></div>
+                                                        </div>
+                                                    </a></li>
+                                                <li><a href="" class="w-100 p-0">
+                                                        <div class="row m-0">
+                                                            <div class="col-1 p-0 image-data"><i
+                                                                    class="fa-solid fa-person-digging"
+                                                                    aria-hidden="true"></i></div>
+                                                            <div class="col content-data"><strike>Классы</strike></div>
+                                                        </div>
+                                                    </a></li>
+                                                <li><a href="" class="w-100 p-0">
+                                                        <div class="row m-0">
+                                                            <div class="col-1 p-0 image-data"><i
+                                                                    class="fa-regular fa-file-lines"
+                                                                    aria-hidden="true"></i></div>
+                                                            <div class="col content-data"><strike>Предыстории</strike></div>
+                                                        </div>
+                                                    </a></li>
+                                                <li><a href="" class="w-100 p-0">
+                                                        <div class="row m-0">
+                                                            <div class="col-1 p-0 image-data"><i
+                                                                    class="fa-solid fa-lightbulb"
+                                                                    aria-hidden="true"></i></div>
+                                                            <div class="col content-data"><strike>Черты</strike></div>
+                                                        </div>
+                                                    </a></li>
+                                                <li><a href="" class="w-100 p-0">
+                                                        <div class="row m-0">
+                                                            <div class="col-1 p-0 image-data"><i
+                                                                    class="fa-solid fa-burst" aria-hidden="true"></i>
+                                                            </div>
+                                                            <div class="col content-data"><strike>Способности</strike></div>
+                                                        </div>
+                                                    </a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col menu-block-section"><button
+                                        onclick="fill()"
+                                        class="col w-100 px-3 menu-block-section-name-button">
+                                        <div class="row d-flex justify-content-between">
+                                            <div class="col label"><strike>Справочники</strike></div>
+                                            <div class="col-auto d-flex align-items-center">
+                                                <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+                                            </div>
+                                        </div>
+                                    </button>
+                                    <div class="col menu-block-section-list"
+                                        style="display: block;">
+                                        <ul>
+                                            <li><a href="" class="w-100 p-0">
+                                                    <div class="row m-0">
+                                                        <div class="col-1 p-0 image-data"><i
+                                                                class="fa-solid fa-fire" aria-hidden="true"></i>
+                                                        </div>
+                                                        <div class="col content-data"><strike>Кидо</strike></div>
+                                                    </div>
+                                                </a></li>
+                                            <li><a href="" class="w-100 p-0">
+                                                    <div class="row m-0">
+                                                        <div class="col-1 p-0 image-data"><i
+                                                                class="fa-solid fa-circle-notch"
+                                                                aria-hidden="true"></i></div>
+                                                        <div class="col content-data"><strike>Магические предметы</strike></div>
+                                                    </div>
+                                                </a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+
                         </div>
                         <div class="col" style="background-color: rgb(139, 95, 180);">
                             data
@@ -83,9 +209,9 @@
             </div>
             <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
             <script src="https://kit.fontawesome.com/a98fe6b196.js" crossorigin="anonymous"></script>
-            
+
             <script src="data/js/common/linkDataRepository.js"></script>
-            <script src="data/js/common/onload.js"></script>            
+            <script src="data/js/common/onload.js"></script>
         </footer>
     </div>
 </body>
