@@ -5,12 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DnD 5e Bleach</title>
-    <link href="data/css/common/common.css" rel="stylesheet">
-    <link href="data/css/common/multiplatform.css" rel="stylesheet">
+    <link href="../../data/css/common/common.css" rel="stylesheet">
+    <link href="../../data/css/common/multiplatform.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
-    <link rel="icon" href="data/img/common/logo/logo_raven_3.png" type="image/x-icon">
+    <link rel="icon" href="../../data/img/common/logo/logo_raven_3.png" type="image/x-icon">
 </head>
 
 <body onload="awake()">
@@ -26,12 +26,13 @@
                                     <div class="row">
                                         <div class="col-auto p-0 d-flex align-items-center">
                                             <a href="homeLink" class="home-link d-flex align-items-center">
-                                                <img src="data/img/common/button/home_button_logo_white.png" alt="home" class="home-link_ico">
+                                                <img src="../../data/img/common/button/home_button_logo_white.png"
+                                                    alt="home" class="home-link_ico">
                                             </a>
                                         </div>
                                         <div class="col-auto chapter-title">
                                             <div class="chapter-title-label">
-                                                Онлайн-справочник Bleach D&D 5e
+                                                Душа [Soul] - Расы и происхождения Bleach D&D 5
                                             </div>
                                         </div>
                                     </div>
@@ -40,12 +41,15 @@
                                     <div class="row">
                                         <div class="col">
                                             <a href="dndSuLink" class="dnd-su-link">
-                                                <img src="data/img/common/button/dnd_su_logo.png" alt="dnd.su" class="dnd-su-ico">
+                                                <img src="../../data/img/common/button/dnd_su_logo.png" alt="dnd.su"
+                                                    class="dnd-su-ico">
                                             </a>
                                         </div>
                                         <div class="col list-button">
-                                            <button class="mobile_list_button" onclick="mobileMenuData(nestingOrder(0))">
-                                                <img src="data/img/common/button/list_button_ico.png" alt="list" class="list-ico">
+                                            <button class="mobile_list_button"
+                                                onclick="mobileMenuData(nestingOrder(2))">
+                                                <img src="../../data/img/common/button/list_button_ico.png" alt="list"
+                                                    class="list-ico">
                                             </button>
                                         </div>
                                     </div>
@@ -64,13 +68,14 @@
                         <div class="col-auto menu-block px-1">
                             <div class="container p-0">
                                 <div class="row-2">
-                                    
+
                                     <div class="col menu-block-section"><button
-                                            onclick="hideChangeChevron('menu-block-section-list', 'menu-block-section-chevron-data', this)" id="0"
-                                            class="col w-100 px-3 menu-block-section-name-button">
+                                            onclick="hideChangeChevron('menu-block-section-list', 'menu-block-section-chevron-data', this)"
+                                            id="0" class="col w-100 px-3 menu-block-section-name-button">
                                             <div class="row d-flex justify-content-between">
                                                 <div class="col label">Справочники</div>
-                                                <div class="col-auto d-flex align-items-center menu-block-section-chevron-data-0">
+                                                <div
+                                                    class="col-auto d-flex align-items-center menu-block-section-chevron-data-0">
                                                     <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
                                                 </div>
                                             </div>
@@ -91,7 +96,8 @@
                                                             <div class="col-1 p-0 image-data"><i
                                                                     class="fa-solid fa-circle-notch"
                                                                     aria-hidden="true"></i></div>
-                                                            <div class="col content-data strike_line">Магические предметы</div>
+                                                            <div class="col content-data strike_line">Магические
+                                                                предметы</div>
                                                         </div>
                                                     </a></li>
                                                 <li><a href="MenuBestiariy" class="w-100 p-0">
@@ -102,7 +108,7 @@
                                                             <div class="col content-data strike_line">Бестиарий</div>
                                                         </div>
                                                     </a></li>
-                                                <li><a href="sites/race/index.html" class="w-100 p-0">
+                                                <li><a href="index.html" class="w-100 p-0">
                                                         <div class="row m-0">
                                                             <div class="col-1 p-0 image-data"><i
                                                                     class="fa-solid fa-user-group"
@@ -146,67 +152,65 @@
                                         </div>
                                     </div>
                                     <div class="col menu-block-section"><button
-                                        onclick="hideChangeChevron('menu-block-section-list', 'menu-block-section-chevron-data', this)" id="1"
-                                        class="col w-100 px-3 menu-block-section-name-button">
-                                        <div class="row d-flex justify-content-between">
-                                            <div class="col label"><strike>Справочники</strike></div>
-                                            <div class="col-auto d-flex align-items-center menu-block-section-chevron-data-1">
-                                                <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+                                            onclick="hideChangeChevron('menu-block-section-list', 'menu-block-section-chevron-data', this)"
+                                            id="1" class="col w-100 px-3 menu-block-section-name-button">
+                                            <div class="row d-flex justify-content-between">
+                                                <div class="col label"><strike>Справочники</strike></div>
+                                                <div
+                                                    class="col-auto d-flex align-items-center menu-block-section-chevron-data-1">
+                                                    <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+                                                </div>
                                             </div>
-                                        </div>
-                                    </button>
-                                    <div class="col menu-block-section-list menu-block-section-list-1"
-                                        style="display: block;">
-                                        <ul>
-                                            <li><a href="" class="w-100 p-0">
-                                                    <div class="row m-0">
-                                                        <div class="col-1 p-0 image-data"><i
-                                                                class="fa-solid fa-fire" aria-hidden="true"></i>
+                                        </button>
+                                        <div class="col menu-block-section-list menu-block-section-list-1"
+                                            style="display: block;">
+                                            <ul>
+                                                <li><a href="" class="w-100 p-0">
+                                                        <div class="row m-0">
+                                                            <div class="col-1 p-0 image-data"><i
+                                                                    class="fa-solid fa-fire" aria-hidden="true"></i>
+                                                            </div>
+                                                            <div class="col content-data"><strike>Кидо</strike></div>
                                                         </div>
-                                                        <div class="col content-data"><strike>Кидо</strike></div>
-                                                    </div>
-                                                </a></li>
-                                            <li><a href="" class="w-100 p-0">
-                                                    <div class="row m-0">
-                                                        <div class="col-1 p-0 image-data"><i
-                                                                class="fa-solid fa-circle-notch"
-                                                                aria-hidden="true"></i></div>
-                                                        <div class="col content-data"><strike>Магические предметы</strike></div>
-                                                    </div>
-                                                </a></li>
-                                        </ul>
+                                                    </a></li>
+                                                <li><a href="" class="w-100 p-0">
+                                                        <div class="row m-0">
+                                                            <div class="col-1 p-0 image-data"><i
+                                                                    class="fa-solid fa-circle-notch"
+                                                                    aria-hidden="true"></i></div>
+                                                            <div class="col content-data"><strike>Магические
+                                                                    предметы</strike></div>
+                                                        </div>
+                                                    </a></li>
+                                            </ul>
+                                        </div>
                                     </div>
-                                </div>
                                 </div>
                             </div>
 
                         </div>
                         <div class="col p-0 info-block">
                             <div class="row-2">
-                                <div class="col chapter-title-mobile">Онлайн-справочник</div>
+                                <div class="col chapter-title-mobile">Душа [Soul] - Расы и происхождения Bleach D&D 5</div>
                                 <div class="col">
-                                    <div class="row-2">
-                                        <div class="col news-data-area">
-                                            <strong>Старт</strong>
-                                            <p>Итак, мой проект воскрес, уже в третий раз, и подобно фениксу потихоньку расправляет свои крылья. Пока не знаю, когда и эта попытка обратится прахом, но пока что я полон интузиазма</p>
-                                            <p><a href="sites/news/Start_2024-01-09.html" class="read-all">Читать полностью</a></p>
+                                    <div class="race-class-data-area">
+                                        <div class="title-block">
+                                            <div class="row-3">
+                                                <div class="col race-class-name">
+                                                    <p>Душа [Soul]</p>                                                    
+                                                </div>
+                                                <div class="col race-class-source">
+                                                    <p><strong>Источник:</strong> "Оригинальный сюжет"</p>
+                                                </div>
+                                                <div class="col race-class-citation"> 
+                                                    <p>Сколько себя помню, я всегда видел призраков. Будто так и должно быть.</p>
+                                                    <p>— Ичиго Куросаки, <strong>временный Синигами</strong></p>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="col news-data-area">
-                                            <strong>Новый год</strong>
-                                            <p>Наступил новый 2024 год, и я хочу поздравить всех с этим пректрасным праздником. Пусть в этом новом году все невзгоды обходят вас стороной, пусть удача сопутствует вам. Пусть наш проект радует вас положительными чертами, спасибо что вы у нас есть.</p>
-                                            <p><a href="sites/news/Happy_new_year_2024-01-09.html" class="read-all">Читать полностью</a></p>
-                                        </div>
-                                        <div class="col news-data-area">
-                                            <strong>Последовательность</strong>
-                                            <p>Не хочу оставлять своих зрителей с двумя постами )), ловите третий. Расскажу про порядок появления блоков информации. Чтобы было проще, на начальном экране будет краткий список для ознакомления ))</p>
-                                            <ul>
-                                                <li><strong>Расы</strong> (так как для ее отрисовки все готово, орсталось перенести на новый "движок")))</li>
-                                                <li><strong>Классы</strong> (то же самое, для отрисовки все готово)</li>
-                                                <li><strong>Кидо</strong> (ыыыы, сложная тема, для реализации все готово :), но разрознено, отдельно был реализован алгоритм фильтрации, отдельно алгоритм отрисовки и алгоритм заполнения, крч. тема сложная, но много сил съела и уже почти готова)</li>
-                                            </ul>                                            
-                                            <p><a href="sites/news/Steps_list_2024-01-09.html" class="read-all">Читать полностью</a></p>
-                                        </div>
+                                        <div class="content-block">content</div>                                        
                                     </div>
+                                    <div class="image-block">image</div>
                                 </div>
                             </div>
                         </div>
@@ -237,9 +241,9 @@
             <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
             <script src="https://kit.fontawesome.com/a98fe6b196.js" crossorigin="anonymous"></script>
 
-            <script src="data/js/common/linkDataRepository.js"></script>
-            <script src="data/js/common/onload.js"></script>
-            <script src="data/js/common/UI.js"></script>
+            <script src="../../data/js/common/linkDataRepository.js"></script>
+            <script src="../../data/js/common/onload.js"></script>
+            <script src="../../data/js/common/UI.js"></script>
         </footer>
     </div>
 </body>

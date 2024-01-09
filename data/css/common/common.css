@@ -1,5 +1,26 @@
+/* ------------------------------------------------------------ temp block start */
+/* .main-block {
+    background-color: rgba(17, 197, 197, 0.493);
+}
+.content-container{
+    background-color: rgb(9, 139, 37);
+}
+.menu-block {
+    background-color: rgb(141, 49, 77);
+}
+.info-block {
+    background-color: rgb(139, 95, 180);
+} 
+.content-area{
+    background-color: rgb(105, 105, 218);
+}*/
+.strike_line{
+    text-decoration: line-through;
+}
+/* ------------------------------------------------------------ temp block end */
+
 html body{
-    background-color: rgb(36, 88, 47);
+    background-color: rgb(69,71,49);
 }
 .header-area{
     background-color: rgb(73, 73, 73);
@@ -7,12 +28,13 @@ html body{
     border-bottom: 2px solid rgb(117, 117, 117);
 }
 .content-area{
-    background-color: rgb(105, 105, 218);
+    position: relative;
 }
 .footer-area{
     background-color: rgb(73, 73, 73);
     color: white;
     border-top: 2px solid rgb(117, 117, 117);
+    z-index: 20;
 }
 
 /* ------------------------------------------------------------- tags start */
@@ -24,13 +46,16 @@ content ol, content ul {
     padding-left: 0; /* Отступ слева в браузере Firefox, Safari, Chrome */
     margin-bottom: 0;
 }
+body p{
+    margin: 0;
+}
 /* ------------------------------------------------------------- tags end */
 
 /* ------------------------------------------------------------- top area start */
-header .home-link img{    
+.home-link{    
     height: 20px;
 }
-header .dnd-su-link img{
+header .dnd-su-link img, header .mobile_list_button img{
     height: 30px;
 }
 header .header-area {
@@ -52,22 +77,38 @@ header .header-area {
     padding-top: 2px;
     padding-bottom: 2px;
 }
+header .mobile_list_button{
+    background:none;
+    border: none;
+    width: 30px;
+    padding: 0;
+}
+.home-link{
+    margin-right: 12px;
+}
+
 /* ------------------------------------------------------------- top area end */
 
 /* ------------------------------------------------------------- content area start */
-
+.chapter-title-mobile{
+    font-size: 20px;
+    font-weight: 500;
+    color: white;
+}
 /* ------------------------------------------------------------- content area end */
 
 /* ------------------------------------------------------------- bottom area start */
-.info-block{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 div.parting-words-col-wide{
     border-left: 2px solid rgb(117, 117, 117);
     padding-top: 2px;
     padding-bottom: 2px;
+}
+.footer-area.fixed-bottom {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 20;
 }
 /* ------------------------------------------------------------- bottom area end */
 
@@ -111,3 +152,121 @@ div.parting-words-col-wide{
     padding-left: 20px;
 }
 /* ------------------------------------------------------------- menu area end */
+
+/* ------------------------------------------------------------- NEWS PAGES start */
+/* ------------------------------------------------------------- NP main start */
+.news-data-area{
+    background-color: rgb(236,228,217);
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+    position: relative;
+}
+.news-data-area img{
+    margin-top: 10px;
+    position: relative;
+    width: 100%;
+}
+content .info-block ul, content .info-block ol{
+    padding-left:32px;
+}
+content .info-block ul li{
+    list-style-type:circle;
+}
+content .info-block ol li{
+    list-style-type:decimal;
+}
+/* ------------------------------------------------------------- NP main end */
+
+a.read-all{
+    text-decoration: underline solid black 1px;
+    color:black;
+    font-style: italic;
+}
+a.read-all:hover{
+    text-decoration: underline dashed rgb(65, 65, 65) 1px;
+    color:rgb(65, 65, 65);
+    font-style: italic;
+}
+/* ------------------------------------------------------------- NEWS PAGES end */
+
+/* ------------------------------------------------------------- RACE LIST PAGE start */
+.grid-group{
+    margin-bottom: 10px;
+}
+.grid-group-name {
+    font-size: 25px;
+    color: white;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+.grid-group-data {
+    display: flex;
+    flex-flow: row wrap;
+}
+.grid-group-data-item {
+    margin-bottom: 8px;
+}
+.grid-group-data-item a {
+    text-decoration: none;
+}
+.grid-group-data-item .button-view{
+    background-color: rgb(236,228,217);
+    border-radius: 5px;
+}
+.grid-group-data-item .button-view:hover{
+    background-color: rgb(230, 206, 174);
+}
+.cr-name {
+    padding-top: 4px;
+    z-index: 3;
+    position: relative;
+    color:black;
+}
+.cr-name-head {
+    font-size: 20px;
+    font-weight: 600;
+    text-shadow: 1px 1px 3px white;
+    line-height: 1;
+    margin-bottom: 5px;    
+}
+.cr-name-append {
+    font-style: italic;
+    margin-top: -7px;
+}
+.button-view {
+    position: relative;
+    z-index: 2;
+    height: 75px;
+}
+.button-view img {
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+}
+/* ------------------------------------------------------------- RACE LIST PAGE end */
+
+/* ------------------------------------------------------------- RACE DATA PAGE start */
+.race-class-data-area strong {
+    font-weight: 500;
+}
+.race-class-data-area {
+    background-color: rgb(236,228,217);
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+.race-class-name p {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.race-class-source {
+    margin-bottom: 10px;
+}
+.race-class-citation {
+    text-align: right;
+    font-style: italic;
+}
+/* ------------------------------------------------------------- RACE DATA PAGE end */

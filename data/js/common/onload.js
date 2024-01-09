@@ -14,8 +14,8 @@ function windowHeightCheckForFooter() {
 
 function linkLauncher(){  
     // заполняет веб-страницу ссылками из репозитория
-    for (let key in window.linkData) {
-        let searchStroke = 'a[href=' + key + ']';
-        $(searchStroke).attr('href',window.linkData[key]);
+    for (let key in window.LinkDataRepository) {
+        let searchStroke = 'a[href="' + key + '"]';
+        $(searchStroke).attr('href',window.LinkDataRepository[key]);
     }
 }
