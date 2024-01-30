@@ -3,7 +3,7 @@
 
 const linkData = { 
     //url
-    "homeLink": "#",
+    "homeLink": "https://raven-soul.github.io/bleach_0.1.2/",
     "dndSuLink": "https://dnd.su"
 }
 

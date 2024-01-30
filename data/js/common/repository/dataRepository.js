@@ -5,24 +5,39 @@
                     "SectionName":"Справочники",
                     "SectionMenuItems":[
                         {
-                            "ItemName":"Кидо",
+                            "ItemName":"<strike>Кидо</strike>",
                             "ItemLink":"#",
                             "ItemLogo":"<i class=\"fa-solid fa-fire\" aria-hidden=\"true\"></i>"
                         },
                         {
-                            "ItemName":"Магические предметы",
+                            "ItemName":"<strike>Магические предметы</strike>",
                             "ItemLink":"#",
                             "ItemLogo":"<i class=\"fa-solid fa-circle-notch\" aria-hidden=\"true\"></i>"
                         },
                         {
-                            "ItemName":"Бестиарий",
+                            "ItemName":"<strike>Бестиарий</strike>",
                             "ItemLink":"#",
                             "ItemLogo":"<i class=\"fa-solid fa-ghost\" aria-hidden=\"true\"></i>"
                         },
                         {
                             "ItemName":"Расы и происхождения",
-                            "ItemLink":"#",
+                            "ItemLink":"sites/race/index.html",
                             "ItemLogo":"<i class=\"fa-solid fa-user-group\" aria-hidden=\"true\"></i>"
+                        },
+                        {
+                            "ItemName":"<strike>Классы</strike>",
+                            "ItemLink":"#",
+                            "ItemLogo":"<i class=\"fa-solid fa-person-digging\" aria-hidden=\"true\"></i>"
+                        },
+                        {
+                            "ItemName":"<strike>Предыстории</strike>",
+                            "ItemLink":"#",
+                            "ItemLogo":"<i class=\"fa-regular fa-file-lines\" aria-hidden=\"true\"></i>"
+                        },
+                        {
+                            "ItemName":"<strike>Черты</strike>",
+                            "ItemLink":"#",
+                            "ItemLogo":"<i class=\"fa-solid fa-lightbulb\" aria-hidden=\"true\"></i>"
                         }
                     ]
                 }
