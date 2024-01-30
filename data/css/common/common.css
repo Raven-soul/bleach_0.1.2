@@ -13,10 +13,11 @@
 } 
 .content-area{
     background-color: rgb(105, 105, 218);
-}*/
-/* .strike_line{
+}
+ .strike_line{
     text-decoration: line-through;
-} */
+} 
+*/
 /* ------------------------------------------------------------ temp block end */
 
 html body{
@@ -268,5 +269,32 @@ a.read-all:hover{
 .race-class-citation {
     text-align: right;
     font-style: italic;
+}
+.race-class-data-area .content-block{
+    padding-top: 10px;
+}
+.race-class-data-area .content-block p{
+    margin-top: 0px;
+    margin-bottom: 8px;
+    line-height: 1.3;
+    font-weight: 350;
+}
+.race-class-data-area h3{
+    font-size: 17px;
+    font-weight: 600;
+    text-transform: uppercase;
+
+    border-bottom: 1px solid #691414;
+    color: #691414;
+    padding: 0;
+    display: block;
+    margin: 0 0 8px;
+}
+.race-class-data-area .feature-race {
+    font-weight: 500;
+    font-style: italic;
+}
+.race-class-data-area .empty-line {
+    visibility: hidden;
 }
 /* ------------------------------------------------------------- RACE DATA PAGE end */
