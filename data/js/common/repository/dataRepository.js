@@ -25,8 +25,8 @@
                             "ItemLogo":"<i class=\"fa-solid fa-user-group\" aria-hidden=\"true\"></i>"
                         },
                         {
-                            "ItemName":"<strike>Классы</strike>",
-                            "ItemLink":"#",
+                            "ItemName":"Классы",
+                            "ItemLink":"sites/class/index.html",
                             "ItemLogo":"<i class=\"fa-solid fa-person-digging\" aria-hidden=\"true\"></i>"
                         },
                         {
