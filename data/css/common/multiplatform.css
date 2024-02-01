@@ -130,6 +130,20 @@
 }
 /* ------------------------------------------------ race class menu cells end*/
 
+/* ------------------------------------------------ class table start*/
+@media (min-width: 1200px){
+    .class-progress-table {
+        margin: 15px 8px;
+        width: calc(100% - 16px);
+    }
+}
+@media (max-width: 1200px){
+    .class-progress-table {
+        margin: 15px 0px;
+        width: 100%;
+    }
+}
+/* ------------------------------------------------ class table end*/
 
 /*  
 @media (min-width: 1200px) {

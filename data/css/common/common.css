@@ -249,7 +249,38 @@ a.read-all:hover{
 }
 /* ------------------------------------------------------------- RACE LIST PAGE end */
 
-/* ------------------------------------------------------------- RACE DATA PAGE start */
+/* ------------------------------------------------------------- RACE-CLASS DATA PAGE start */
+/* ------------------------------------------------------------- h start*/
+.race-class-data-area h2{
+    font-size: 17px;
+    font-weight: 600;
+    text-transform: uppercase;
+
+    padding: 0;
+    display: block;
+    margin: 0 0 8px;
+}
+.race-class-data-area h3{
+    font-size: 17px;
+    font-weight: 600;
+    text-transform: uppercase;
+
+    border-bottom: 1px solid #691414;
+    color: #691414;
+    padding: 0;
+    display: block;
+    margin: 0 0 8px;
+}
+.race-class-data-area h4 {
+    font-size: 17px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #58190e;
+    padding: 0;
+    display: block;
+    margin: 0 0 8px;
+}
+/* ------------------------------------------------------------- h end*/
 .race-class-data-area strong {
     font-weight: 500;
 }
@@ -279,17 +310,6 @@ a.read-all:hover{
     line-height: 1.3;
     font-weight: 350;
 }
-.race-class-data-area h3{
-    font-size: 17px;
-    font-weight: 600;
-    text-transform: uppercase;
-
-    border-bottom: 1px solid #691414;
-    color: #691414;
-    padding: 0;
-    display: block;
-    margin: 0 0 8px;
-}
 .race-class-data-area .feature-race {
     font-weight: 500;
     font-style: italic;
@@ -297,4 +317,12 @@ a.read-all:hover{
 .race-class-data-area .empty-line {
     visibility: hidden;
 }
-/* ------------------------------------------------------------- RACE DATA PAGE end */
+.race-class-data-area .content-block .sub-menu {
+    margin-bottom: 8px;
+}
+/* .race-class-data-area .content-block .table table{
+    margin-bottom: 8px;
+} */
+
+
+/* ------------------------------------------------------------- RACE-CLASS DATA PAGE end */
