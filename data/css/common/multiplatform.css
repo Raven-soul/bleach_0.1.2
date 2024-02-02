@@ -136,11 +136,23 @@
         margin: 15px 8px;
         width: calc(100% - 16px);
     }
+    table .long {
+        display: inline;
+    }
+    table .short {
+        display: none;
+    }
 }
 @media (max-width: 1200px){
     .class-progress-table {
         margin: 15px 0px;
         width: 100%;
+    }
+    table .long {
+        display: none;
+    }
+    table .short {
+        display: inline;
     }
 }
 /* ------------------------------------------------ class table end*/
