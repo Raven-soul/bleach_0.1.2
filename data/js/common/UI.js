@@ -39,3 +39,13 @@ function specializationBlockHide(hideBlockName, button) {
     $('#'+ id).toggleClass('active');
     $('.'+ hideBlockName + '-' + id).toggleClass('active');
 }
+
+function galleryExit(){
+    $('.gallery-data-block').toggleClass('active');
+}
+
+function galleryShow(image){
+    var path = image.getAttribute("src");
+    $('.gallery-data-block').toggleClass('active');
+    $('#gallery-img').attr("src", path);
+}
