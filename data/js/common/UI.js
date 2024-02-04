@@ -33,3 +33,9 @@ function nestingOrder(order) {
     }
     return result
 }
+
+function specializationBlockHide(hideBlockName, button) {
+    var id = button.getAttribute("id");
+    $('#'+ id).toggleClass('active');
+    $('.'+ hideBlockName + '-' + id).toggleClass('active');
+}

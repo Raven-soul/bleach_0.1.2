@@ -37,6 +37,9 @@ html body{
     border-top: 2px solid rgb(117, 117, 117);
     z-index: 20;
 }
+.data-content {
+    margin-bottom: 15px;
+}
 
 /* ------------------------------------------------------------- tags start */
 li {
@@ -306,13 +309,27 @@ a.read-all:hover{
     margin: 0 0 8px;
 }
 /* ------------------------------------------------------------- h end*/
+/* ------------------------------------------------------------- p start*/
+.race-class-data-area .content-block p{
+    margin-top: 0px;
+    margin-bottom: 8px;
+    line-height: 1.3;
+    font-weight: 350;
+}
+.race-class-data-area .content-block p.level{
+    margin-top: -5px;
+    font-style: italic;
+}
+/* ------------------------------------------------------------- p end */
+
 .race-class-data-area strong {
     font-weight: 500;
 }
 .race-class-data-area {
-    background-color: rgb(236,228,217);
+    background-color:  rgb(236,228,217);
     border-radius: 5px;
     padding: 5px 10px;
+    position: relative;
 }
 .race-class-name p {
     font-size: 24px;
@@ -328,12 +345,6 @@ a.read-all:hover{
 }
 .race-class-data-area .content-block{
     padding-top: 10px;
-}
-.race-class-data-area .content-block p{
-    margin-top: 0px;
-    margin-bottom: 8px;
-    line-height: 1.3;
-    font-weight: 350;
 }
 .race-class-data-area .feature-race {
     font-weight: 500;
@@ -380,4 +391,40 @@ a.read-all:hover{
 .race-class-data-area .content-block .blue-data-area .data-block {
     margin-top: 20px;
 }
+.race-class-data-area .content-block .spec-info-block .hide-next:hover {
+    cursor: pointer;
+}
+.race-class-data-area .content-block .spec-info-block .hidden-data-item.active {
+    display: block;
+}
+.race-class-data-area h1.hide-next:not(.active) {
+    margin: 0;
+}
+.race-class-data-area .content-block .spec-info-block .hidden-data-item:not(.active) {
+    display: none;
+}
+.race-class-data-area .content-block .spec-info-block {
+    padding: 8px;
+    border: 1px solid rgba(20,20,20,.1);
+    border-radius: 5px;
+    background-color: rgba(20,20,20,.05);
+    margin-bottom: 10px;
+}
+.race-class-data-area .back-image {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 100%;
+    z-index: 0;
+}
+.race-class-data-area .back-image img {
+    width: 50%;
+    float: right;
+    opacity: 50%;
+    
+} 
+.race-class-data-area .main-content-block {
+    position: relative;
+    z-index: 2;
+} 
 /* ------------------------------------------------------------- RACE-CLASS DATA PAGE end */
