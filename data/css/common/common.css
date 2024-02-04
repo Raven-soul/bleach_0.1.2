@@ -413,7 +413,7 @@ a.read-all:hover{
     text-align: left;
 }
 .race-class-data-area .content-block .table td {
-    padding: 0px 8px;
+    padding: 0px 5px;
 }
 .race-class-data-area .content-block .table tr:not(.tb-head-row):not(.tb-empty-row):hover {
     background-color: rgba(255,165,0,.2);
@@ -459,9 +459,10 @@ a.read-all:hover{
     z-index: 0;
 }
 .race-class-data-area .back-image img {
-    width: 50%;
+    max-width: 50%;
+    max-height: 50%;
     float: right;
-    opacity: 50%;
+    opacity: 40%;
     
 } 
 .race-class-data-area .main-content-block {
