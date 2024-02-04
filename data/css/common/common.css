@@ -58,7 +58,7 @@ html body{
 }
 .gallery-data-block .exit img {
     /* TODO */
-    width: 5%; 
+    width: 5vw; 
     height: auto;
     cursor: pointer;
     z-index: 6;
@@ -77,8 +77,9 @@ html body{
     display: none;
 }
 .gallery-data-block .image-block img {
-    height: 100vh;
+    height: 90vh;
     width: auto;
+    background-color: aliceblue;
 }
 /* ------------------------------------------------------------- gallery end */
 /* ------------------------------------------------------------- tags start */
