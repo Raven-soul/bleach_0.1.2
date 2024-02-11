@@ -5,23 +5,26 @@
 const castTime = {
     bonus: "Bonus action",
     action: "1 action",
-    reaction: "Reaction"
+    reaction: "Reaction",
+    round: "1 round"
 }
 
 const rng = {
     self: "Self",
+    touch: "Touch",
     ft30: "30 feet",
     ft100: "100 feet"
 }
 
 const tp = {
-    acid: "Acid"
+    acid: "Acid",
+    blood: "Blood"
 }
 
 const armamentAbilitiesContent = [
     {
         type: tp.acid,
-        spCost: 1,
+        cost: 1,
         castingTime: castTime.action,
         range: "self",
         components: {
@@ -34,7 +37,8 @@ const armamentAbilitiesContent = [
             until_sealed: true,
             concentration: false,
             minute1: false,
-            round1: false
+            round1: false,
+            instantaneous: false
         },
         name: "Кислотная форма [Acid Form]", 
         requirements: "",
@@ -49,7 +53,7 @@ const armamentAbilitiesContent = [
     }, //Acid Form 1
     {
         type: tp.acid,
-        spCost: 3,
+        cost: 3,
         castingTime: castTime.action,
         range: rng.self,
         components: {
@@ -62,7 +66,8 @@ const armamentAbilitiesContent = [
             until_sealed: true,
             concentration: true,
             minute1: false,
-            round1: false
+            round1: false,
+            instantaneous: false
         },
         name: "Кислотное оружие [Acidic Weapon]", 
         requirements: "",
@@ -76,7 +81,7 @@ const armamentAbilitiesContent = [
     }, //Acidic Weapon 2
     {
         type: tp.acid,
-        spCost: 0,
+        cost: 0,
         castingTime: castTime.action,
         range: rng.self,
         components: {
@@ -89,7 +94,8 @@ const armamentAbilitiesContent = [
             until_sealed: false,
             concentration: false,
             minute1: false,
-            round1: false
+            round1: false,
+            instantaneous: false
         },
         name: "Едкое оружие [Caustic Weapon]", 
         requirements: "Одна кислотная способность",
@@ -103,7 +109,7 @@ const armamentAbilitiesContent = [
     }, //Caustic Weapon 3
     {
         type: tp.acid,
-        spCost: 3,
+        cost: 3,
         castingTime: castTime.bonus,
         range: rng.self,
         components: {
@@ -116,7 +122,8 @@ const armamentAbilitiesContent = [
             until_sealed: true,
             concentration: false,
             minute1: false,
-            round1: false
+            round1: false,
+            instantaneous: false
         },
         name: "Кислотная броня [Acid Armor]", 
         requirements: "Одна кислотная способность",
@@ -133,7 +140,7 @@ const armamentAbilitiesContent = [
     }, //Acid Armor 4
     {
         type: tp.acid,
-        spCost: 2,
+        cost: 2,
         castingTime: castTime.action,
         range: rng.ft30,
         components: {
@@ -146,7 +153,8 @@ const armamentAbilitiesContent = [
             until_sealed: false,
             concentration: true,
             minute1: true,
-            round1: false
+            round1: false,
+            instantaneous: false
         },
         name: "Кислотный выстрел [Acid Shot]", 
         requirements: "Одна кислотная способность",
@@ -159,7 +167,7 @@ const armamentAbilitiesContent = [
     }, //Acid Shot 5
     {
         type: tp.acid,
-        spCost: 3,
+        cost: 3,
         castingTime: castTime.action,
         range: rng.self,
         components: {
@@ -172,7 +180,8 @@ const armamentAbilitiesContent = [
             until_sealed: false,
             concentration: true,
             minute1: true,
-            round1: false
+            round1: false,
+            instantaneous: false
         },
         name: "Кислотный плевок [Acid Spit]", 
         requirements: "Две кислотные способности",
@@ -186,7 +195,7 @@ const armamentAbilitiesContent = [
     }, //Acid Spit 6
     {
         type: tp.acid,
-        spCost: 2,
+        cost: 2,
         castingTime: castTime.action,
         range: rng.ft30,
         components: {
@@ -199,7 +208,8 @@ const armamentAbilitiesContent = [
             until_sealed: false,
             concentration: false,
             minute1: true,
-            round1: false
+            round1: false,
+            instantaneous: false
         },
         name: "Кислотный бассейн [Acid Pool]", 
         requirements: "Две кислотные способности",
@@ -215,7 +225,7 @@ const armamentAbilitiesContent = [
     }, //Acid Pool 7
     {
         type: tp.acid,
-        spCost: 3,
+        cost: 3,
         castingTime: castTime.action,
         range: rng.ft100,
         components: {
@@ -228,7 +238,8 @@ const armamentAbilitiesContent = [
             until_sealed: false,
             concentration: true,
             minute1: true,
-            round1: false
+            round1: false,
+            instantaneous: false
         },
         name: "Кислотный дождь [Acid Rain]", 
         requirements: "Три кислотные способности",
@@ -244,7 +255,7 @@ const armamentAbilitiesContent = [
     }, //Acid Rain 8
     {
         type: tp.acid,
-        spCost: 4,
+        cost: 4,
         castingTime: castTime.action,
         range: rng.self,
         components: {
@@ -257,7 +268,8 @@ const armamentAbilitiesContent = [
             until_sealed: false,
             concentration: true,
             minute1: false,
-            round1: true
+            round1: false,
+            instantaneous: false
         },
         name: "Прикосновение коррозии [Corrosive Touch]", 
         requirements: "Четыре кислотные способности",
@@ -273,8 +285,36 @@ const armamentAbilitiesContent = [
     }, //Corrosive Touch 9
     {
         type: tp.acid,
-        spCost: 3,
-        castingTime: castTime.action,
+        cost: 3,
+        castingTime: castTime.round,
+        range: rng.ft100,
+        components: {
+            verbal: true,    //v
+            somatic: true,   //s
+            material: false, //m
+            released: true   //w
+        },
+        duration: {
+            until_sealed: false,
+            concentration: true,
+            minute1: false,
+            round1: false,
+            instantaneous: false
+        },
+        name: "Атака коррозией (Финальный) [Corrosive Attack (Ultimate)]", 
+        requirements: "Пять кислотных способностей",
+        data:`
+        <p>Вы выбираете область в пределах досягаемости и выпускаете смертоносную едкую кислоту в 40-футовом кубе. Каждое существо в области получает урон кислотой 10d6 при провале и половину этого урона при успехе.</p>
+        <pКроме того, любые существа, провалившие спасбросок, продолжают получать урон кислотой 10d6 в начале своего хода, пока вы сохраняете концентрацию. Если эти существа владели каким-либо некаменным и немагическим оружием, их оружие получает постоянный и накопительный штраф -1 к броскам на урон каждый раз, когда они получают урон от этой способности. Если штраф падает до -5, оружие уничтожается. Если они владеют какой-либо некаменной, немагической броней или щитами, это требует постоянного и накопительного штрафа -1 к предлагаемому КД. Щиты брони уменьшаются до AC 10 или щит, бонус которого падает до +0, уничтожается.</p>
+        <p>Если какое-либо из воздействующих на оружие, доспехи или щиты является магическим, им разрешен спасбросок каждый раз, когда они получают урон, при этом успех не получает штрафа.<p>
+        <p>Магическим объектам и фауне в пределах области, за которыми не присматривают, разрешен спасбросок. при неудачном спасброске они страдают от тех же эффектов, что и существо, провалившее спасбросок. Мирская фауна и некаменные предметы разлагаются и разъедаются.</p>
+        <p>Вы можете повторно выбрать эту способность во второй раз, если вы это сделаете, дальность удвоится, размер куба удвоится, а размер кубика урона увеличится до d10.</p>
+        `
+    }, //Corrosive Attack (Ultimate) 10
+    {
+        type: tp.acid,
+        cost: 4,
+        castingTime: castTime.bonus,
         range: rng.self,
         components: {
             verbal: true,    //v
@@ -286,18 +326,177 @@ const armamentAbilitiesContent = [
             until_sealed: false,
             concentration: true,
             minute1: false,
-            round1: true
+            round1: false,
+            instantaneous: false
         },
-        name: "Атака коррозией [Corrosive Attack (Ultimate)]", 
-        requirements: "Пять кислотных способностей",
+        name: "Разъедающая форма (Вознесенная) [Corrosive Form (Ascended)]", 
+        requirements: "Атака коррозией и шесть кислотных способностей",
         data:`
-        <p>Вы пропитываете свое вооружение едкой кислотой. В течение этого времени, когда вы ударяете существо своим вооружением, и существо носит некаменную, немагическую броню, оно получает постоянный накопительный штраф -1 к КД, которое оно предлагает. Броня снижается до AC 10 или щит, который падает до бонуса +0, уничтожается.</p>
-        <p>Если броня или щит магические, существо должно совершить спасбросок Телосложения, в случае неудачи получая накопительный штраф на время действия. Броня не уничтожается, если AC снижается до 10 или выше, а щит не уничтожается, если его бонус снижается до +0 или выше. Через 3 часа магическая броня или щиты со штрафами от этой способности снимаются.</p>
-
-        <p>Вы можете выбирать эту способность несколько раз, каждый раз выбирая один из следующих вариантов:</p>
-        <p> &mdash; Увеличение продолжительности на 1 раунд.</p>
-        <p> &mdash; Увеличьте сложность спасброска на 1.</p>
-        <p> &mdash; Удвойте количество часов, необходимое для снятия штрафов.</p>
+        <p>Во время вознесения вы можете использовать кислотные способности и заклинания, наносящие урон кислотой, получать эффекты Коррозионной атаки; за исключением того, что он не наносит урон, который наносит Коррозионная атака.</p>
         `
-    },
+    }, //Corrosive Form (Ascended) 11
+    {
+        type: tp.acid,
+        cost: 0,
+        castingTime: castTime.bonus,
+        range: rng.self,
+        components: {
+            verbal:   /*v*/ false,  
+            somatic:  /*s*/ false,  
+            material: /*m*/ false, 
+            released: /*w*/ false  
+        },
+        duration: {
+            until_sealed: false,
+            concentration: false,
+            minute1: false,
+            round1: false,
+            instantaneous: false
+        },
+        name: "Суперкислота (Вознесенная) [Superacid (Ascended)]", 
+        requirements: "Шесть кислотных способностей",
+        data:`
+        <p>Ваши кислотные способности увеличиваются в силе.</p>
+        <p>Ваши способности вооружения или Кидо, наносящие урон кислотой, игнорируют сопротивление кислоте. Если существо невосприимчиво к урону кислотой, вместо этого оно получает половину урона.</p>
+        `
+    }, //Superacid (Ascended) 12
+    {
+        type: tp.blood,
+        cost: 1,
+        castingTime: castTime.action,
+        range: rng.self,
+        components: {
+            verbal:   /*v*/ true,  
+            somatic:  /*s*/ true,  
+            material: /*m*/ false, 
+            released: /*w*/ true  
+        },
+        duration: {
+            until_sealed: true,
+            concentration: true,
+            minute1: false,
+            round1: false,
+            instantaneous: false
+        },
+        name: "Клинок Крови [Blade of Blood]", 
+        requirements: "Шесть кислотных способностей",
+        data:`
+        <p>Вы усиливаете свое вооружение своей кровью. Когда вы активируете эту способность, вы теряете 1d3 очков жизни, а ваше вооружение наносит дополнительный урон 1d6. Вы можете отклонить эту способность как бонусное действие.</p>
+        <p>Каждый раз, когда вы повторно выбираете эту способность, размер кубика потерянных вами очков жизни увеличивается на один шаг до максимума 1d10, а размер дополнительного кубика урона, наносимого этой способностью, увеличивается на один шаг до максимума 1d12.</p>
+        <p>Вы можете повторно выбрать эту способность несколько раз, каждый раз выбирая один из следующих вариантов:</p>
+        <p> &mdash; Вы можете активировать эту способность бонусным действием и отключить ее по своему желанию.</p>
+        <p> &mdash; Эта способность больше не требует концентрации, компонентов V или S.</p>
+        <p> &mdash; Уменьшите размер кубика хитов, которые вы теряете из-за этой способности, на один шаг, минимум 1d3.</p>        
+        `
+    }, //Blade of Blood 1
+    {
+        type: tp.blood,
+        cost: 2,
+        castingTime: castTime.bonus,
+        range: rng.self,
+        components: {
+            verbal:   /*v*/ true,  
+            somatic:  /*s*/ true,  
+            material: /*m*/ false, 
+            released: /*w*/ true  
+        },
+        duration: {
+            until_sealed: false,
+            concentration: false,
+            minute1: false,
+            round1: false,
+            instantaneous: false
+        },
+        name: "Кровоточащий удар [Bleeding Strike]", 
+        requirements: "",
+        data:`
+        <p>В следующий раз, когда вы ударите существо своим оружием до окончания действия этой способности, оружие нанесет цели тяжелую рану. В начале каждого своего хода цель должна совершить спасбросок Телосложения. В случае провала он получает 1d4 урона. При успешном сохранении эффект прекращается. Если цель или существо в пределах 5 футов от нее использует действие, чтобы залатать рану, или если какой-либо другой эффект исцеляет рану, эффект заканчивается.</p>
+        <p>Каждый раз, когда вы повторно выбираете эту способность, продолжительность увеличивается на 1 раунд.</p>
+        <p>Вы можете повторно выбрать эту способность несколько раз, каждый раз выбирая один из следующих вариантов:</p>
+        <p> &mdash; Эта способность больше не требует компонентов V или S.</p>
+        <p> &mdash; Увеличьте размер кубика урона на одну ступень, максимум 1d10.</p>
+        <p> &mdash; Увеличьте DC спасброска на 1, вы можете выбрать эту опцию всего 5 раз.</p>        
+        `
+    }, //Bleeding Strike 2
+    {
+        type: tp.blood,
+        cost: 0,
+        castingTime: castTime.bonus,
+        range: rng.self,
+        components: {
+            verbal:   /*v*/ false,  
+            somatic:  /*s*/ false,  
+            material: /*m*/ false, 
+            released: /*w*/ false  
+        },
+        duration: {
+            until_sealed: false,
+            concentration: false,
+            minute1: false,
+            round1: false,
+            instantaneous: false
+        },
+        name: "Ранящий клинок [Wounding Blade]", 
+        requirements: "Клинок крови (3)",
+        data:`
+        <p>Когда вы наносите критический удар по существу своим вооружением, цели наносится 2 очка урона Телосложению.</p>
+        `
+    }, //Wounding Blade 3
+    {
+        type: tp.blood,
+        cost: 1,
+        castingTime: castTime.reaction,
+        range: rng.self,
+        components: {
+            verbal:   /*v*/ true,  
+            somatic:  /*s*/ true,  
+            material: /*m*/ false, 
+            released: /*w*/ true  
+        },
+        duration: {
+            until_sealed: false,
+            concentration: false,
+            minute1: false,
+            round1: false,
+            instantaneous: true
+        },
+        name: "Щит крови [Blood Shield]", 
+        requirements: "Одна кровавая способность",
+        data:`
+        <p>Когда против вас совершается бросок атаки, вы в качестве реакции создаете щит из собственной крови. Вы теряете 1d4 очков жизни и получаете такое же количество в качестве бонуса к вашему классу брони против этой атаки.</p>
+        <p>Каждый раз, когда вы повторно выбираете эту способность, размер кубика увеличивается на один шаг до максимума 1d12.</p>
+        <p>Вы можете повторно выбрать эту способность несколько раз, каждый раз выбирая один из следующих вариантов:</p>
+        <p> &mdash; Эта способность больше не требует компонентов V или S. Вы можете выбрать эту опцию во второй раз, при этом компонент W больше не требуется.</p>
+        <p> &mdash; Длительность этой способности изменена на «Концентрация до следующего хода».</p>
+        `
+    }, //Blood Shield 4
+    {
+        type: tp.blood,
+        cost: 2,
+        castingTime: castTime.action,
+        range: rng.touch,
+        components: {
+            verbal:   /*v*/ true,  
+            somatic:  /*s*/ true,  
+            material: /*m*/ true, 
+            released: /*w*/ true  
+        },
+        duration: {
+            until_sealed: false,
+            concentration: false,
+            minute1: false,
+            round1: false,
+            instantaneous: true
+        },
+        name: "Кровавое ремесло [Bloodcraft]", 
+        requirements: "Одна кровавая способность",
+        data:`
+        <p>Воздействовать на кровь или извлекать информацию из нее можно различными способами. Кровь должна оставаться без присмотра, например, лужи крови в пределах 5-футового куба или флакона с кровью. Вы также можете коснуться желающего существа, и оно потеряет 1d4 хитов.</p>
+        <p> &mdash; Вы знаете тип существа, пролившего кровь. Кроме того, в течение следующих 24 часов вы можете сменить кровь, и когда существо или кровь будут идентифицированы, они зарегистрируются как другой тип существа по вашему выбору.</p>
+        <p> &mdash; Вы знаете, несет ли кровь какие-либо болезни или яды. Кроме того, вы знаете тип болезни или яда, если сталкивались с ним раньше.</p>
+        <p> &mdash; Вы знаете, сколько лет крови или возраст существа.</p>
+        <p> &mdash; Вы превращаете лужу крови в ловушку. В течение следующих 8 часов, когда существо входит в то же пространство, что и кровь, оно получает колющий урон 1d6.</p>
+        <p> &mdash;Вы укрепляете кровь существа. В течение следующего часа цель имеет преимущество на спасброски Телосложения от ядов и болезней.</p>
+        `
+    }, //Bloodcraft 5
 ]
