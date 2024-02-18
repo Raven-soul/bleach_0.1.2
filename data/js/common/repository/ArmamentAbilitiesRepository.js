@@ -2,6 +2,11 @@
 
 // --DC - сложность
 
+/*
+    DC - Сложность спасброска
+    AC - Класс доспеха
+*/
+
 const castTime = {
     bonus: "Bonus action",
     action: "1 action",
@@ -18,6 +23,7 @@ const rng = {
     ft80: "80 feet",
     ft100: "100 feet",
     ft120: "120 feet",
+    ft500: "500 feet",
     heilinBogen: "Equal to your Heilig Bogen"
 }
 
@@ -26,7 +32,9 @@ const tp = {
     blood: "Blood",
     bow: "Bow",
     dark: "Dark",
-    defence: "Defence"
+    defence: "Defence",
+    earth: "Earth",
+    fire: "Fire"
 }
 
 const armamentAbilitiesContent = [
@@ -48,7 +56,8 @@ const armamentAbilitiesContent = [
             minute1: false,
             round1: false,
             instantaneous: false,
-            hour1:         /**/ false
+            hour1:         /**/ false,
+            minute5:       /**/ false
         },
         name: "Кислотная форма [Acid Form]", 
         requirements: "",
@@ -79,7 +88,8 @@ const armamentAbilitiesContent = [
             minute1: false,
             round1: false,
             instantaneous: false,
-            hour1:         /**/ false
+            hour1:         /**/ false,
+            minute5:       /**/ false
         },
         name: "Кислотное оружие [Acidic Weapon]", 
         requirements: "",
@@ -109,7 +119,8 @@ const armamentAbilitiesContent = [
             minute1: false,
             round1: false,
             instantaneous: false,
-            hour1:         /**/ false
+            hour1:         /**/ false,
+            minute5:       /**/ false
         },
         name: "Едкое оружие [Caustic Weapon]", 
         requirements: "Одна кислотная способность",
@@ -139,7 +150,8 @@ const armamentAbilitiesContent = [
             minute1: false,
             round1: false,
             instantaneous: false,
-            hour1:         /**/ false
+            hour1:         /**/ false,
+            minute5:       /**/ false
         },
         name: "Кислотная броня [Acid Armor]", 
         requirements: "Одна кислотная способность",
@@ -172,7 +184,8 @@ const armamentAbilitiesContent = [
             minute1: true,
             round1: false,
             instantaneous: false,
-            hour1:         /**/ false
+            hour1:         /**/ false,
+            minute5:       /**/ false
         },
         name: "Кислотный выстрел [Acid Shot]", 
         requirements: "Одна кислотная способность",
@@ -201,7 +214,8 @@ const armamentAbilitiesContent = [
             minute1: true,
             round1: false,
             instantaneous: false,
-            hour1:         /**/ false
+            hour1:         /**/ false,
+            minute5:       /**/ false
         },
         name: "Кислотный плевок [Acid Spit]", 
         requirements: "Две кислотные способности",
@@ -231,7 +245,8 @@ const armamentAbilitiesContent = [
             minute1: true,
             round1: false,
             instantaneous: false,
-            hour1:         /**/ false
+            hour1:         /**/ false,
+            minute5:       /**/ false
         },
         name: "Кислотный бассейн [Acid Pool]", 
         requirements: "Две кислотные способности",
@@ -263,7 +278,8 @@ const armamentAbilitiesContent = [
             minute1: true,
             round1: false,
             instantaneous: false,
-            hour1:         /**/ false
+            hour1:         /**/ false,
+            minute5:       /**/ false
         },
         name: "Кислотный дождь [Acid Rain]", 
         requirements: "Три кислотные способности",
@@ -295,7 +311,8 @@ const armamentAbilitiesContent = [
             minute1: false,
             round1: false,
             instantaneous: false,
-            hour1:         /**/ false
+            hour1:         /**/ false,
+            minute5:       /**/ false
         },
         name: "Прикосновение коррозии [Corrosive Touch]", 
         requirements: "Четыре кислотные способности",
@@ -327,7 +344,8 @@ const armamentAbilitiesContent = [
             minute1: false,
             round1: false,
             instantaneous: false,
-            hour1:         /**/ false
+            hour1:         /**/ false,
+            minute5:       /**/ false
         },
         name: "Атака коррозией (Финальный) [Corrosive Attack (Ultimate)]", 
         requirements: "Пять кислотных способностей",
@@ -357,7 +375,8 @@ const armamentAbilitiesContent = [
             minute1: false,
             round1: false,
             instantaneous: false,
-            hour1:         /**/ false
+            hour1:         /**/ false,
+            minute5:       /**/ false
         },
         name: "Разъедающая форма (Вознесенная) [Corrosive Form (Ascended)]", 
         requirements: "Атака коррозией и шесть кислотных способностей",
@@ -383,7 +402,8 @@ const armamentAbilitiesContent = [
             minute1: false,
             round1: false,
             instantaneous: false,
-            hour1:         /**/ false
+            hour1:         /**/ false,
+            minute5:       /**/ false
         },
         name: "Суперкислота (Вознесенная) [Superacid (Ascended)]", 
         requirements: "Шесть кислотных способностей",
@@ -410,7 +430,8 @@ const armamentAbilitiesContent = [
             minute1: false,
             round1: false,
             instantaneous: false,
-            hour1:         /**/ false
+            hour1:         /**/ false,
+            minute5:       /**/ false
         },
         name: "Клинок Крови [Blade of Blood]", 
         requirements: "Шесть кислотных способностей",
@@ -441,7 +462,8 @@ const armamentAbilitiesContent = [
             minute1: false,
             round1: false,
             instantaneous: false,
-            hour1:         /**/ false
+            hour1:         /**/ false,
+            minute5:       /**/ false
         },
         name: "Кровоточащий удар [Bleeding Strike]", 
         requirements: "",
@@ -472,7 +494,8 @@ const armamentAbilitiesContent = [
             minute1: false,
             round1: false,
             instantaneous: false,
-            hour1:         /**/ false
+            hour1:         /**/ false,
+            minute5:       /**/ false
         },
         name: "Ранящий клинок [Wounding Blade]", 
         requirements: "Клинок крови (3)",
@@ -498,7 +521,8 @@ const armamentAbilitiesContent = [
             minute1: false,
             round1: false,
             instantaneous: true,
-            hour1:         /**/ false
+            hour1:         /**/ false,
+            minute5:       /**/ false
         },
         name: "Щит крови [Blood Shield]", 
         requirements: "Одна кровавая способность",
@@ -528,7 +552,8 @@ const armamentAbilitiesContent = [
             minute1: false,
             round1: false,
             instantaneous: true,
-            hour1:         /**/ false
+            hour1:         /**/ false,
+            minute5:       /**/ false
         },
         name: "Кровавое ремесло [Bloodcraft]", 
         requirements: "Одна кровавая способность",
@@ -559,7 +584,8 @@ const armamentAbilitiesContent = [
             minute1: false,
             round1: true,
             instantaneous: false,
-            hour1:         /**/ false
+            hour1:         /**/ false,
+            minute5:       /**/ false
         },
         name: "Вампирский удар [Vampiric Strike]", 
         requirements: "Одна кровавая способность",
@@ -589,7 +615,8 @@ const armamentAbilitiesContent = [
             minute1: false,
             round1: false,
             instantaneous: true,
-            hour1:         /**/ false
+            hour1:         /**/ false,
+            minute5:       /**/ false
         },
         name: "Опустошение реацу [Drain Reiatsu]", 
         requirements: "Вампирский удар и одна кровавая способность",
@@ -619,7 +646,8 @@ const armamentAbilitiesContent = [
             minute1: false,
             round1: false,
             instantaneous: true,
-            hour1:         /**/ false
+            hour1:         /**/ false,
+            minute5:       /**/ false
         },
         name: "Кровавый выстрел [Blood Shot]", 
         requirements: "Две кровавых способности",
@@ -650,7 +678,8 @@ const armamentAbilitiesContent = [
             minute1: false,
             round1: false,
             instantaneous: false,
-            hour1:         /**/ false
+            hour1:         /**/ false,
+            minute5:       /**/ false
         },
         name: "Магия крови [Blood Magic]", 
         requirements: "Три кровавых способности",
@@ -677,7 +706,8 @@ const armamentAbilitiesContent = [
             minute1: false,
             round1: false,
             instantaneous: true,
-            hour1:         /**/ false
+            hour1:         /**/ false,
+            minute5:       /**/ false
         },
         name: "Кровавый взрыв [Blood Burst]", 
         requirements: "Три кровавых способности",
@@ -709,7 +739,8 @@ const armamentAbilitiesContent = [
             minute1:       /**/ false,
             round1:        /**/ false,
             instantaneous: /**/ false,
-            hour1:         /**/ false
+            hour1:         /**/ false,
+            minute5:       /**/ false
         },
         name: "Предвидящий выстрел [Anticipating Shot]", 
         requirements: "",
@@ -736,7 +767,8 @@ const armamentAbilitiesContent = [
             minute1:       /**/ false,
             round1:        /**/ false,
             instantaneous: /**/ false,
-            hour1:         /**/ false
+            hour1:         /**/ false,
+            minute5:       /**/ false
         },
         name: "Изгоняющая стрела (Мастерский выстрел) [Banishing Arrow (Master Shot)]", 
         requirements: "",
@@ -762,7 +794,8 @@ const armamentAbilitiesContent = [
             minute1:       /**/ false,
             round1:        /**/ false,
             instantaneous: /**/ false,
-            hour1:         /**/ false
+            hour1:         /**/ false,
+            minute5:       /**/ false
         },
         name: "Обманчивая стрела [Beguiling Arrow]", 
         requirements: "",
@@ -789,7 +822,8 @@ const armamentAbilitiesContent = [
             minute1:       /**/ false,
             round1:        /**/ false,
             instantaneous: /**/ false,
-            hour1:         /**/ false
+            hour1:         /**/ false,
+            minute5:       /**/ false
         },
         name: "Разрывная стрела [Bursting Arrow]", 
         requirements: "",
@@ -816,7 +850,8 @@ const armamentAbilitiesContent = [
             minute1:       /**/ false,
             round1:        /**/ false,
             instantaneous: /**/ false,
-            hour1:         /**/ false
+            hour1:         /**/ false,
+            minute5:       /**/ false
         },
         name: "Критическая стрела [Critical Arrow]", 
         requirements: "",
@@ -843,7 +878,8 @@ const armamentAbilitiesContent = [
             minute1:       /**/ false,
             round1:        /**/ false,
             instantaneous: /**/ false,
-            hour1:         /**/ false
+            hour1:         /**/ false,
+            minute5:       /**/ false
         },
         name: "Изогнутая стрела [Curving Arrow]", 
         requirements: "",
@@ -870,7 +906,8 @@ const armamentAbilitiesContent = [
             minute1:       /**/ false,
             round1:        /**/ false,
             instantaneous: /**/ false,
-            hour1:         /**/ false
+            hour1:         /**/ false,
+            minute5:       /**/ false
         },
         name: "Ослепительная стрела [Dazing Arrow]", 
         requirements: "",
@@ -897,7 +934,8 @@ const armamentAbilitiesContent = [
             minute1:       /**/ false,
             round1:        /**/ false,
             instantaneous: /**/ false,
-            hour1:         /**/ false
+            hour1:         /**/ false,
+            minute5:       /**/ false
         },
         name: "Отклоняющая стрела [Deflecting Arrow]", 
         requirements: "",
@@ -924,7 +962,8 @@ const armamentAbilitiesContent = [
             minute1:       /**/ false,
             round1:        /**/ false,
             instantaneous: /**/ false,
-            hour1:         /**/ false
+            hour1:         /**/ false,
+            minute5:       /**/ false
         },
         name: "Рассеивающая стрела [Dispelling Arrow]", 
         requirements: "",
@@ -951,7 +990,8 @@ const armamentAbilitiesContent = [
             minute1:       /**/ false,
             round1:        /**/ false,
             instantaneous: /**/ false,
-            hour1:         /**/ false
+            hour1:         /**/ false,
+            minute5:       /**/ false
         },
         name: "Разрушающая стрела [Disrupting Arrow]", 
         requirements: "",
@@ -980,7 +1020,8 @@ const armamentAbilitiesContent = [
             minute1:       /**/ false,
             round1:        /**/ false,
             instantaneous: /**/ false,
-            hour1:         /**/ false
+            hour1:         /**/ false,
+            minute5:       /**/ false
         },
         name: "Дальняя стрела [Distant Arrow]", 
         requirements: "",
@@ -1007,7 +1048,8 @@ const armamentAbilitiesContent = [
             minute1:       /**/ false,
             round1:        /**/ false,
             instantaneous: /**/ false,
-            hour1:         /**/ false
+            hour1:         /**/ false,
+            minute5:       /**/ false
         },
         name: "Отвлекающая стрела [Distracting Arrow]", 
         requirements: "",
@@ -1034,7 +1076,8 @@ const armamentAbilitiesContent = [
             minute1:       /**/ false,
             round1:        /**/ false,
             instantaneous: /**/ false,
-            hour1:         /**/ false
+            hour1:         /**/ false,
+            minute5:       /**/ false
         },
         name: "Элементальная стрела [Elemental Arrow]", 
         requirements: "",
@@ -1061,7 +1104,8 @@ const armamentAbilitiesContent = [
             minute1:       /**/ false,
             round1:        /**/ false,
             instantaneous: /**/ false,
-            hour1:         /**/ false
+            hour1:         /**/ false,
+            minute5:       /**/ false
         },
         name: "Ослабляющая стрела (Мастерский выстрел) [Enfeebling Arrow (Master Shot)]", 
         requirements: "",
@@ -1087,7 +1131,8 @@ const armamentAbilitiesContent = [
             minute1:       /**/ false,
             round1:        /**/ false,
             instantaneous: /**/ false,
-            hour1:         /**/ false
+            hour1:         /**/ false,
+            minute5:       /**/ false
         },
         name: "Цепкая стрела (Мастерский выстрел) [Grasping Arrow (Master Shot)]", 
         requirements: "",
@@ -1113,7 +1158,8 @@ const armamentAbilitiesContent = [
             minute1:       /**/ false,
             round1:        /**/ false,
             instantaneous: /**/ true,
-            hour1:         /**/ false
+            hour1:         /**/ false,
+            minute5:       /**/ false
         },
         name: "Клавир [Klavier]", 
         requirements: "",
@@ -1141,7 +1187,8 @@ const armamentAbilitiesContent = [
             minute1:       /**/ false,
             round1:        /**/ false,
             instantaneous: /**/ true,
-            hour1:         /**/ false
+            hour1:         /**/ false,
+            minute5:       /**/ false
         },
         name: "Лихт Реген (Мастерский выстрел) [Licht Regen (Master Shot)]", 
         requirements: "",
@@ -1167,7 +1214,8 @@ const armamentAbilitiesContent = [
             minute1:       /**/ false,
             round1:        /**/ false,
             instantaneous: /**/ false,
-            hour1:         /**/ false
+            hour1:         /**/ false,
+            minute5:       /**/ false
         },
         name: "Пронзающая стрела [Piercing Arrow]", 
         requirements: "",
@@ -1194,7 +1242,8 @@ const armamentAbilitiesContent = [
             minute1:       /**/ false,
             round1:        /**/ false,
             instantaneous: /**/ false,
-            hour1:         /**/ false
+            hour1:         /**/ false,
+            minute5:       /**/ false
         },
         name: "Точная стрела [Precise Arrow]", 
         requirements: "",
@@ -1221,7 +1270,8 @@ const armamentAbilitiesContent = [
             minute1:       /**/ false,
             round1:        /**/ false,
             instantaneous: /**/ false,
-            hour1:         /**/ false
+            hour1:         /**/ false,
+            minute5:       /**/ false
         },
         name: "Отталкивающая стрела [Pushing Arrow]", 
         requirements: "",
@@ -1248,7 +1298,8 @@ const armamentAbilitiesContent = [
             minute1:       /**/ false,
             round1:        /**/ false,
             instantaneous: /**/ false,
-            hour1:         /**/ true
+            hour1:         /**/ true,
+            minute5:       /**/ false
         },
         name: "Отталкивающая стрела [Seeking Arrow]", 
         requirements: "",
@@ -1276,7 +1327,8 @@ const armamentAbilitiesContent = [
             minute1:       /**/ false,
             round1:        /**/ false,
             instantaneous: /**/ false,
-            hour1:         /**/ false
+            hour1:         /**/ false,
+            minute5:       /**/ false
         },
         name: "Теневая стрела (Мастерский выстрел) [Shadow Arrow (Master Shot)]", 
         requirements: "",
@@ -1302,7 +1354,8 @@ const armamentAbilitiesContent = [
             minute1:       /**/ false,
             round1:        /**/ false,
             instantaneous: /**/ false,
-            hour1:         /**/ false
+            hour1:         /**/ false,
+            minute5:       /**/ false
         },
         name: "Духовная стрела (Мастерский выстрел) [Soul Arrow (Master Shot)]", 
         requirements: "",
@@ -1328,7 +1381,8 @@ const armamentAbilitiesContent = [
             minute1:       /**/ false,
             round1:        /**/ false,
             instantaneous: /**/ false,
-            hour1:         /**/ false
+            hour1:         /**/ false,
+            minute5:       /**/ false
         },
         name: "Шагающий выстрел [Stepping Shot]", 
         requirements: "",
@@ -1354,7 +1408,8 @@ const armamentAbilitiesContent = [
             minute1:       /**/ false,
             round1:        /**/ false,
             instantaneous: /**/ false,
-            hour1:         /**/ false
+            hour1:         /**/ false,
+            minute5:       /**/ false
         },
         name: "Ранящая стрела (Мастерский выстрел) [Wounding Arrow (Master Shot)]", 
         requirements: "",
@@ -1380,7 +1435,8 @@ const armamentAbilitiesContent = [
             minute1:       /**/ false,
             round1:        /**/ false,
             instantaneous: /**/ false,
-            hour1:         /**/ false
+            hour1:         /**/ false,
+            minute5:       /**/ false
         },
         name: "Некротическая форма [Necrotic Form]", 
         requirements: "",
@@ -1410,7 +1466,8 @@ const armamentAbilitiesContent = [
             minute1:       /**/ false,
             round1:        /**/ false,
             instantaneous: /**/ false,
-            hour1:         /**/ false
+            hour1:         /**/ false,
+            minute5:       /**/ false
         },
         name: "Оружие тьмы [Dark Weapon]", 
         requirements: "",
@@ -1441,7 +1498,8 @@ const armamentAbilitiesContent = [
             minute1:       /**/ false,
             round1:        /**/ false,
             instantaneous: /**/ false,
-            hour1:         /**/ false
+            hour1:         /**/ false,
+            minute5:       /**/ false
         },
         name: "Теневое оружие [Umbral Weapon]", 
         requirements: "Одна способность тьмы",
@@ -1471,7 +1529,8 @@ const armamentAbilitiesContent = [
             minute1:       /**/ false,
             round1:        /**/ false,
             instantaneous: /**/ false,
-            hour1:         /**/ false
+            hour1:         /**/ false,
+            minute5:       /**/ false
         },
         name: "Аура Тьмы [Aura of Dark]", 
         requirements: "Две способности тьмы",
@@ -1504,7 +1563,8 @@ const armamentAbilitiesContent = [
             minute1:       /**/ true,
             round1:        /**/ false,
             instantaneous: /**/ false,
-            hour1:         /**/ false
+            hour1:         /**/ false,
+            minute5:       /**/ false
         },
         name: "Тьма [Darkness]", 
         requirements: "Одна способность тьмы",
@@ -1539,7 +1599,8 @@ const armamentAbilitiesContent = [
             minute1:       /**/ true,
             round1:        /**/ false,
             instantaneous: /**/ false,
-            hour1:         /**/ false
+            hour1:         /**/ false,
+            minute5:       /**/ false
         },
         name: "Темное зрение [Darkvision]", 
         requirements: "Способность Тьма [Darkness]",
@@ -1570,7 +1631,8 @@ const armamentAbilitiesContent = [
             minute1:       /**/ false,
             round1:        /**/ false,
             instantaneous: /**/ true,
-            hour1:         /**/ false
+            hour1:         /**/ false,
+            minute5:       /**/ false
         },
         name: "Теневой луч [Umbral Blast]", 
         requirements: "Две способности тьмы",
@@ -1602,7 +1664,8 @@ const armamentAbilitiesContent = [
             minute1:       /**/ false,
             round1:        /**/ false,
             instantaneous: /**/ false,
-            hour1:         /**/ false
+            hour1:         /**/ false,
+            minute5:       /**/ false
         },
         name: "Стена Тьмы [Wall of Dark]", 
         requirements: "Три способности тьмы",
@@ -1638,7 +1701,8 @@ const armamentAbilitiesContent = [
             minute1:       /**/ false,
             round1:        /**/ false,
             instantaneous: /**/ true,
-            hour1:         /**/ false
+            hour1:         /**/ false,
+            minute5:       /**/ false
         },
         name: "Всплеск тьмы (Ультимативный) [Burst of Dark (Ultimate)]", 
         requirements: "Четыре способности тьмы",
@@ -1671,7 +1735,8 @@ const armamentAbilitiesContent = [
             minute1:       /**/ false,
             round1:        /**/ false,
             instantaneous: /**/ true,
-            hour1:         /**/ false
+            hour1:         /**/ false,
+            minute5:       /**/ false
         },
         name: "Черная дыра (Ультимативный) [Black Hole (Ascended)]", 
         requirements: "Пять способностей тьмы",
@@ -1701,7 +1766,8 @@ const armamentAbilitiesContent = [
             minute1:       /**/ false,
             round1:        /**/ false,
             instantaneous: /**/ false,
-            hour1:         /**/ false
+            hour1:         /**/ false,
+            minute5:       /**/ false
         },
         name: "Нечестивая Тьма (Вознесенный) [Unholy Dark (Ascended)]", 
         requirements: "Шесть способностей тьмы",
@@ -1728,7 +1794,8 @@ const armamentAbilitiesContent = [
             minute1:       /**/ false,
             round1:        /**/ false,
             instantaneous: /**/ false,
-            hour1:         /**/ false
+            hour1:         /**/ false,
+            minute5:       /**/ false
         },
         name: "Броня [Armor]", 
         requirements: "",
@@ -1760,7 +1827,8 @@ const armamentAbilitiesContent = [
             minute1:       /**/ false,
             round1:        /**/ false,
             instantaneous: /**/ false,
-            hour1:         /**/ false
+            hour1:         /**/ false,
+            minute5:       /**/ false
         },
         name: "Щит [Shield]", 
         requirements: "",
@@ -1787,7 +1855,8 @@ const armamentAbilitiesContent = [
             minute1:       /**/ false,
             round1:        /**/ false,
             instantaneous: /**/ true,
-            hour1:         /**/ false
+            hour1:         /**/ false,
+            minute5:       /**/ false
         },
         name: "Удар щитом [Shield Bash]", 
         requirements: "Способность Щит [Shield]",
@@ -1816,7 +1885,8 @@ const armamentAbilitiesContent = [
             minute1:       /**/ false,
             round1:        /**/ true,
             instantaneous: /**/ false,
-            hour1:         /**/ false
+            hour1:         /**/ false,
+            minute5:       /**/ false
         },
         name: "Оборонительный всплеск [Defensive Surge]", 
         requirements: "Одна оборонительная способность",
@@ -1845,7 +1915,8 @@ const armamentAbilitiesContent = [
             minute1:       /**/ false,
             round1:        /**/ false,
             instantaneous: /**/ true,
-            hour1:         /**/ false
+            hour1:         /**/ false,
+            minute5:       /**/ false
         },
         name: "Большой спасбросок [Greater Saving Throw]", 
         requirements: "Две оборонительные способности",
@@ -1874,7 +1945,8 @@ const armamentAbilitiesContent = [
             minute1:       /**/ false,
             round1:        /**/ false,
             instantaneous: /**/ false,
-            hour1:         /**/ false
+            hour1:         /**/ false,
+            minute5:       /**/ false
         },
         name: "Железное тело [Iron Body]", 
         requirements: "Три оборонительные способности",
@@ -1901,7 +1973,8 @@ const armamentAbilitiesContent = [
             minute1:       /**/ false,
             round1:        /**/ false,
             instantaneous: /**/ false,
-            hour1:         /**/ false
+            hour1:         /**/ false,
+            minute5:       /**/ false
         },
         name: "Шипованный доспех [Thornmail]", 
         requirements: "Четыре оборонительные способности",
@@ -1928,7 +2001,8 @@ const armamentAbilitiesContent = [
             minute1:       /**/ false,
             round1:        /**/ false,
             instantaneous: /**/ false,
-            hour1:         /**/ false
+            hour1:         /**/ false,
+            minute5:       /**/ false
         },
         name: "Сопротивление заклинаниям [Spell Resistance]", 
         requirements: "Пять оборонительных способностей",
@@ -1954,7 +2028,8 @@ const armamentAbilitiesContent = [
             minute1:       /**/ false,
             round1:        /**/ false,
             instantaneous: /**/ false,
-            hour1:         /**/ false
+            hour1:         /**/ false,
+            minute5:       /**/ false
         },
         name: "Сопротивление заклинаниям [Quick Defense]", 
         requirements: "Шесть оборонительных способностей",
@@ -1981,13 +2056,441 @@ const armamentAbilitiesContent = [
             minute1:       /**/ false,
             round1:        /**/ false,
             instantaneous: /**/ true,
-            hour1:         /**/ false
+            hour1:         /**/ false,
+            minute5:       /**/ false
         },
         name: "Защитник [Quick Defense]", 
         requirements: "Шесть оборонительных способностей",
         data:`
         <p>Если существо в радиусе действия будет подвергнуто воздействию заклинания или способности, и это заклинание или способность активирует способность брони, если вы были ее носителем, вы можете активировать способность брони, вместо этого ваш союзник все активные эффекты от этой способности.</p>
-        <p>Вы можете повторно выбрать эту способность во второй раз, если вы это сделаете, каждый раз, когда вы активируете свою способность Брони, вы можете заставить согласное существо в пределах 60 футов получить Броню и получить от нее пользу.</p>
+        <p>Вы можете повторно выбрать эту способность во второй раз, если вы это сделаете, каждый раз, когда вы активируете свою способность Брони, вы можете заставить согласное существо в пределах 60 футов получить Броню вместе с ее эффектами.</p>
         `
-    },
+    }, //Quick Defense 10
+    {
+        type: tp.defence,
+        cost: 0,
+        rules: false, 
+        castingTime:      castTime.action,
+        range:            rng.self,
+        components: {
+            verbal:       /*v*/ false,  
+            somatic:      /*s*/ false,  
+            material:     /*m*/ false, 
+            released:     /*w*/ false  
+        },
+        duration: {
+            until_sealed:  /**/ false,
+            concentration: /**/ false,
+            minute1:       /**/ false,
+            round1:        /**/ false,
+            instantaneous: /**/ false,
+            hour1:         /**/ false,
+            minute5:       /**/ false
+        },
+        name: "Повышенное сопротивление заклинаниям (возвышенный) [Greater Spell Resistance (Ascended)]", 
+        requirements: "Семь оборонительных способностей",
+        data:`
+        <p>Во время Вознесения у вас есть сопротивление урону от заклинаний.</p>
+        `
+    }, //Greater Spell Resistance (Ascended) 11
+    {
+        type: tp.earth,
+        cost: 1,
+        rules: true, 
+        castingTime:      castTime.action,
+        range:            rng.self,
+        components: {
+            verbal:       /*v*/ true,  
+            somatic:      /*s*/ true,  
+            material:     /*m*/ false, 
+            released:     /*w*/ true  
+        },
+        duration: {
+            until_sealed:  /**/ true,
+            concentration: /**/ false,
+            minute1:       /**/ false,
+            round1:        /**/ false,
+            instantaneous: /**/ false,
+            hour1:         /**/ false,
+            minute5:       /**/ false
+        },
+        name: "Форма Земли [Earth Form]", 
+        requirements: "Семь оборонительных способностей",
+        data:`
+        <p>Вашим вооружением становится чистая земля. Пока эта способность активна, тип урона вашего оружия меняется на дробящий урон.</p>
+        <p>Если у вас есть Призыв, вы можете применить эту способность и к его оружию. Вы можете отклонить эту способность как бонусное действие.</p>
+        <p>Вы можете повторно выбрать эту способность несколько раз, каждый раз выбирая один из следующих вариантов:</p>
+        <p> &mdash; Вы можете активировать эту способность как бонусное действие и отключить ее по своему желанию.</p>
+        <p> &mdash; Эта способность больше не требует компонентов V или S.</p>
+        `
+    }, //Earth Form 1 ----------------------------------- Earth
+    {
+        type: tp.earth,
+        cost: 2,
+        rules: true, 
+        castingTime:      castTime.action,
+        range:            rng.self,
+        components: {
+            verbal:       /*v*/ true,  
+            somatic:      /*s*/ true,  
+            material:     /*m*/ false, 
+            released:     /*w*/ true  
+        },
+        duration: {
+            until_sealed:  /**/ true,
+            concentration: /**/ true,
+            minute1:       /**/ false,
+            round1:        /**/ false,
+            instantaneous: /**/ false,
+            hour1:         /**/ false,
+            minute5:       /**/ false
+        },
+        name: "Каменное оружие [Stone Weapon]", 
+        requirements: "",
+        data:`
+        <p>Ваше вооружение наполнено большими кусками камня и земли, наносящими дополнительный дробящий урон 1d4.</p>
+        <p>Вы можете повторно выбрать эту способность несколько раз, каждый раз выбирая один из следующих вариантов:</p>
+        <p> &mdash; Вы можете активировать эту способность как бонусное действие и отключить ее по своему желанию.</p>
+        <p> &mdash; Эта способность больше не требует компонентов V или S.</p>
+        <p> &mdash; Увеличьте размер кубика урона на один шаг, максимум до 1d12.</p>
+        `
+    }, //Stone Weapon 2
+    {
+        type: tp.earth,
+        cost: 0,
+        rules: false, 
+        castingTime:      castTime.action,
+        range:            rng.self,
+        components: {
+            verbal:       /*v*/ false,  
+            somatic:      /*s*/ false,  
+            material:     /*m*/ false, 
+            released:     /*w*/ false  
+        },
+        duration: {
+            until_sealed:  /**/ false,
+            concentration: /**/ false,
+            minute1:       /**/ false,
+            round1:        /**/ false,
+            instantaneous: /**/ false,
+            hour1:         /**/ false,
+            minute5:       /**/ false
+        },
+        name: "Гранитное оружие [Granite Weapon]", 
+        requirements: "Одна земляная способность",
+        data:`
+        <p>Когда вы наносите критический удар своим вооружением, цель получает дополнительный дробящий урон 1d4 и получает удар с такой силой, что становится недееспособной. В конце каждого своего хода цель может совершить спасбросок Телосложения. В случае успеха эта способность заканчивается на цели.</p>
+        <p>Вы можете повторно выбрать эту способность несколько раз, каждый раз выбирая один из следующих вариантов:</p>
+        <p> &mdash; Увеличьте DC спасброска на 1.</p>
+        <p> &mdash; Увеличьте размер кубика урона на один шаг, максимум до 1d10.</p>
+        `
+    }, //Granite Weapon 3
+    {
+        type: tp.earth,
+        cost: 1,
+        rules: true, 
+        castingTime:      castTime.action,
+        range:            rng.ft30,
+        components: {
+            verbal:       /*v*/ true,  
+            somatic:      /*s*/ true,  
+            material:     /*m*/ false, 
+            released:     /*w*/ false  
+        },
+        duration: {
+            until_sealed:  /**/ false,
+            concentration: /**/ true,
+            minute1:       /**/ false,
+            round1:        /**/ false,
+            instantaneous: /**/ false,
+            hour1:         /**/ true,
+            minute5:       /**/ false
+        },
+        name: "Лепка земли [Mold Earth]", 
+        requirements: "Одна земляная способность",
+        data:`
+        <p>Вы выбираете или прикасаетесь к части земли, грязи, камня или подобного материала, которую вы можете видеть в пределах дистанции и которая умещается в пределах 10-футового куба. Вы манипулируете им одним из следующих способов:</p>
+        <p> &mdash; Вы можете изменить форму материала в этой области любым способом по вашему выбору на время действия. Вы можете повысить или понизить высоту местности, создать или засыпать траншею, возвести или сгладить стену или сформировать колонну. Масштаб любых таких изменений не может превышать половины наибольшего размера области.</p>
+        <p> &mdash; Вы вызываете появление на материале форм, цветов или того и другого, произносите слова, создаете изображения или формируете узоры. Изменения действуют в течение всего срока действия.</p>
+        <p> &mdash; Если материал, на который вы нацелены, находится на земле, вы превращаете его в труднопроходимую местность. Альтернативно, вы можете сделать землю нормальной местностью, если это уже сложная местность. Это изменение длится в течение всего времени.</p>
+        <p> &mdash; Вы превращаете камень в грязь или наоборот. Если вы хотите превратить камень в грязь, пока существо находится в этой области, оно должно преуспеть в спасброске силы, иначе эта область будет считаться труднопроходимой местностью. Если вы хотите превратить грязь в камень, существа в этой области должны преуспеть в спасброске Ловкости, иначе они будут удержаны на время действия. Скованное существо может действием совершить дополнительный спасбросок Силы, чтобы оторваться от затвердевшей скалы.</p>
+        <p>Если вы используете эту способность несколько раз, вы можете иметь только количество ее немгновенных эффектов, равное вашему бонусу мастерства, активных одновременно, и вы можете игнорировать такой эффект как действие.</p>
+        <p>Каждый раз, когда вы выбираете эту способность, площадь куба, на который вы можете воздействовать, увеличивается на 5 футов, а толщина, на которую вы можете влиять, увеличивается на 1 фут.</p>
+        <p>Вы можете выбирать эту способность несколько раз, каждый раз выбирая один из следующих вариантов:</p>
+        <p> &mdash; Увеличить дальность на 10 футов.</p>
+        <p> &mdash; Эта способность больше не требует компонентов V.</p>
+        <p> &mdash; Увеличение продолжительности на 1 час.</p>
+        <p> &mdash; Эта способность больше не требует концентрации.</p>
+        `
+    }, //Mold Earth 4
+    {
+        type: tp.earth,
+        cost: 1,
+        rules: true, 
+        castingTime:      castTime.action,
+        range:            rng.self,
+        components: {
+            verbal:       /*v*/ true,  
+            somatic:      /*s*/ true,  
+            material:     /*m*/ false, 
+            released:     /*w*/ true  
+        },
+        duration: {
+            until_sealed:  /**/ true,
+            concentration: /**/ true,
+            minute1:       /**/ false,
+            round1:        /**/ false,
+            instantaneous: /**/ false,
+            hour1:         /**/ false,
+            minute5:       /**/ false
+        },
+        name: "Земляной щит [Earth Shield]", 
+        requirements: "Две земляной способности",
+        data:`
+        <p>Пока способность не закончится, кусочки камня разлетятся по вашему телу, и вы получите следующие преимущества:</p>
+        <p> &mdash; Вы уменьшаете получаемый вами физический урон на 3.</p>
+        <p> &mdash; Это значение увеличивается на единицу каждый раз, когда вы выбираете эту способность.</p>
+        <p> &mdash; Вы можете перемещаться по сложной местности, состоящей из земли, камня или подобного материала, не затрачивая лишнего движения.</p>
+        <p> &mdash; Вы можете рассеять щит, стреляя камнями и осколками в сфере радиусом 20 футов с центром на вас. Существа внутри сферы должны совершить спасбросок ловкости или получить дробящий урон 2d6. При успешном спасброске они получают половину урона. Каждый раз, когда вы выбираете эту способность, радиус сферы увеличивается на 5 футов.</p>
+
+        <p>Вы можете повторно выбрать эту способность несколько раз, каждый раз выбирая один из следующих вариантов:</p>
+        <p> &mdash; Эта способность больше не требует компонентов V или S.</p>
+        <p> &mdash; Эта способность больше не требует концентрации.</p>
+        <p> &mdash; Увеличьте урон на 1d6, максимум до 7d6.</p>
+        `
+    }, //Earth Shield 5
+    {
+        type: tp.earth,
+        cost: 1,
+        rules: true, 
+        castingTime:      castTime.action,
+        range:            rng.ft60,
+        components: {
+            verbal:       /*v*/ true,  
+            somatic:      /*s*/ true,  
+            material:     /*m*/ false, 
+            released:     /*w*/ true  
+        },
+        duration: {
+            until_sealed:  /**/ false,
+            concentration: /**/ true,
+            minute1:       /**/ false,
+            round1:        /**/ false,
+            instantaneous: /**/ false,
+            hour1:         /**/ false,
+            minute5:       /**/ true
+        },
+        name: "Стена камня [Wall of Stone]", 
+        requirements: "Лепка земли [Mold Earth] и одна другая земляная способности",
+        data:`
+        <p>Немагическая стена из твердого камня возникает в выбранной вами точке в пределах дистанции.</p>
+        <p>Стена имеет толщину 3 дюйма и состоит из пяти панелей размером 10 на 10 футов. Каждая панель должна быть непрерывной, по крайней мере, с другой панелью. Каждый раз, когда вы повторно выбираете эту способность, толщина увеличивается на 1 дюйм.</p>
+        <p>Если стена прорезает пространство существа при его появлении, существо отталкивается к одной стороне стены (на ваш выбор). Если существо со всех сторон окружено стеной (или стеной и другой твердой поверхностью), оно может совершить спасбросок Ловкости. В случае успеха он может использовать свою реакцию, чтобы набрать свою скорость и больше не быть окруженным стеной.</p>
+        <p>Стена может иметь любую форму по вашему желанию, однако она не может занимать то же пространство, что и существо или объект. стена не обязательно должна быть вертикальной или опираться на прочный фундамент. Однако он должен сливаться с существующим камнем и прочно поддерживаться им. Таким образом, вы можете использовать это заклинание, чтобы преодолеть пропасть или создать пандус.</p>
+        <p>Если вы создаете пролет длиной более 20 футов, вам необходимо уменьшить вдвое размер каждой панели, чтобы создать опоры. Вы можете грубо придать стене форму, чтобы создать зубцы, зубцы и так далее.</p>
+        <p>Стена — это объект из камня, который можно повредить и, таким образом, пробить. Каждая панель имеет AC 15 и 10 очков жизни на дюйм толщины. Уменьшение хитов панели до 0 разрушает ее и может привести к разрушению соединенных панелей по усмотрению DM.</p>
+        <p>Если вы сохраняете концентрацию на этой способности в течение всего ее действия, стена становится постоянной и не может быть развеяна. В противном случае стена исчезнет, когда способность закончится.</p>
+        
+        <p>Вы можете повторно выбрать эту способность несколько раз, каждый раз выбирая один из следующих вариантов:</p>
+        <p> &mdash; Увеличение дальности на 10 футов.</p>
+        <p> &mdash; Эта способность больше не требует компонентов V или S.</p>
+        <p> &mdash; Эта способность больше не требует концентрации.</p>
+        <p> &mdash; Вы можете создать дополнительную панель.</p>
+        `
+    }, //Wall of Stone 6
+    {
+        type: tp.earth,
+        cost: 2,
+        rules: true, 
+        castingTime:      castTime.action,
+        range:            rng.ft100,
+        components: {
+            verbal:       /*v*/ true,  
+            somatic:      /*s*/ true,  
+            material:     /*m*/ false, 
+            released:     /*w*/ true  
+        },
+        duration: {
+            until_sealed:  /**/ false,
+            concentration: /**/ false,
+            minute1:       /**/ false,
+            round1:        /**/ false,
+            instantaneous: /**/ true,
+            hour1:         /**/ false,
+            minute5:       /**/ false
+        },
+        name: "Земляной луч [Earth Blast]", 
+        requirements: "Три земляных способности",
+        data:`
+        <p>Выберите одно существо, которое вы видите в пределах дистанции. В цель запускается снаряд из перепаханной земли.</p>
+        <p>Совершите дальнюю атаку по цели. При попадании цель получает дробящий урон 3d8.</p>
+        <p>Каждый раз, когда вы повторно выбираете эту способность, вы получаете дополнительный снаряд (максимум четыре). Вы можете направить дополнительные снаряды в ту же цель или в другую, для любых дополнительных снарядов необходимо сделать отдельный бросок атаки.</p>
+
+        <p>Вы можете повторно выбрать эту способность несколько раз, каждый раз выбирая один из следующих вариантов:</p>
+        <p> &mdash; Эта способность больше не требует компонентов V.</p>
+        <p> &mdash; Дальность увеличена на 10 футов.</p>
+        <p> &mdash; Увеличьте размер кубика урона до d10. Вы должны выбрать эту способность четыре раза, прежде чем сможете выбрать эту опцию.</p>
+        `
+    }, //Earth Blast 7
+    {
+        type: tp.earth,
+        cost: 2,
+        rules: true, 
+        castingTime:      castTime.action,
+        range:            rng.self,
+        components: {
+            verbal:       /*v*/ true,  
+            somatic:      /*s*/ true,  
+            material:     /*m*/ false, 
+            released:     /*w*/ true  
+        },
+        duration: {
+            until_sealed:  /**/ false,
+            concentration: /**/ false,
+            minute1:       /**/ false,
+            round1:        /**/ false,
+            instantaneous: /**/ true,
+            hour1:         /**/ false,
+            minute5:       /**/ false
+        },
+        name: "Тремор [Tremor]", 
+        requirements: "Четыре земляных способности",
+        data:`
+        <p>Вы наносите удар о землю, создавая дрожь, которая расходится от вас в радиусе 40 футов. Каждое существо в радиусе действия должно преуспеть в спасброске Ловкости, иначе оно получит дробящий урон 7d10 и будет сбито с ног. Существо, преуспевшее в спасброске, получает вдвое меньше урона и не сбивается с ног.</p>
+        <p>Каждый раз, когда вы повторно выбираете эту способность, радиус увеличивается на 10 футов.</p>
+
+        <p>Вы можете повторно выбрать эту способность несколько раз, каждый раз выбирая один из следующих вариантов:</p>
+        <p> &mdash; Эта способность больше не требует компонентов V.</p>
+        <p> &mdash; Увеличьте СЛ спасброска на 1.</p>
+        <p> &mdash; Увеличьте урон на 1d10.</p>
+        `
+    }, //Tremor 8
+    {
+        type: tp.earth,
+        cost: 3,
+        rules: true, 
+        castingTime:      castTime.round,
+        range:            rng.ft120,
+        components: {
+            verbal:       /*v*/ true,  
+            somatic:      /*s*/ true,  
+            material:     /*m*/ false, 
+            released:     /*w*/ true  
+        },
+        duration: {
+            until_sealed:  /**/ false,
+            concentration: /**/ true,
+            minute1:       /**/ true,
+            round1:        /**/ false,
+            instantaneous: /**/ false,
+            hour1:         /**/ false,
+            minute5:       /**/ false
+        },
+        name: "Каменные Столпы (Ультимативный) [Pillars of Stone (Ultimate)]", 
+        requirements: "Пять земляных способностей",
+        data:`
+        <p>Пока действует эта способность, вы можете вызывать из земли каменные колонны.</p>
+        <p>Действием вы заставляете каменную колонну взрываться из мест на земле, которые вы можете видеть в пределах досягаемости. Каждый столб представляет собой цилиндр диаметром 5 футов и высотой до 30 футов; каждый раз, когда вы повторно выбираете эту способность, диаметр и высота увеличиваются на 5 футов. Земля, где появляется столб, должна быть достаточно широкой для его диаметра, и вы можете нацеливаться на землю под существом, если это существо Среднего размера или меньше. Каждый столб имеет КД 5 и 30 очков жизни. При уменьшении хитов до 0 столб рассыпается на щебень, создавая область труднопроходимой местности радиусом 10 футов. Завалы сохраняются до тех пор, пока их не расчистят.</p>
+        <p>Если под существом создается столб, то это существо должно преуспеть в спасброске Ловкости, иначе оно получит дробящий урон 5d8 и будет поднято столбом. Существо может отказаться от спасброска. Если столб не может достичь своей полной высоты из-за потолка или другого препятствия, существо на столбе получает дробящий урон 5d8 и оказывается удерживаемым, зажатым между столбом и препятствием.</p>
+        <p>Удерживаемое существо может действием совершить проверку Силы или Ловкости (по выбору существа) против СЛ спасброска способности. В случае успеха существо больше не сдерживается и должно либо сойти с колонны, либо упасть с нее.</p>
+        <p>Каждый раз, когда вы повторно выбираете эту способность, урон увеличивается на 1d8.</p>
+
+        <p>Вы можете повторно выбрать эту способность несколько раз, каждый раз выбирая один из следующих вариантов:</p>
+        <p> &mdash; Увеличение дальности на 20 футов.</p>
+        <p> &mdash; Эта способность больше не требует компонентов V.</p>
+        <p> &mdash; Вместо этого вы действием заставляете два столба земли вырваться из земли из двух разных точек вместо одной.</p>
+        `
+    }, //Pillars of Stone (Ultimate) 9
+    {
+        type: tp.earth,
+        cost: 4,
+        rules: true, 
+        castingTime:      castTime.round,
+        range:            rng.ft500,
+        components: {
+            verbal:       /*v*/ true,  
+            somatic:      /*s*/ true,  
+            material:     /*m*/ false, 
+            released:     /*w*/ true  
+        },
+        duration: {
+            until_sealed:  /**/ false,
+            concentration: /**/ true,
+            minute1:       /**/ true,
+            round1:        /**/ false,
+            instantaneous: /**/ false,
+            hour1:         /**/ false,
+            minute5:       /**/ false
+        },
+        name: "Землетресение (возвышенный) [Earthquake (Ascended)]", 
+        requirements: "Шесть земляных способностей",
+        data:`
+        <p>Вы создаете сейсмическое возмущение в точке на земле, которую можете видеть в пределах досягаемости.</p>
+        <p>В течение этого времени интенсивная дрожь прорывает землю по кругу радиусом 100 футов с центром в этой точке и сотрясает существ и конструкции, соприкасающиеся с землей в этой области.</p>
+        <p>Местность в этом районе становится труднопроходимой. Каждое существо на земле, которое концентрируется, должно совершить спасбросок Телосложения. При провале сохранения концентрация существа нарушается.</p>
+        <p>Когда вы используете эту способность и в конце каждого хода концентрируетесь на ней, каждое существо на земле в этой области должно совершить спасбросок Ловкости. При провале существо сбивается с ног и получает дробящий урон 10d6.</p>
+        <p>Эта способность может иметь дополнительные эффекты в зависимости от местности в области, как это определено DM.</p>
+        <p><strong>Трещины</strong></p>
+        <p>Трещины открываются по всей области действия способности в начале вашего следующего хода после произнесения заклинания. Всего открывается 1d6 таких трещин в местах, выбранных Мастером. Каждый имеет глубину 1d10 x 10 футов, ширину 10 футов и простирается от одного края области заклинания до противоположной стороны. Существо, стоящее на месте, где открывается трещина, должно преуспеть в спасброске Ловкости, иначе упадет. Существо, успешно сделавшее спасбросок, движется вместе с краем трещины, когда она открывается.</p>
+        <p>Трещина, открывающаяся под конструкцией, приводит к ее автоматическому обрушению (см. ниже).</p>
+
+        <p><strong>Здания</strong></p>
+        <p>Землетресение наносит 50 дробящего урона любой конструкции, соприкасающейся с землей в этой области, когда вы произносите заклинание, а также в начале каждого вашего хода, пока заклинание не закончится. Если хиты конструкции падают до 0, она рушится и потенциально наносит урон близлежащим существам. Существо, находящееся в пределах половины высоты строения, должно совершить спасбросок Ловкости. В случае провала существо получает дробящий урон 20d6, сбивается с ног и закапывается под обломками, требуя проверку Силы (Атлетика) со Сл 20 в качестве действия, чтобы спастись. DM может регулировать DC выше или ниже, в зависимости от характера обломков. При успешном спасброске существо получает вдвое меньше урона и не падает на землю и не закапывается.</p>
+        <p>Вы можете выбрать эту способность второй раз, если вы это сделаете, количество трещин удваивается, размер трещин удваивается, а урон, наносимый этой способностью структурам, удваивается.</p>
+        `
+    }, //Earthquake (Ascended) 10
+    {
+        type: tp.earth,
+        cost: 0,
+        rules: false, 
+        castingTime:      castTime.action,
+        range:            rng.self,
+        components: {
+            verbal:       /*v*/ false,  
+            somatic:      /*s*/ false,  
+            material:     /*m*/ false, 
+            released:     /*w*/ false  
+        },
+        duration: {
+            until_sealed:  /**/ false,
+            concentration: /**/ false,
+            minute1:       /**/ false,
+            round1:        /**/ false,
+            instantaneous: /**/ false,
+            hour1:         /**/ false,
+            minute5:       /**/ false
+        },
+        name: "Бедрок  (возвышенный) [Bedrock (Ascended)]", 
+        requirements: "Шесть земляных способностей",
+        data:`
+        <p>Ваши земные способности увеличиваются в силе. Ваши способности вооружения или Кидо, наносящие дробящий урон, игнорируют сопротивление. Если существо невосприимчиво к дробящему урону, вместо этого оно получает половину урона.</p>
+        `
+    }, //Bedrock (Ascended) 11
+    {
+        type: tp.earth,
+        cost: 1,
+        rules: true, 
+        castingTime:      castTime.action,
+        range:            rng.self,
+        components: {
+            verbal:       /*v*/ true,  
+            somatic:      /*s*/ true,  
+            material:     /*m*/ false, 
+            released:     /*w*/ true  
+        },
+        duration: {
+            until_sealed:  /**/ true,
+            concentration: /**/ false,
+            minute1:       /**/ false,
+            round1:        /**/ false,
+            instantaneous: /**/ false,
+            hour1:         /**/ false,
+            minute5:       /**/ false
+        },
+        name: "Форма огня [Fire Form]", 
+        requirements: "Шесть земляных способностей",
+        data:`
+        <p>Ваши земные способности увеличиваются в силе. Ваши способности вооружения или Кидо, наносящие дробящий урон, игнорируют сопротивление. Если существо невосприимчиво к дробящему урону, вместо этого оно получает половину урона.</p>
+        `
+    }, // Fire Form 1 ----------------------------------- Fire
 ]
