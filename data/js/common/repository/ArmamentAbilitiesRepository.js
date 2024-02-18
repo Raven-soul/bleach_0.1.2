@@ -1768,12 +1768,41 @@ const armamentAbilitiesContent = [
         <p>Вы создаете щит в своей левой руке. Если при активации этой способности у вас есть Призыв, вместо этого ваш Призыв может получить щит.</p>
         <p>Вы можете повторно выбрать эту способность во второй раз, если вы это сделаете, пока держите щит, ваша вторая рука считается открытой.</p>
         `
-    }, //Shield
+    }, //Shield 2
     {
         type: tp.defence,
         cost: 2,
         rules: true, 
         castingTime:      castTime.bonus,
+        range:            rng.ft5,
+        components: {
+            verbal:       /*v*/ true,  
+            somatic:      /*s*/ true,  
+            material:     /*m*/ false, 
+            released:     /*w*/ true  
+        },
+        duration: {
+            until_sealed:  /**/ false,
+            concentration: /**/ false,
+            minute1:       /**/ false,
+            round1:        /**/ false,
+            instantaneous: /**/ true,
+            hour1:         /**/ false
+        },
+        name: "Удар щитом [Shield Bash]", 
+        requirements: "Способность Щит [Shield]",
+        data:`
+        <p>Ваш щит считается оружием ближнего боя, наносящим дробящий урон 1d4, вы получаете владение этим оружием.</p>
+        <p>Вы можете повторно выбрать эту способность несколько раз, каждый раз выбирая один из следующих вариантов:</p>
+        <p> &mdash; Увеличьте размер кубика урона на один шаг, максимум до 1d12.</p>
+        <p> &mdash; Ваш щит рассматривается как ваше вооружение с целью получения выгоды от любых бонусов, функций, заклинаний или способностей вооружения, которые дает ваше вооружение. Прежде чем выбрать этот вариант, вы должны были выбрать эту способность дважды.</p>
+        `
+    }, //Shield Bash 3
+    {
+        type: tp.defence,
+        cost: 3,
+        rules: true, 
+        castingTime:      castTime.reaction,
         range:            rng.self,
         components: {
             verbal:       /*v*/ true,  
@@ -1782,18 +1811,183 @@ const armamentAbilitiesContent = [
             released:     /*w*/ true  
         },
         duration: {
-            until_sealed:  /**/ true,
+            until_sealed:  /**/ false,
+            concentration: /**/ false,
+            minute1:       /**/ false,
+            round1:        /**/ true,
+            instantaneous: /**/ false,
+            hour1:         /**/ false
+        },
+        name: "Оборонительный всплеск [Defensive Surge]", 
+        requirements: "Одна оборонительная способность",
+        data:`
+        <p>Когда вас атакуют, вы создаете барьер. На время действия вы получаете 4 временных хита.</p>
+        <p>Вы можете повторно выбрать эту способность несколько раз, каждый раз выбирая один из следующих вариантов:</p>
+        <p> &mdash; Эта способность больше не требует компонентов V или S.</p>
+        <p> &mdash; Увеличьте временные очки жизни на +2.</p>
+        `
+    }, //Defensive Surge 4
+    {
+        type: tp.defence,
+        cost: 3,
+        rules: true, 
+        castingTime:      castTime.reaction,
+        range:            rng.self,
+        components: {
+            verbal:       /*v*/ true,  
+            somatic:      /*s*/ true,  
+            material:     /*m*/ false, 
+            released:     /*w*/ true  
+        },
+        duration: {
+            until_sealed:  /**/ false,
+            concentration: /**/ false,
+            minute1:       /**/ false,
+            round1:        /**/ false,
+            instantaneous: /**/ true,
+            hour1:         /**/ false
+        },
+        name: "Большой спасбросок [Greater Saving Throw]", 
+        requirements: "Две оборонительные способности",
+        data:`
+        <p>Когда вы совершаете спасбросок, в качестве реакции вы получаете бонус +1 к этому спасброску.</p>
+        <p>Вы можете повторно выбрать эту способность несколько раз, каждый раз выбирая один из следующих вариантов:</p>
+        <p> &mdash; Эта способность больше не требует компонентов V или S.</p>
+        <p> &mdash; Увеличьте бонус, который дает эта способность, на 1, максимум до +5.</p>
+        `
+    }, //Greater Saving Throw 5
+    {
+        type: tp.defence,
+        cost: 0,
+        rules: false, 
+        castingTime:      castTime.action,
+        range:            rng.self,
+        components: {
+            verbal:       /*v*/ false,  
+            somatic:      /*s*/ false,  
+            material:     /*m*/ false, 
+            released:     /*w*/ false  
+        },
+        duration: {
+            until_sealed:  /**/ false,
             concentration: /**/ false,
             minute1:       /**/ false,
             round1:        /**/ false,
             instantaneous: /**/ false,
             hour1:         /**/ false
         },
-        name: "Удар щитом [Shield Bash]", 
-        requirements: "Способность Щит [Shield]",
+        name: "Железное тело [Iron Body]", 
+        requirements: "Три оборонительные способности",
         data:`
-        <p>Вы создаете щит в своей левой руке. Если при активации этой способности у вас есть Призыв, вместо этого ваш Призыв может получить щит.</p>
-        <p>Вы можете повторно выбрать эту способность во второй раз, если вы это сделаете, пока держите щит, ваша вторая рука считается открытой.</p>
+        <p>У вас есть порог урона, равный 3 (источник с порогом урона имеет иммунитет ко всему урону, если только он не получит количество урона от одной атаки или эффекта, равное или превышающее его порог урона, и в этом случае он получает урон как обычно).</p>
+        <p>Вы можете повторно выбрать эту способность несколько раз, каждый раз увеличивая порог урона на 1.</p>
+        `
+    }, //Iron Body 6
+    {
+        type: tp.defence,
+        cost: 0,
+        rules: false, 
+        castingTime:      castTime.action,
+        range:            rng.self,
+        components: {
+            verbal:       /*v*/ false,  
+            somatic:      /*s*/ false,  
+            material:     /*m*/ false, 
+            released:     /*w*/ false  
+        },
+        duration: {
+            until_sealed:  /**/ false,
+            concentration: /**/ false,
+            minute1:       /**/ false,
+            round1:        /**/ false,
+            instantaneous: /**/ false,
+            hour1:         /**/ false
+        },
+        name: "Шипованный доспех [Thornmail]", 
+        requirements: "Четыре оборонительные способности",
+        data:`
+        <p>Каждый раз, когда вам наносят урон рукопашной атакой, атакующий получает 1d4 урона. Эта способность может работать в сочетании с такими способностями, как «Форма огня».</p>
+        <p>Вы можете повторно выбрать эту способность несколько раз, каждый раз увеличивая урон дополнительно на 1d4 до максимального значения 5d4.</p>
+        `
+    }, //Thornmail 7
+    {
+        type: tp.defence,
+        cost: 0,
+        rules: false, 
+        castingTime:      castTime.action,
+        range:            rng.self,
+        components: {
+            verbal:       /*v*/ false,  
+            somatic:      /*s*/ false,  
+            material:     /*m*/ false, 
+            released:     /*w*/ false  
+        },
+        duration: {
+            until_sealed:  /**/ false,
+            concentration: /**/ false,
+            minute1:       /**/ false,
+            round1:        /**/ false,
+            instantaneous: /**/ false,
+            hour1:         /**/ false
+        },
+        name: "Сопротивление заклинаниям [Spell Resistance]", 
+        requirements: "Пять оборонительных способностей",
+        data:`
+        <p>Нося доспехи, вы получаете преимущество в спасбросках от заклинаний. Если ваш Призыв носит броню, вместо этого он получает выгоду от этой способности.</p>
+        `
+    }, //Spell Resistance 8
+    {
+        type: tp.defence,
+        cost: 0,
+        rules: false, 
+        castingTime:      castTime.action,
+        range:            rng.self,
+        components: {
+            verbal:       /*v*/ false,  
+            somatic:      /*s*/ false,  
+            material:     /*m*/ false, 
+            released:     /*w*/ false  
+        },
+        duration: {
+            until_sealed:  /**/ false,
+            concentration: /**/ false,
+            minute1:       /**/ false,
+            round1:        /**/ false,
+            instantaneous: /**/ false,
+            hour1:         /**/ false
+        },
+        name: "Сопротивление заклинаниям [Quick Defense]", 
+        requirements: "Шесть оборонительных способностей",
+        data:`
+        <p>Вы получаете дополнительную реакцию, дополнительные реакции от этой способности можно использовать только для барьерных способностей и требуют от вас затрат 2 SP.</p>
+        <p>Вы можете повторно выбрать эту способность несколько раз, каждый раз получая дополнительную реакцию.</p>
+        `
+    }, //Quick Defense 9
+    {
+        type: tp.defence,
+        cost: 4,
+        rules: true, 
+        castingTime:      castTime.reaction,
+        range:            rng.ft60,
+        components: {
+            verbal:       /*v*/ true,  
+            somatic:      /*s*/ true,  
+            material:     /*m*/ false, 
+            released:     /*w*/ true  
+        },
+        duration: {
+            until_sealed:  /**/ false,
+            concentration: /**/ false,
+            minute1:       /**/ false,
+            round1:        /**/ false,
+            instantaneous: /**/ true,
+            hour1:         /**/ false
+        },
+        name: "Защитник [Quick Defense]", 
+        requirements: "Шесть оборонительных способностей",
+        data:`
+        <p>Если существо в радиусе действия будет подвергнуто воздействию заклинания или способности, и это заклинание или способность активирует способность брони, если вы были ее носителем, вы можете активировать способность брони, вместо этого ваш союзник все активные эффекты от этой способности.</p>
+        <p>Вы можете повторно выбрать эту способность во второй раз, если вы это сделаете, каждый раз, когда вы активируете свою способность Брони, вы можете заставить согласное существо в пределах 60 футов получить Броню и получить от нее пользу.</p>
         `
     },
 ]
