@@ -8,23 +8,28 @@
 */
 
 const castTime = {
+    none: "none",
     bonus: "Bonus action",
     action: "1 action",
     reaction: "Reaction",
-    round: "1 round"
+    round: "1 round"    
 }
 
 const rng = {
+    none: "none",
     self: "Self",
     touch: "Touch",
     ft5: "5 feet",
     ft30: "30 feet",
+    ft40: "40 feet",
     ft60: "60 feet",
     ft80: "80 feet",
     ft100: "100 feet",
     ft120: "120 feet",
     ft500: "500 feet",
-    heilinBogen: "Equal to your Heilig Bogen"
+    heilinBogen: "Equal to your Heilig Bogen",
+    cone30: "Self (30-foot cone)",
+    mile1: "1 mile"
 }
 
 const tp = {
@@ -34,7 +39,9 @@ const tp = {
     dark: "Dark",
     defence: "Defence",
     earth: "Earth",
-    fire: "Fire"
+    fire: "Fire",
+    common: "Common",
+    gravity: "Gravity"
 }
 
 const armamentAbilitiesContent = [
@@ -2557,4 +2564,783 @@ const armamentAbilitiesContent = [
         <p> &mdash; Увеличьте размер кубика урона на один шаг, максимум до 1d10.</p>
         `
     }, // Scorching Weapon 3
+    {
+        type: tp.fire,
+        cost: 1,
+        rules: true, 
+        castingTime:      castTime.action,
+        range:            rng.ft60,
+        components: {
+            verbal:       /*v*/ false,  
+            somatic:      /*s*/ true,  
+            material:     /*m*/ false, 
+            released:     /*w*/ false  
+        },
+        duration: {
+            until_sealed:  /**/ false,
+            concentration: /**/ false,
+            minute1:       /**/ false,
+            round1:        /**/ false,
+            instantaneous: /**/ true,
+            hour1:         /**/ true,
+            minute5:       /**/ false
+        },
+        name: "Контроль пламени [Control Flames]", 
+        requirements: "Одна огненная способность",
+        data:`
+        <p>Вы выбрали немагическое пламя, которое можете видеть в пределах дистанции и которое умещается в пределах 5-футового куба. Вы можете повлиять на него одним из следующих способов:</p>
+        <p> &mdash; Вы мгновенно гасите пламя внутри куба.</p>
+        <p> &mdash; Вы удваиваете или уменьшаете вдвое интенсивность яркого и тусклого света, излучаемого пламенем, меняете его цвет или и то, и другое. Вы выбираете продолжительность.</p>
+        <p> &mdash; Вы заставляете простые формы, такие как расплывчатая форма существа, неодушевленный предмет или локация, появляться в огне и оживать, пока вы лежите. Вы выбираете продолжительность.</p>
+        <p> &mdash; У вас также может появиться мерцающее пламя в вашей руке. Пламя остается там все время и не причиняет вреда ни вам, ни вашему оборудованию. Пламя излучает яркий свет в радиусе 10 футов и тусклый свет еще на 10 футов. Вы можете отклонить этот эффект как действие.</p>
+        <p>Каждый раз, когда вы повторно выбираете эту способность, куб увеличивается на 5 футов.</p>
+
+        <p>Вы можете повторно выбрать эту способность несколько раз, каждый раз выбирая один из следующих вариантов:</p>
+        <p> &mdash; Теперь вы можете воздействовать на магический огонь.</p>
+        <p> &mdash; Пламя, которое вы можете создать с помощью этой способности, не создает тепла и не использует кислород, если вы того пожелаете; это пламя можно скрыть или спрятать, но нельзя задушить или погасить</p>
+        <p> &mdash; Увеличьте длительность этой способности на 1 час.</p>
+        `
+    }, //Control Flames 4
+    {
+        type: tp.fire,
+        cost: 1,
+        rules: true, 
+        castingTime:      castTime.action,
+        range:            rng.self,
+        components: {
+            verbal:       /*v*/ true,  
+            somatic:      /*s*/ true,  
+            material:     /*m*/ false, 
+            released:     /*w*/ true  
+        },
+        duration: {
+            until_sealed:  /**/ true,
+            concentration: /**/ true,
+            minute1:       /**/ false,
+            round1:        /**/ false,
+            instantaneous: /**/ false,
+            hour1:         /**/ false,
+            minute5:       /**/ false
+        },
+        name: "Щит пламени [Fire Shield]", 
+        requirements: "Две огненные способности",
+        data:`
+        <p>Пламя пробегает по вашему телу на протяжении всего времени действия способности. Пламя не причинит вреда вам и вашему оборудованию. Пока способность не закончится, вы получаете следующие преимущества:</p>
+
+        <p> &mdash; У вас есть устойчивость к урону от огня и холода.</p>
+        <p> &mdash; Вы излучаете яркий свет в радиусе 5 футов и тусклый свет еще на 5 футов.</p>
+        <p> &mdash; Любое существо, которое впервые за ход перемещается в пределах 5 футов от вас или заканчивает там свой ход, получает урон огнём 1d4. Каждый раз, когда вы повторно выбираете эту способность, размер кубика урона увеличивается на один шаг, максимум до 1d10.</p>
+
+        <p>Вы можете повторно выбрать эту способность несколько раз, каждый раз выбирая один из следующих вариантов:</p>
+        <p> &mdash; Эта способность больше не требует компонентов V или S.</p>
+        <p> &mdash; Эта способность больше не требует концентрации.</p>
+        <p> &mdash; Диапазон яркого и тусклого света удваивается.</p>
+        <p> &mdash; Вместо этого вы невосприимчивы к урону от огня.</p>
+        <p> &mdash; Вы можете выбрать, будет ли урон от этой способности затрагивать существ или нет.</p>
+        `
+    }, //Fire Shield 5
+    {
+        type: tp.fire,
+        cost: 2,
+        rules: true, 
+        castingTime:      castTime.action,
+        range:            rng.cone30,
+        components: {
+            verbal:       /*v*/ true,  
+            somatic:      /*s*/ true,  
+            material:     /*m*/ false, 
+            released:     /*w*/ true  
+        },
+        duration: {
+            until_sealed:  /**/ false,
+            concentration: /**/ false,
+            minute1:       /**/ false,
+            round1:        /**/ false,
+            instantaneous: /**/ true,
+            hour1:         /**/ false,
+            minute5:       /**/ false
+        },
+        name: "Конус огня [Cone of Fire]", 
+        requirements: "Три огненные способности",
+        data:`
+        <p>Ревущая волна пламени , конусом вырывающаяся из вас.</p>
+        <p>Каждое существо в 30-футовом конусе должно совершить спасбросок Ловкости. Существо получает урон огнём 3d8 при нанесенном ударе или половину этого урона при успешном.</p>
+        
+        <p>Вы можете повторно выбрать эту способность несколько раз, каждый раз выбирая один из следующих вариантов:</p>
+        <p> &mdash; Эта способность больше не требует компонентов V или S.</p>
+        <p> &mdash; Увеличьте размер конуса на 5 футов.</p>
+        <p> &mdash; Увеличьте урон на 1d6.</p>
+        `
+    }, //Cone of Fire 6
+    {
+        type: tp.fire,
+        cost: 2,
+        rules: true, 
+        castingTime:      castTime.action,
+        range:            rng.ft60,
+        components: {
+            verbal:       /*v*/ true,  
+            somatic:      /*s*/ true,  
+            material:     /*m*/ false, 
+            released:     /*w*/ true  
+        },
+        duration: {
+            until_sealed:  /**/ true,
+            concentration: /**/ true,
+            minute1:       /**/ false,
+            round1:        /**/ false,
+            instantaneous: /**/ false,
+            hour1:         /**/ false,
+            minute5:       /**/ false
+        },
+        name: "Стена огня [Wall of Fire]", 
+        requirements: "Четыре огненные способности",
+        data:`
+        <p>Вы создаете стену огня на твердой поверхности в пределах дистанции. Вы можете сделать стену длиной до 60 футов, высотой 20 футов и толщиной 1 фут или кольцевую стену диаметром до 20 футов, высотой 20 футов и толщиной 1 фут. Стена непрозрачна и сохраняется в течение всего времени действия.</p>
+        <p>Когда появляется стена, каждое существо в ее области должно совершить спасбросок Ловкости. При провале существо получает урон огнём 4d6, или половину этого урона при успешном спасброске.</p>
+        <p>Одна сторона стены, выбранная вами при чтении этого заклинания, наносит ужасный урон 4d6 каждому существу, которое заканчивает свой ход в пределах 10 футов от этой стороны или внутри стены. Существо получает одинаковый урон, когда оно впервые за ход входит в стену или заканчивает там свой ход. Другая сторона стены не наносит урона.</p>
+        <p>Каждый раз, когда вы повторно выбираете эту способность, урон увеличивается на 1d6.</p>
+        
+        <p>Вы можете повторно выбрать эту способность несколько раз, каждый раз выбирая один из следующих вариантов:</p>
+        <p> &mdash; Увеличьте дальность, высоту, длину и диаметр этой способности на 10 футов.</p>
+        <p> &mdash; Эта способность больше не требует компонентов V или S.</p>
+        <p> &mdash; Эта способность больше не требует концентрации.</p>
+        <p> &mdash; Увеличьте СЛ спасброска на 1.</p>
+        <p> &mdash; Вы можете выбрать обе стороны стены, чтобы нанести урон.</p>
+        `
+    }, //Wall of Fire 7
+    {
+        type: tp.fire,
+        cost: 2,
+        rules: true, 
+        castingTime:      castTime.action,
+        range:            rng.ft60,
+        components: {
+            verbal:       /*v*/ true,  
+            somatic:      /*s*/ true,  
+            material:     /*m*/ false, 
+            released:     /*w*/ true  
+        },
+        duration: {
+            until_sealed:  /**/ false,
+            concentration: /**/ false,
+            minute1:       /**/ false,
+            round1:        /**/ false,
+            instantaneous: /**/ true,
+            hour1:         /**/ true,
+            minute5:       /**/ false
+        },
+        name: "Столп Пламени [Pillar of Flame]", 
+        requirements: "Четыре огненные способности",
+        data:`
+        <p>A vertical column of fire roars to life on a point you choose within range. This column is 40 feet high with a 10-foot radius. Each creature within the pillar must make a Dexterity saving throw.</p>
+        <p>Существо получает урон огнём 6d6 при провале или половину этого урона при успехе. Эта способность может действовать мгновенно или сохраняться в течение часа. Каждый раз, когда вы повторно выбираете эту способность, урон увеличивается на 1d6.</p>
+
+        <p>Вы можете повторно выбрать эту способность несколько раз, каждый раз выбирая один из следующих вариантов:</p>
+        <p> &mdash; Увеличение дальности на 10 футов.</p>
+        <p> &mdash; Эта способность больше не требует компонентов V или S.</p>
+        <p> &mdash; Увеличьте радиус и высоту цилиндра на 5 футов.</p>
+        `
+    }, //Pillar of Flame 8
+    {
+        type: tp.fire,
+        cost: 3,
+        rules: true, 
+        castingTime:      castTime.action,
+        range:            rng.ft100,
+        components: {
+            verbal:       /*v*/ true,  
+            somatic:      /*s*/ true,  
+            material:     /*m*/ false, 
+            released:     /*w*/ true  
+        },
+        duration: {
+            until_sealed:  /**/ false,
+            concentration: /**/ false,
+            minute1:       /**/ false,
+            round1:        /**/ false,
+            instantaneous: /**/ true,
+            hour1:         /**/ false,
+            minute5:       /**/ false
+        },
+        name: "Огненный шторм (Ультимативный) [Fire Storm (Ultimate)]", 
+        requirements: "Пять огненных способностей",
+        data:`
+        <p>Шторм, состоящий из полос ревущего пламени, появляется в выбранном вами месте в пределах досягаемости.</p>
+        <p>Область шторма состоит из до десяти 10-футовых кубов, которые вы можете расположить по своему желанию. У каждого куба msut есть хотя бы одна грань, примыкающая к грани другого куба. Каждое существо в области получает урон огнём 7d8.</p>
+        <p>Огонь повреждает растения, предметы на территории и воспламеняет легковоспламеняющиеся предметы, которые не носят и не носят с собой.</p>
+        <p>Каждый раз, когда вы повторно выбираете эту способность, урон увеличивается на 1d8.</p>
+
+        <p>Вы можете повторно выбрать эту способность несколько раз, каждый раз выбирая один из следующих вариантов:</p>
+        <p> &mdash; Эта способность больше не требует компонентов V или S.</p>
+        <p> &mdash; Увеличьте размер кубиков на 5 футов.</p>
+        `
+    }, //Fire Storm (Ultimate) 9
+    {
+        type: tp.fire,
+        cost: 4,
+        rules: true, 
+        castingTime:      castTime.round,
+        range:            rng.mile1,
+        components: {
+            verbal:       /*v*/ true,  
+            somatic:      /*s*/ true,  
+            material:     /*m*/ false, 
+            released:     /*w*/ true  
+        },
+        duration: {
+            until_sealed:  /**/ false,
+            concentration: /**/ false,
+            minute1:       /**/ false,
+            round1:        /**/ false,
+            instantaneous: /**/ true,
+            hour1:         /**/ false,
+            minute5:       /**/ false
+        },
+        name: "Метеоритный рой (вознесенный) [Meteor Swarm (Ascended)]", 
+        requirements: "Шесть огненных способностей",
+        data:`
+        <p>Пылающие огненные шары падают на землю в четырех разных точках, которые вы можете видеть в пределах досягаемости.</p>
+        <p>Каждое существо в сфере радиусом 20 футов с центром в каждой выбранной вами точке должно совершить спасбросок Ловкости. Сфера распространяется по углам. Существо получает урон огнём 10d6 и дробящий урон 10d6 при провале или половину этого урона при успехе. Существо, находящееся в зоне действия более чем одной огненной вспышки, воздействует только один раз.</p>
+        <p>Эта способность повреждает растения, предметы в зоне действия и поджигает легковоспламеняющиеся предметы, которые никто не носит и не переносит.</p>
+        <p>Вы можете повторно выбрать эту способность во второй раз, если вы это сделаете, огненные вспышки могут воздействовать на существ более одного раза.</p>
+        ` 
+    }, //Meteor Swarm (Ascended) 10
+    {
+        type: tp.fire,
+        cost: 0,
+        rules: false, 
+        castingTime:      castTime.action,
+        range:            rng.self,
+        components: {
+            verbal:       /*v*/ false,  
+            somatic:      /*s*/ false,  
+            material:     /*m*/ false, 
+            released:     /*w*/ false  
+        },
+        duration: {
+            until_sealed:  /**/ false,
+            concentration: /**/ false,
+            minute1:       /**/ false,
+            round1:        /**/ false,
+            instantaneous: /**/ false,
+            hour1:         /**/ false,
+            minute5:       /**/ false
+        },
+        name: "Адское Пламя (Вознесенный) [Hellfire (Ascended)]", 
+        requirements: "Шесть огненных способностей",
+        data:`
+        <p>Ваши способности вооружения и Кидо, наносящие урон от огня, игнорируют сопротивления. Если существо будет невосприимчиво к урону от огня, вместо этого оно получит половину урона.</p>
+        ` 
+    }, //Hellfire (Ascended) 11
+    {
+        type: tp.common,
+        cost: 0,
+        rules: true, 
+        castingTime:      castTime.none,
+        range:            rng.none,
+        components: {
+            verbal:       /*v*/ false,  
+            somatic:      /*s*/ false,  
+            material:     /*m*/ false, 
+            released:     /*w*/ false  
+        },
+        duration: {
+            until_sealed:  /**/ true,
+            concentration: /**/ false,
+            minute1:       /**/ false,
+            round1:        /**/ false,
+            instantaneous: /**/ false,
+            hour1:         /**/ false,
+            minute5:       /**/ false
+        },
+        name: "Повышенная сила [Increased Strength]", 
+        requirements: "",
+        data:`
+        <p>Пока ваше вооружение активно, ваш показатель Силы увеличивается на 2.</p>
+        <p>Вы можете повторно выбрать эту способность несколько раз, каждый раз увеличивая показатель Силы на 1.</p>
+        ` 
+    }, //Increased Strength 1 ---------------------------------- common
+    {
+        type: tp.common,
+        cost: 0,
+        rules: true, 
+        castingTime:      castTime.none,
+        range:            rng.none,
+        components: {
+            verbal:       /*v*/ false,  
+            somatic:      /*s*/ false,  
+            material:     /*m*/ false, 
+            released:     /*w*/ false  
+        },
+        duration: {
+            until_sealed:  /**/ true,
+            concentration: /**/ false,
+            minute1:       /**/ false,
+            round1:        /**/ false,
+            instantaneous: /**/ false,
+            hour1:         /**/ false,
+            minute5:       /**/ false
+        },
+        name: "Повышенная ловкость [Increased Dexterity]", 
+        requirements: "",
+        data:`
+        <p>Пока ваше вооружение активно, ваш показатель Ловкости увеличивается на 2.</p>
+        <p>Вы можете повторно выбирать эту способность несколько раз, каждый раз увеличивая показатель Ловкости на 1.</p>
+        ` 
+    }, //Increased Dexterity 2
+    {
+        type: tp.common,
+        cost: 0,
+        rules: true, 
+        castingTime:      castTime.none,
+        range:            rng.none,
+        components: {
+            verbal:       /*v*/ false,  
+            somatic:      /*s*/ false,  
+            material:     /*m*/ false, 
+            released:     /*w*/ false  
+        },
+        duration: {
+            until_sealed:  /**/ true,
+            concentration: /**/ false,
+            minute1:       /**/ false,
+            round1:        /**/ false,
+            instantaneous: /**/ false,
+            hour1:         /**/ false,
+            minute5:       /**/ false
+        },
+        name: "Повышенное телосложение [Increased Constitution]", 
+        requirements: "",
+        data:`
+        <p>Пока ваше вооружение активно, ваш показатель Телосложения увеличивается на 2.</p>
+        <p>Вы можете повторно выбрать эту способность несколько раз, каждый раз увеличивая показатель Телосложения на 1.</p>
+        ` 
+    }, //Increased Constitution 3
+    {
+        type: tp.common,
+        cost: 0,
+        rules: true, 
+        castingTime:      castTime.none,
+        range:            rng.none,
+        components: {
+            verbal:       /*v*/ false,  
+            somatic:      /*s*/ false,  
+            material:     /*m*/ false, 
+            released:     /*w*/ false  
+        },
+        duration: {
+            until_sealed:  /**/ true,
+            concentration: /**/ false,
+            minute1:       /**/ false,
+            round1:        /**/ false,
+            instantaneous: /**/ false,
+            hour1:         /**/ false,
+            minute5:       /**/ false
+        },
+        name: "Повышенный интеллект [Increased Intelligence]", 
+        requirements: "",
+        data:`
+        <p>Пока ваше вооружение активно, ваш показатель Интеллекта увеличивается на 2.</p>
+        <p>Вы можете повторно выбрать эту способность несколько раз, каждый раз увеличивая свой показатель Интеллекта на 1.</p>
+        ` 
+    }, //Increased Intelligence 4
+    {
+        type: tp.common,
+        cost: 0,
+        rules: true, 
+        castingTime:      castTime.none,
+        range:            rng.none,
+        components: {
+            verbal:       /*v*/ false,  
+            somatic:      /*s*/ false,  
+            material:     /*m*/ false, 
+            released:     /*w*/ false  
+        },
+        duration: {
+            until_sealed:  /**/ true,
+            concentration: /**/ false,
+            minute1:       /**/ false,
+            round1:        /**/ false,
+            instantaneous: /**/ false,
+            hour1:         /**/ false,
+            minute5:       /**/ false
+        },
+        name: "Повышенная мудрость [Increased Wisdom]", 
+        requirements: "",
+        data:`
+        <p>Пока ваше вооружение активно, ваш показатель Мудрости увеличивается на 2.</p>
+        <p>Вы можете повторно выбрать эту способность несколько раз, каждый раз увеличивая свой показатель Мудрости на 1.</p>
+        ` 
+    }, //Increased Wisdom 5
+    {
+        type: tp.common,
+        cost: 0,
+        rules: true, 
+        castingTime:      castTime.none,
+        range:            rng.none,
+        components: {
+            verbal:       /*v*/ false,  
+            somatic:      /*s*/ false,  
+            material:     /*m*/ false, 
+            released:     /*w*/ false  
+        },
+        duration: {
+            until_sealed:  /**/ true,
+            concentration: /**/ false,
+            minute1:       /**/ false,
+            round1:        /**/ false,
+            instantaneous: /**/ false,
+            hour1:         /**/ false,
+            minute5:       /**/ false
+        },
+        name: "Повышенная харизма [Increased Charisma]", 
+        requirements: "",
+        data:`
+        <p>Пока ваше вооружение активно, ваш показатель Харизмы увеличивается на 2.</p>
+        <p>Вы можете повторно выбрать эту способность несколько раз, каждый раз увеличивая показатель Харизмы на 1.</p>
+        ` 
+    }, //Increased Charisma 6
+    {
+        type: tp.common,
+        cost: 0,
+        rules: true, 
+        castingTime:      castTime.none,
+        range:            rng.none,
+        components: {
+            verbal:       /*v*/ false,  
+            somatic:      /*s*/ false,  
+            material:     /*m*/ false, 
+            released:     /*w*/ false  
+        },
+        duration: {
+            until_sealed:  /**/ true,
+            concentration: /**/ false,
+            minute1:       /**/ false,
+            round1:        /**/ false,
+            instantaneous: /**/ false,
+            hour1:         /**/ false,
+            minute5:       /**/ false
+        },
+        name: "Увеличенный спасбросок [Increased Saving Throw]", 
+        requirements: "Три способности вооружения",
+        data:`
+        <p>Пока ваше вооружение активно, вы получаете бонус +1 к спасброскам.</p>
+        <p>Вы можете повторно выбрать эту способность до трех раз, каждый раз увеличивая этот бонус на 1, максимум +4.</p>
+        ` 
+    }, //Increased Saving Throw 7
+    {
+        type: tp.common,
+        cost: 0,
+        rules: true, 
+        castingTime:      castTime.none,
+        range:            rng.none,
+        components: {
+            verbal:       /*v*/ false,  
+            somatic:      /*s*/ false,  
+            material:     /*m*/ false, 
+            released:     /*w*/ false  
+        },
+        duration: {
+            until_sealed:  /**/ true,
+            concentration: /**/ false,
+            minute1:       /**/ false,
+            round1:        /**/ false,
+            instantaneous: /**/ false,
+            hour1:         /**/ false,
+            minute5:       /**/ false
+        },
+        name: "Увеличенный навык [Increased Skill]", 
+        requirements: "",
+        data:`
+        <p>Выберите навык, которым вы не владеете, пока ваше вооружение активно, вы считаетесь владеющим выбранным навыком.</p>
+        <p>Вы можете повторно выбрать эту способность несколько раз, каждый раз выбирая другой навык, которым вы не владеете.</p>
+        ` 
+    }, //Increased Skill 8
+    {
+        type: tp.common,
+        cost: 0,
+        rules: true, 
+        castingTime:      castTime.none,
+        range:            rng.none,
+        components: {
+            verbal:       /*v*/ false,  
+            somatic:      /*s*/ false,  
+            material:     /*m*/ false, 
+            released:     /*w*/ false  
+        },
+        duration: {
+            until_sealed:  /**/ true,
+            concentration: /**/ false,
+            minute1:       /**/ false,
+            round1:        /**/ false,
+            instantaneous: /**/ false,
+            hour1:         /**/ false,
+            minute5:       /**/ false
+        },
+        name: "Увеличенная скорость [Increased Speed]", 
+        requirements: "",
+        data:`
+        <p>Пока ваше вооружение активно, все ваши формы передвижения увеличиваются на 5 футов.</p>
+        <p>Вы можете повторно выбрать эту способность несколько раз, каждый раз увеличивая этот бонус на 5 футов.</p>
+        ` 
+    }, //Increased Speed 9
+    {
+        type: tp.common,
+        cost: 0,
+        rules: false, 
+        castingTime:      castTime.none,
+        range:            rng.none,
+        components: {
+            verbal:       /*v*/ false,  
+            somatic:      /*s*/ false,  
+            material:     /*m*/ false, 
+            released:     /*w*/ false  
+        },
+        duration: {
+            until_sealed:  /**/ true,
+            concentration: /**/ false,
+            minute1:       /**/ false,
+            round1:        /**/ false,
+            instantaneous: /**/ false,
+            hour1:         /**/ false,
+            minute5:       /**/ false
+        },
+        name: "Быстрое высвобождение [Quick Release]", 
+        requirements: "",
+        data:`
+        <p>Вы можете высвободить свое вооружение Бонусным действием.</p>
+        ` 
+    }, //Quick Release 10
+    {
+        type: tp.common,
+        cost: 0,
+        rules: false, 
+        castingTime:      castTime.none,
+        range:            rng.none,
+        components: {
+            verbal:       /*v*/ false,  
+            somatic:      /*s*/ false,  
+            material:     /*m*/ false, 
+            released:     /*w*/ false  
+        },
+        duration: {
+            until_sealed:  /**/ true,
+            concentration: /**/ false,
+            minute1:       /**/ false,
+            round1:        /**/ false,
+            instantaneous: /**/ false,
+            hour1:         /**/ false,
+            minute5:       /**/ false
+        },
+        name: "Великое быстрое высвобождение [Quick Release Greater]", 
+        requirements: "Форма высвобождения",
+        data:`
+        <p>Вы можете активировать свою Вознесенную форму в качестве Бонусного действия, если ваше вооружение выпущено.</p>
+        ` 
+    }, //Quick Release Greater 11
+    {
+        type: tp.common,
+        cost: 0,
+        rules: false, 
+        castingTime:      castTime.none,
+        range:            rng.none,
+        components: {
+            verbal:       /*v*/ false,  
+            somatic:      /*s*/ false,  
+            material:     /*m*/ false, 
+            released:     /*w*/ false  
+        },
+        duration: {
+            until_sealed:  /**/ true,
+            concentration: /**/ false,
+            minute1:       /**/ false,
+            round1:        /**/ false,
+            instantaneous: /**/ false,
+            hour1:         /**/ false,
+            minute5:       /**/ false
+        },
+        name: "Увеличенние талантов [Increased Talent]", 
+        requirements: "",
+        data:`
+        <p>Получите черту, которая подходит вам !!!TODO!!!</p>
+        <p>Вы можете повторно выбрать эту способность несколько раз, всего три раза.</p>
+        ` 
+    }, //Increased Talent 12
+    {
+        type: tp.common,
+        cost: 0,
+        rules: true, 
+        castingTime:      castTime.none,
+        range:            rng.none,
+        components: {
+            verbal:       /*v*/ false,  
+            somatic:      /*s*/ false,  
+            material:     /*m*/ false, 
+            released:     /*w*/ false  
+        },
+        duration: {
+            until_sealed:  /**/ true,
+            concentration: /**/ false,
+            minute1:       /**/ false,
+            round1:        /**/ false,
+            instantaneous: /**/ false,
+            hour1:         /**/ false,
+            minute5:       /**/ false
+        },
+        name: "Увеличенная концентрация [Increased Concentration]", 
+        requirements: "Одна способность вооружения",
+        data:`
+        <p>Пока ваше вооружение высвобождено, вы имеете преимущество на проверки, чтобы сохранить концентрацию на способностях вооружения.</p>
+        ` 
+    }, //Increased Concentration 13
+    {
+        type: tp.common,
+        cost: 2,
+        rules: true, 
+        castingTime:      castTime.action,
+        range:            rng.ft40,
+        components: {
+            verbal:       /*v*/ true,  
+            somatic:      /*s*/ true,  
+            material:     /*m*/ false, 
+            released:     /*w*/ true  
+        },
+        duration: {
+            until_sealed:  /**/ false,
+            concentration: /**/ false,
+            minute1:       /**/ false,
+            round1:        /**/ false,
+            instantaneous: /**/ true,
+            hour1:         /**/ false,
+            minute5:       /**/ false
+        },
+        name: "Духовный луч [Spirit Blast]", 
+        requirements: "Одна способность вооружения",
+        data:`
+        <p>Взрыв реацу устремляется к существу, находящемуся в пределах досягаемости от вас.</p>
+        <p>Совершите дальнюю атаку по цели. При попадании цель получает силовой урон 2d8. Каждый раз, когда вы повторно выбираете эту способность, вы получаете дополнительный луч (максимум четыре луча). Вы можете направить дополнительные лучи на ту же цель или на другую, для любых дополнительных лучей необходимо сделать отдельный бросок атаки.</p>
+        <p>Вы можете повторно выбрать эту способность несколько раз, каждый раз выбирая один из следующих вариантов:</p>
+        <p> &mdash; Эта способность больше не требует компонентов V или S.</p>
+        <p> &mdash; Увеличение дальности на 10 футов.</p>
+        <p> &mdash; Увеличьте размер кубика урона на одну ступень, максимум д12.</p>
+        ` 
+    }, //Spirit Blast 14
+    {
+        type: tp.common,
+        cost: 0,
+        rules: false, 
+        castingTime:      castTime.action,
+        range:            rng.self,
+        components: {
+            verbal:       /*v*/ false,  
+            somatic:      /*s*/ false,  
+            material:     /*m*/ false, 
+            released:     /*w*/ false  
+        },
+        duration: {
+            until_sealed:  /**/ false,
+            concentration: /**/ false,
+            minute1:       /**/ false,
+            round1:        /**/ false,
+            instantaneous: /**/ false,
+            hour1:         /**/ false,
+            minute5:       /**/ false
+        },
+        name: "Увеличенная внимательность [Increased Awareness]", 
+        requirements: "Четыре способности вооружения",
+        data:`
+        <p>Вы получаете следующие преимущества:</p>
+        <p> &mdash; Вы добавляете свой бонус мастерства к своим броскам на инициативу.</p>
+        <p> &mdash; Вы получаете бонус +2 к пассивному показателю Мудрости (Внимательности).</p>
+        <p> &mdash; У вас есть слепое зрение на расстоянии 5 футов. Это сочетается с другими источниками слепого зрения.</p>
+        ` 
+    }, //Increased Awareness 15
+    {
+        type: tp.common,
+        cost: 3,
+        rules: true, 
+        castingTime:      castTime.action,
+        range:            rng.self,
+        components: {
+            verbal:       /*v*/ true,  
+            somatic:      /*s*/ true,  
+            material:     /*m*/ false, 
+            released:     /*w*/ true  
+        },
+        duration: {
+            until_sealed:  /**/ true,
+            concentration: /**/ true,
+            minute1:       /**/ false,
+            round1:        /**/ false,
+            instantaneous: /**/ false,
+            hour1:         /**/ false,
+            minute5:       /**/ false
+        },
+        name: "Полет [Flying]", 
+        requirements: "Шесть способностей вооружения",
+        data:`
+        <p>На время действия вы получаете скорость полета 60 футов. Когда эта способность заканчивается, вы начинаете падать, если все еще находитесь в воздухе, если только не сможете остановить падение.</p>
+        <p>Вы можете повторно выбрать эту способность несколько раз, каждый раз выбирая один из следующих вариантов:</p>
+        <p> &mdash; Эта способность больше не требует компонентов V или S.</p>
+        <p> &mdash; Эта способность больше не требует концентрации.</p>
+        <p> &mdash; Увеличьте скорость полета на 10 футов.</p>
+        ` 
+    }, //Flying 16
+    {
+        type: tp.common,
+        cost: 0,
+        rules: false, 
+        castingTime:      castTime.action,
+        range:            rng.self,
+        components: {
+            verbal:       /*v*/ false,  
+            somatic:      /*s*/ false,  
+            material:     /*m*/ false, 
+            released:     /*w*/ false  
+        },
+        duration: {
+            until_sealed:  /**/ false,
+            concentration: /**/ false,
+            minute1:       /**/ false,
+            round1:        /**/ false,
+            instantaneous: /**/ false,
+            hour1:         /**/ false,
+            minute5:       /**/ false
+        },
+        name: "Ускоренная способность (возвышенная) [Quickened Ability (Ascended)]", 
+        requirements: "Шесть способностей вооружения",
+        data:`
+        <p>Выберите способность вооружения, время применения которой равно одному действию, теперь оно изменено на Бонусное действие.</p>
+        <p>Вы можете повторно выбрать эту способность несколько раз.</p>
+        ` 
+    }, //Quickened Ability (Ascended) 17
+    {
+        type: tp.common,
+        cost: 0,
+        rules: false, 
+        castingTime:      castTime.action,
+        range:            rng.self,
+        components: {
+            verbal:       /*v*/ false,  
+            somatic:      /*s*/ false,  
+            material:     /*m*/ false, 
+            released:     /*w*/ false  
+        },
+        duration: {
+            until_sealed:  /**/ false,
+            concentration: /**/ false,
+            minute1:       /**/ false,
+            round1:        /**/ false,
+            instantaneous: /**/ false,
+            hour1:         /**/ false,
+            minute5:       /**/ false
+        },
+        name: "Улучшенное Вознесение (Вознесенный) [Improved Ascencion (Ascended)]", 
+        requirements: "Форма высвобождения",
+        data:`
+        <p>Выберите две способности вооружения, доступ к этим способностям у вас есть только во время вознесения.</p>
+        <p>Вы можете выбрать эту способность несколько раз.</p>
+        ` 
+    }, //Improved Ascencion (Ascended) 18
 ]
