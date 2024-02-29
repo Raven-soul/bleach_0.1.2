@@ -30,7 +30,9 @@ const rng = {
     ft500: "500 feet",
     heilinBogen: "Equal to your Heilig Bogen",
     cone30: "Self (30-foot cone)",
-    mile1: "1 mile"
+    mile1: "1 mile",
+    varies: "Varies",
+    special: "Special"
 }
 
 const tp = {
@@ -42,7 +44,8 @@ const tp = {
     earth: "Earth",
     fire: "Fire",
     common: "Common",
-    gravity: "Gravity"
+    gravity: "Gravity",
+    healing: "Healing"
 }
 
 const armamentAbilitiesContent = [
@@ -65,7 +68,9 @@ const armamentAbilitiesContent = [
             round1: false,
             instantaneous: false,
             hour1:         /**/ false,
-            minute5:       /**/ false
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
         },
         name: "Кислотная форма [Acid Form]", 
         requirements: "",
@@ -97,7 +102,9 @@ const armamentAbilitiesContent = [
             round1: false,
             instantaneous: false,
             hour1:         /**/ false,
-            minute5:       /**/ false
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
         },
         name: "Кислотное оружие [Acidic Weapon]", 
         requirements: "",
@@ -128,7 +135,9 @@ const armamentAbilitiesContent = [
             round1: false,
             instantaneous: false,
             hour1:         /**/ false,
-            minute5:       /**/ false
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
         },
         name: "Едкое оружие [Caustic Weapon]", 
         requirements: "Одна кислотная способность",
@@ -159,7 +168,9 @@ const armamentAbilitiesContent = [
             round1: false,
             instantaneous: false,
             hour1:         /**/ false,
-            minute5:       /**/ false
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
         },
         name: "Кислотная броня [Acid Armor]", 
         requirements: "Одна кислотная способность",
@@ -193,7 +204,9 @@ const armamentAbilitiesContent = [
             round1: false,
             instantaneous: false,
             hour1:         /**/ false,
-            minute5:       /**/ false
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
         },
         name: "Кислотный выстрел [Acid Shot]", 
         requirements: "Одна кислотная способность",
@@ -223,7 +236,9 @@ const armamentAbilitiesContent = [
             round1: false,
             instantaneous: false,
             hour1:         /**/ false,
-            minute5:       /**/ false
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
         },
         name: "Кислотный плевок [Acid Spit]", 
         requirements: "Две кислотные способности",
@@ -254,7 +269,9 @@ const armamentAbilitiesContent = [
             round1: false,
             instantaneous: false,
             hour1:         /**/ false,
-            minute5:       /**/ false
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
         },
         name: "Кислотный бассейн [Acid Pool]", 
         requirements: "Две кислотные способности",
@@ -287,7 +304,9 @@ const armamentAbilitiesContent = [
             round1: false,
             instantaneous: false,
             hour1:         /**/ false,
-            minute5:       /**/ false
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
         },
         name: "Кислотный дождь [Acid Rain]", 
         requirements: "Три кислотные способности",
@@ -320,7 +339,9 @@ const armamentAbilitiesContent = [
             round1: false,
             instantaneous: false,
             hour1:         /**/ false,
-            minute5:       /**/ false
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
         },
         name: "Прикосновение коррозии [Corrosive Touch]", 
         requirements: "Четыре кислотные способности",
@@ -353,7 +374,9 @@ const armamentAbilitiesContent = [
             round1: false,
             instantaneous: false,
             hour1:         /**/ false,
-            minute5:       /**/ false
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
         },
         name: "Атака коррозией (Финальный) [Corrosive Attack (Ultimate)]", 
         requirements: "Пять кислотных способностей",
@@ -384,7 +407,9 @@ const armamentAbilitiesContent = [
             round1: false,
             instantaneous: false,
             hour1:         /**/ false,
-            minute5:       /**/ false
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
         },
         name: "Разъедающая форма (Вознесенная) [Corrosive Form (Ascended)]", 
         requirements: "Атака коррозией и шесть кислотных способностей",
@@ -411,7 +436,9 @@ const armamentAbilitiesContent = [
             round1: false,
             instantaneous: false,
             hour1:         /**/ false,
-            minute5:       /**/ false
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
         },
         name: "Суперкислота (Вознесенная) [Superacid (Ascended)]", 
         requirements: "Шесть кислотных способностей",
@@ -439,7 +466,9 @@ const armamentAbilitiesContent = [
             round1: false,
             instantaneous: false,
             hour1:         /**/ false,
-            minute5:       /**/ false
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
         },
         name: "Клинок Крови [Blade of Blood]", 
         requirements: "Шесть кислотных способностей",
@@ -471,7 +500,9 @@ const armamentAbilitiesContent = [
             round1: false,
             instantaneous: false,
             hour1:         /**/ false,
-            minute5:       /**/ false
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
         },
         name: "Кровоточащий удар [Bleeding Strike]", 
         requirements: "",
@@ -503,7 +534,9 @@ const armamentAbilitiesContent = [
             round1: false,
             instantaneous: false,
             hour1:         /**/ false,
-            minute5:       /**/ false
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
         },
         name: "Ранящий клинок [Wounding Blade]", 
         requirements: "Клинок крови (3)",
@@ -530,7 +563,9 @@ const armamentAbilitiesContent = [
             round1: false,
             instantaneous: true,
             hour1:         /**/ false,
-            minute5:       /**/ false
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
         },
         name: "Щит крови [Blood Shield]", 
         requirements: "Одна кровавая способность",
@@ -561,7 +596,9 @@ const armamentAbilitiesContent = [
             round1: false,
             instantaneous: true,
             hour1:         /**/ false,
-            minute5:       /**/ false
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
         },
         name: "Кровавое ремесло [Bloodcraft]", 
         requirements: "Одна кровавая способность",
@@ -593,7 +630,9 @@ const armamentAbilitiesContent = [
             round1: true,
             instantaneous: false,
             hour1:         /**/ false,
-            minute5:       /**/ false
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
         },
         name: "Вампирский удар [Vampiric Strike]", 
         requirements: "Одна кровавая способность",
@@ -624,7 +663,9 @@ const armamentAbilitiesContent = [
             round1: false,
             instantaneous: true,
             hour1:         /**/ false,
-            minute5:       /**/ false
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
         },
         name: "Опустошение реацу [Drain Reiatsu]", 
         requirements: "Вампирский удар и одна кровавая способность",
@@ -655,7 +696,9 @@ const armamentAbilitiesContent = [
             round1: false,
             instantaneous: true,
             hour1:         /**/ false,
-            minute5:       /**/ false
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
         },
         name: "Кровавый выстрел [Blood Shot]", 
         requirements: "Две кровавых способности",
@@ -687,7 +730,9 @@ const armamentAbilitiesContent = [
             round1: false,
             instantaneous: false,
             hour1:         /**/ false,
-            minute5:       /**/ false
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
         },
         name: "Магия крови [Blood Magic]", 
         requirements: "Три кровавых способности",
@@ -715,7 +760,9 @@ const armamentAbilitiesContent = [
             round1: false,
             instantaneous: true,
             hour1:         /**/ false,
-            minute5:       /**/ false
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
         },
         name: "Кровавый взрыв [Blood Burst]", 
         requirements: "Три кровавых способности",
@@ -748,7 +795,9 @@ const armamentAbilitiesContent = [
             round1:        /**/ false,
             instantaneous: /**/ false,
             hour1:         /**/ false,
-            minute5:       /**/ false
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
         },
         name: "Предвидящий выстрел [Anticipating Shot]", 
         requirements: "",
@@ -776,7 +825,9 @@ const armamentAbilitiesContent = [
             round1:        /**/ false,
             instantaneous: /**/ false,
             hour1:         /**/ false,
-            minute5:       /**/ false
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
         },
         name: "Изгоняющая стрела (Мастерский выстрел) [Banishing Arrow (Master Shot)]", 
         requirements: "",
@@ -803,7 +854,9 @@ const armamentAbilitiesContent = [
             round1:        /**/ false,
             instantaneous: /**/ false,
             hour1:         /**/ false,
-            minute5:       /**/ false
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
         },
         name: "Обманчивая стрела [Beguiling Arrow]", 
         requirements: "",
@@ -831,7 +884,9 @@ const armamentAbilitiesContent = [
             round1:        /**/ false,
             instantaneous: /**/ false,
             hour1:         /**/ false,
-            minute5:       /**/ false
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
         },
         name: "Разрывная стрела [Bursting Arrow]", 
         requirements: "",
@@ -859,7 +914,9 @@ const armamentAbilitiesContent = [
             round1:        /**/ false,
             instantaneous: /**/ false,
             hour1:         /**/ false,
-            minute5:       /**/ false
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
         },
         name: "Критическая стрела [Critical Arrow]", 
         requirements: "",
@@ -887,7 +944,9 @@ const armamentAbilitiesContent = [
             round1:        /**/ false,
             instantaneous: /**/ false,
             hour1:         /**/ false,
-            minute5:       /**/ false
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
         },
         name: "Изогнутая стрела [Curving Arrow]", 
         requirements: "",
@@ -915,7 +974,9 @@ const armamentAbilitiesContent = [
             round1:        /**/ false,
             instantaneous: /**/ false,
             hour1:         /**/ false,
-            minute5:       /**/ false
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
         },
         name: "Ослепительная стрела [Dazing Arrow]", 
         requirements: "",
@@ -943,7 +1004,9 @@ const armamentAbilitiesContent = [
             round1:        /**/ false,
             instantaneous: /**/ false,
             hour1:         /**/ false,
-            minute5:       /**/ false
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
         },
         name: "Отклоняющая стрела [Deflecting Arrow]", 
         requirements: "",
@@ -971,7 +1034,9 @@ const armamentAbilitiesContent = [
             round1:        /**/ false,
             instantaneous: /**/ false,
             hour1:         /**/ false,
-            minute5:       /**/ false
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
         },
         name: "Рассеивающая стрела [Dispelling Arrow]", 
         requirements: "",
@@ -999,7 +1064,9 @@ const armamentAbilitiesContent = [
             round1:        /**/ false,
             instantaneous: /**/ false,
             hour1:         /**/ false,
-            minute5:       /**/ false
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
         },
         name: "Разрушающая стрела [Disrupting Arrow]", 
         requirements: "",
@@ -1029,7 +1096,9 @@ const armamentAbilitiesContent = [
             round1:        /**/ false,
             instantaneous: /**/ false,
             hour1:         /**/ false,
-            minute5:       /**/ false
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
         },
         name: "Дальняя стрела [Distant Arrow]", 
         requirements: "",
@@ -1057,7 +1126,9 @@ const armamentAbilitiesContent = [
             round1:        /**/ false,
             instantaneous: /**/ false,
             hour1:         /**/ false,
-            minute5:       /**/ false
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
         },
         name: "Отвлекающая стрела [Distracting Arrow]", 
         requirements: "",
@@ -1085,7 +1156,9 @@ const armamentAbilitiesContent = [
             round1:        /**/ false,
             instantaneous: /**/ false,
             hour1:         /**/ false,
-            minute5:       /**/ false
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
         },
         name: "Элементальная стрела [Elemental Arrow]", 
         requirements: "",
@@ -1113,7 +1186,9 @@ const armamentAbilitiesContent = [
             round1:        /**/ false,
             instantaneous: /**/ false,
             hour1:         /**/ false,
-            minute5:       /**/ false
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
         },
         name: "Ослабляющая стрела (Мастерский выстрел) [Enfeebling Arrow (Master Shot)]", 
         requirements: "",
@@ -1140,7 +1215,9 @@ const armamentAbilitiesContent = [
             round1:        /**/ false,
             instantaneous: /**/ false,
             hour1:         /**/ false,
-            minute5:       /**/ false
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
         },
         name: "Цепкая стрела (Мастерский выстрел) [Grasping Arrow (Master Shot)]", 
         requirements: "",
@@ -1167,7 +1244,9 @@ const armamentAbilitiesContent = [
             round1:        /**/ false,
             instantaneous: /**/ true,
             hour1:         /**/ false,
-            minute5:       /**/ false
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
         },
         name: "Клавир [Klavier]", 
         requirements: "",
@@ -1196,7 +1275,9 @@ const armamentAbilitiesContent = [
             round1:        /**/ false,
             instantaneous: /**/ true,
             hour1:         /**/ false,
-            minute5:       /**/ false
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
         },
         name: "Лихт Реген (Мастерский выстрел) [Licht Regen (Master Shot)]", 
         requirements: "",
@@ -1223,7 +1304,9 @@ const armamentAbilitiesContent = [
             round1:        /**/ false,
             instantaneous: /**/ false,
             hour1:         /**/ false,
-            minute5:       /**/ false
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
         },
         name: "Пронзающая стрела [Piercing Arrow]", 
         requirements: "",
@@ -1251,7 +1334,9 @@ const armamentAbilitiesContent = [
             round1:        /**/ false,
             instantaneous: /**/ false,
             hour1:         /**/ false,
-            minute5:       /**/ false
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
         },
         name: "Точная стрела [Precise Arrow]", 
         requirements: "",
@@ -1279,7 +1364,9 @@ const armamentAbilitiesContent = [
             round1:        /**/ false,
             instantaneous: /**/ false,
             hour1:         /**/ false,
-            minute5:       /**/ false
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
         },
         name: "Отталкивающая стрела [Pushing Arrow]", 
         requirements: "",
@@ -1307,7 +1394,9 @@ const armamentAbilitiesContent = [
             round1:        /**/ false,
             instantaneous: /**/ false,
             hour1:         /**/ true,
-            minute5:       /**/ false
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
         },
         name: "Отталкивающая стрела [Seeking Arrow]", 
         requirements: "",
@@ -1336,7 +1425,9 @@ const armamentAbilitiesContent = [
             round1:        /**/ false,
             instantaneous: /**/ false,
             hour1:         /**/ false,
-            minute5:       /**/ false
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
         },
         name: "Теневая стрела (Мастерский выстрел) [Shadow Arrow (Master Shot)]", 
         requirements: "",
@@ -1363,7 +1454,9 @@ const armamentAbilitiesContent = [
             round1:        /**/ false,
             instantaneous: /**/ false,
             hour1:         /**/ false,
-            minute5:       /**/ false
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
         },
         name: "Духовная стрела (Мастерский выстрел) [Soul Arrow (Master Shot)]", 
         requirements: "",
@@ -1390,7 +1483,9 @@ const armamentAbilitiesContent = [
             round1:        /**/ false,
             instantaneous: /**/ false,
             hour1:         /**/ false,
-            minute5:       /**/ false
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
         },
         name: "Шагающий выстрел [Stepping Shot]", 
         requirements: "",
@@ -1417,7 +1512,9 @@ const armamentAbilitiesContent = [
             round1:        /**/ false,
             instantaneous: /**/ false,
             hour1:         /**/ false,
-            minute5:       /**/ false
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
         },
         name: "Ранящая стрела (Мастерский выстрел) [Wounding Arrow (Master Shot)]", 
         requirements: "",
@@ -1444,7 +1541,9 @@ const armamentAbilitiesContent = [
             round1:        /**/ false,
             instantaneous: /**/ false,
             hour1:         /**/ false,
-            minute5:       /**/ false
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
         },
         name: "Некротическая форма [Necrotic Form]", 
         requirements: "",
@@ -1475,7 +1574,9 @@ const armamentAbilitiesContent = [
             round1:        /**/ false,
             instantaneous: /**/ false,
             hour1:         /**/ false,
-            minute5:       /**/ false
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
         },
         name: "Оружие тьмы [Dark Weapon]", 
         requirements: "",
@@ -1507,7 +1608,9 @@ const armamentAbilitiesContent = [
             round1:        /**/ false,
             instantaneous: /**/ false,
             hour1:         /**/ false,
-            minute5:       /**/ false
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
         },
         name: "Теневое оружие [Umbral Weapon]", 
         requirements: "Одна способность тьмы",
@@ -1538,7 +1641,9 @@ const armamentAbilitiesContent = [
             round1:        /**/ false,
             instantaneous: /**/ false,
             hour1:         /**/ false,
-            minute5:       /**/ false
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
         },
         name: "Аура Тьмы [Aura of Dark]", 
         requirements: "Две способности тьмы",
@@ -1572,7 +1677,9 @@ const armamentAbilitiesContent = [
             round1:        /**/ false,
             instantaneous: /**/ false,
             hour1:         /**/ false,
-            minute5:       /**/ false
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
         },
         name: "Тьма [Darkness]", 
         requirements: "Одна способность тьмы",
@@ -1608,7 +1715,9 @@ const armamentAbilitiesContent = [
             round1:        /**/ false,
             instantaneous: /**/ false,
             hour1:         /**/ false,
-            minute5:       /**/ false
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
         },
         name: "Темное зрение [Darkvision]", 
         requirements: "Способность Тьма [Darkness]",
@@ -1640,7 +1749,9 @@ const armamentAbilitiesContent = [
             round1:        /**/ false,
             instantaneous: /**/ true,
             hour1:         /**/ false,
-            minute5:       /**/ false
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
         },
         name: "Теневой луч [Umbral Blast]", 
         requirements: "Две способности тьмы",
@@ -1673,7 +1784,9 @@ const armamentAbilitiesContent = [
             round1:        /**/ false,
             instantaneous: /**/ false,
             hour1:         /**/ false,
-            minute5:       /**/ false
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
         },
         name: "Стена Тьмы [Wall of Dark]", 
         requirements: "Три способности тьмы",
@@ -1710,7 +1823,9 @@ const armamentAbilitiesContent = [
             round1:        /**/ false,
             instantaneous: /**/ true,
             hour1:         /**/ false,
-            minute5:       /**/ false
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
         },
         name: "Всплеск тьмы (Ультимативный) [Burst of Dark (Ultimate)]", 
         requirements: "Четыре способности тьмы",
@@ -1744,7 +1859,9 @@ const armamentAbilitiesContent = [
             round1:        /**/ false,
             instantaneous: /**/ true,
             hour1:         /**/ false,
-            minute5:       /**/ false
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
         },
         name: "Черная дыра (Ультимативный) [Black Hole (Ascended)]", 
         requirements: "Пять способностей тьмы",
@@ -1775,7 +1892,9 @@ const armamentAbilitiesContent = [
             round1:        /**/ false,
             instantaneous: /**/ false,
             hour1:         /**/ false,
-            minute5:       /**/ false
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
         },
         name: "Нечестивая Тьма (Вознесенный) [Unholy Dark (Ascended)]", 
         requirements: "Шесть способностей тьмы",
@@ -1803,7 +1922,9 @@ const armamentAbilitiesContent = [
             round1:        /**/ false,
             instantaneous: /**/ false,
             hour1:         /**/ false,
-            minute5:       /**/ false
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
         },
         name: "Броня [Armor]", 
         requirements: "",
@@ -1836,7 +1957,9 @@ const armamentAbilitiesContent = [
             round1:        /**/ false,
             instantaneous: /**/ false,
             hour1:         /**/ false,
-            minute5:       /**/ false
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
         },
         name: "Щит [Shield]", 
         requirements: "",
@@ -1864,7 +1987,9 @@ const armamentAbilitiesContent = [
             round1:        /**/ false,
             instantaneous: /**/ true,
             hour1:         /**/ false,
-            minute5:       /**/ false
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
         },
         name: "Удар щитом [Shield Bash]", 
         requirements: "Способность Щит [Shield]",
@@ -1894,7 +2019,9 @@ const armamentAbilitiesContent = [
             round1:        /**/ true,
             instantaneous: /**/ false,
             hour1:         /**/ false,
-            minute5:       /**/ false
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
         },
         name: "Оборонительный всплеск [Defensive Surge]", 
         requirements: "Одна оборонительная способность",
@@ -1924,7 +2051,9 @@ const armamentAbilitiesContent = [
             round1:        /**/ false,
             instantaneous: /**/ true,
             hour1:         /**/ false,
-            minute5:       /**/ false
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
         },
         name: "Большой спасбросок [Greater Saving Throw]", 
         requirements: "Две оборонительные способности",
@@ -1954,7 +2083,9 @@ const armamentAbilitiesContent = [
             round1:        /**/ false,
             instantaneous: /**/ false,
             hour1:         /**/ false,
-            minute5:       /**/ false
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
         },
         name: "Железное тело [Iron Body]", 
         requirements: "Три оборонительные способности",
@@ -1982,7 +2113,9 @@ const armamentAbilitiesContent = [
             round1:        /**/ false,
             instantaneous: /**/ false,
             hour1:         /**/ false,
-            minute5:       /**/ false
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
         },
         name: "Шипованный доспех [Thornmail]", 
         requirements: "Четыре оборонительные способности",
@@ -2010,7 +2143,9 @@ const armamentAbilitiesContent = [
             round1:        /**/ false,
             instantaneous: /**/ false,
             hour1:         /**/ false,
-            minute5:       /**/ false
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
         },
         name: "Сопротивление заклинаниям [Spell Resistance]", 
         requirements: "Пять оборонительных способностей",
@@ -2037,7 +2172,9 @@ const armamentAbilitiesContent = [
             round1:        /**/ false,
             instantaneous: /**/ false,
             hour1:         /**/ false,
-            minute5:       /**/ false
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
         },
         name: "Сопротивление заклинаниям [Quick Defense]", 
         requirements: "Шесть оборонительных способностей",
@@ -2065,7 +2202,9 @@ const armamentAbilitiesContent = [
             round1:        /**/ false,
             instantaneous: /**/ true,
             hour1:         /**/ false,
-            minute5:       /**/ false
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
         },
         name: "Защитник [Quick Defense]", 
         requirements: "Шесть оборонительных способностей",
@@ -2093,7 +2232,9 @@ const armamentAbilitiesContent = [
             round1:        /**/ false,
             instantaneous: /**/ false,
             hour1:         /**/ false,
-            minute5:       /**/ false
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
         },
         name: "Повышенное сопротивление заклинаниям (возвышенный) [Greater Spell Resistance (Ascended)]", 
         requirements: "Семь оборонительных способностей",
@@ -2120,7 +2261,9 @@ const armamentAbilitiesContent = [
             round1:        /**/ false,
             instantaneous: /**/ false,
             hour1:         /**/ false,
-            minute5:       /**/ false
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
         },
         name: "Форма Земли [Earth Form]", 
         requirements: "Семь оборонительных способностей",
@@ -2151,7 +2294,9 @@ const armamentAbilitiesContent = [
             round1:        /**/ false,
             instantaneous: /**/ false,
             hour1:         /**/ false,
-            minute5:       /**/ false
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
         },
         name: "Каменное оружие [Stone Weapon]", 
         requirements: "",
@@ -2182,7 +2327,9 @@ const armamentAbilitiesContent = [
             round1:        /**/ false,
             instantaneous: /**/ false,
             hour1:         /**/ false,
-            minute5:       /**/ false
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
         },
         name: "Гранитное оружие [Granite Weapon]", 
         requirements: "Одна земляная способность",
@@ -2212,7 +2359,9 @@ const armamentAbilitiesContent = [
             round1:        /**/ false,
             instantaneous: /**/ false,
             hour1:         /**/ true,
-            minute5:       /**/ false
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
         },
         name: "Лепка земли [Mold Earth]", 
         requirements: "Одна земляная способность",
@@ -2250,7 +2399,9 @@ const armamentAbilitiesContent = [
             round1:        /**/ false,
             instantaneous: /**/ false,
             hour1:         /**/ false,
-            minute5:       /**/ false
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
         },
         name: "Земляной щит [Earth Shield]", 
         requirements: "Две земляной способности",
@@ -2286,7 +2437,9 @@ const armamentAbilitiesContent = [
             round1:        /**/ false,
             instantaneous: /**/ false,
             hour1:         /**/ false,
-            minute5:       /**/ true
+            minute5:       /**/ true,
+            round2:        /**/ false,
+            special:       /**/ false
         },
         name: "Стена камня [Wall of Stone]", 
         requirements: "Лепка земли [Mold Earth] и одна другая земляная способности",
@@ -2325,7 +2478,9 @@ const armamentAbilitiesContent = [
             round1:        /**/ false,
             instantaneous: /**/ true,
             hour1:         /**/ false,
-            minute5:       /**/ false
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
         },
         name: "Земляной луч [Earth Blast]", 
         requirements: "Три земляных способности",
@@ -2359,7 +2514,9 @@ const armamentAbilitiesContent = [
             round1:        /**/ false,
             instantaneous: /**/ true,
             hour1:         /**/ false,
-            minute5:       /**/ false
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
         },
         name: "Тремор [Tremor]", 
         requirements: "Четыре земляных способности",
@@ -2392,7 +2549,9 @@ const armamentAbilitiesContent = [
             round1:        /**/ false,
             instantaneous: /**/ false,
             hour1:         /**/ false,
-            minute5:       /**/ false
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
         },
         name: "Каменные Столпы (Ультимативный) [Pillars of Stone (Ultimate)]", 
         requirements: "Пять земляных способностей",
@@ -2428,7 +2587,9 @@ const armamentAbilitiesContent = [
             round1:        /**/ false,
             instantaneous: /**/ false,
             hour1:         /**/ false,
-            minute5:       /**/ false
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
         },
         name: "Землетресение (возвышенный) [Earthquake (Ascended)]", 
         requirements: "Шесть земляных способностей",
@@ -2466,7 +2627,9 @@ const armamentAbilitiesContent = [
             round1:        /**/ false,
             instantaneous: /**/ false,
             hour1:         /**/ false,
-            minute5:       /**/ false
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
         },
         name: "Бедрок  (возвышенный) [Bedrock (Ascended)]", 
         requirements: "Шесть земляных способностей",
@@ -2493,7 +2656,9 @@ const armamentAbilitiesContent = [
             round1:        /**/ false,
             instantaneous: /**/ false,
             hour1:         /**/ false,
-            minute5:       /**/ false
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
         },
         name: "Форма огня [Fire Form]", 
         requirements: "",
@@ -2524,7 +2689,9 @@ const armamentAbilitiesContent = [
             round1:        /**/ false,
             instantaneous: /**/ false,
             hour1:         /**/ false,
-            minute5:       /**/ false
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
         },
         name: "Пылающее оружие [Flaming Weapon]", 
         requirements: "",
@@ -2555,7 +2722,9 @@ const armamentAbilitiesContent = [
             round1:        /**/ false,
             instantaneous: /**/ false,
             hour1:         /**/ false,
-            minute5:       /**/ false
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
         },
         name: "Опаляющее оружие [Scorching Weapon]", 
         requirements: "Одна огненная способность",
@@ -2584,7 +2753,9 @@ const armamentAbilitiesContent = [
             round1:        /**/ false,
             instantaneous: /**/ true,
             hour1:         /**/ true,
-            minute5:       /**/ false
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
         },
         name: "Контроль пламени [Control Flames]", 
         requirements: "Одна огненная способность",
@@ -2621,7 +2792,9 @@ const armamentAbilitiesContent = [
             round1:        /**/ false,
             instantaneous: /**/ false,
             hour1:         /**/ false,
-            minute5:       /**/ false
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
         },
         name: "Щит пламени [Fire Shield]", 
         requirements: "Две огненные способности",
@@ -2659,7 +2832,9 @@ const armamentAbilitiesContent = [
             round1:        /**/ false,
             instantaneous: /**/ true,
             hour1:         /**/ false,
-            minute5:       /**/ false
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
         },
         name: "Конус огня [Cone of Fire]", 
         requirements: "Три огненные способности",
@@ -2692,7 +2867,9 @@ const armamentAbilitiesContent = [
             round1:        /**/ false,
             instantaneous: /**/ false,
             hour1:         /**/ false,
-            minute5:       /**/ false
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
         },
         name: "Стена огня [Wall of Fire]", 
         requirements: "Четыре огненные способности",
@@ -2729,7 +2906,9 @@ const armamentAbilitiesContent = [
             round1:        /**/ false,
             instantaneous: /**/ true,
             hour1:         /**/ true,
-            minute5:       /**/ false
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
         },
         name: "Столп Пламени [Pillar of Flame]", 
         requirements: "Четыре огненные способности",
@@ -2762,7 +2941,9 @@ const armamentAbilitiesContent = [
             round1:        /**/ false,
             instantaneous: /**/ true,
             hour1:         /**/ false,
-            minute5:       /**/ false
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
         },
         name: "Огненный шторм (Ультимативный) [Fire Storm (Ultimate)]", 
         requirements: "Пять огненных способностей",
@@ -2796,7 +2977,9 @@ const armamentAbilitiesContent = [
             round1:        /**/ false,
             instantaneous: /**/ true,
             hour1:         /**/ false,
-            minute5:       /**/ false
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
         },
         name: "Метеоритный рой (вознесенный) [Meteor Swarm (Ascended)]", 
         requirements: "Шесть огненных способностей",
@@ -2826,7 +3009,9 @@ const armamentAbilitiesContent = [
             round1:        /**/ false,
             instantaneous: /**/ false,
             hour1:         /**/ false,
-            minute5:       /**/ false
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
         },
         name: "Адское Пламя (Вознесенный) [Hellfire (Ascended)]", 
         requirements: "Шесть огненных способностей",
@@ -2853,7 +3038,9 @@ const armamentAbilitiesContent = [
             round1:        /**/ false,
             instantaneous: /**/ false,
             hour1:         /**/ false,
-            minute5:       /**/ false
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
         },
         name: "Повышенная сила [Increased Strength]", 
         requirements: "",
@@ -2881,7 +3068,9 @@ const armamentAbilitiesContent = [
             round1:        /**/ false,
             instantaneous: /**/ false,
             hour1:         /**/ false,
-            minute5:       /**/ false
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
         },
         name: "Повышенная ловкость [Increased Dexterity]", 
         requirements: "",
@@ -2909,7 +3098,9 @@ const armamentAbilitiesContent = [
             round1:        /**/ false,
             instantaneous: /**/ false,
             hour1:         /**/ false,
-            minute5:       /**/ false
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
         },
         name: "Повышенное телосложение [Increased Constitution]", 
         requirements: "",
@@ -2937,7 +3128,9 @@ const armamentAbilitiesContent = [
             round1:        /**/ false,
             instantaneous: /**/ false,
             hour1:         /**/ false,
-            minute5:       /**/ false
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
         },
         name: "Повышенный интеллект [Increased Intelligence]", 
         requirements: "",
@@ -2965,7 +3158,9 @@ const armamentAbilitiesContent = [
             round1:        /**/ false,
             instantaneous: /**/ false,
             hour1:         /**/ false,
-            minute5:       /**/ false
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
         },
         name: "Повышенная мудрость [Increased Wisdom]", 
         requirements: "",
@@ -2993,7 +3188,9 @@ const armamentAbilitiesContent = [
             round1:        /**/ false,
             instantaneous: /**/ false,
             hour1:         /**/ false,
-            minute5:       /**/ false
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
         },
         name: "Повышенная харизма [Increased Charisma]", 
         requirements: "",
@@ -3021,7 +3218,9 @@ const armamentAbilitiesContent = [
             round1:        /**/ false,
             instantaneous: /**/ false,
             hour1:         /**/ false,
-            minute5:       /**/ false
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
         },
         name: "Увеличенный спасбросок [Increased Saving Throw]", 
         requirements: "Три способности вооружения",
@@ -3049,7 +3248,9 @@ const armamentAbilitiesContent = [
             round1:        /**/ false,
             instantaneous: /**/ false,
             hour1:         /**/ false,
-            minute5:       /**/ false
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
         },
         name: "Увеличенный навык [Increased Skill]", 
         requirements: "",
@@ -3077,7 +3278,9 @@ const armamentAbilitiesContent = [
             round1:        /**/ false,
             instantaneous: /**/ false,
             hour1:         /**/ false,
-            minute5:       /**/ false
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
         },
         name: "Увеличенная скорость [Increased Speed]", 
         requirements: "",
@@ -3105,7 +3308,9 @@ const armamentAbilitiesContent = [
             round1:        /**/ false,
             instantaneous: /**/ false,
             hour1:         /**/ false,
-            minute5:       /**/ false
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
         },
         name: "Быстрое высвобождение [Quick Release]", 
         requirements: "",
@@ -3132,7 +3337,9 @@ const armamentAbilitiesContent = [
             round1:        /**/ false,
             instantaneous: /**/ false,
             hour1:         /**/ false,
-            minute5:       /**/ false
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
         },
         name: "Великое быстрое высвобождение [Quick Release Greater]", 
         requirements: "Форма высвобождения",
@@ -3159,7 +3366,9 @@ const armamentAbilitiesContent = [
             round1:        /**/ false,
             instantaneous: /**/ false,
             hour1:         /**/ false,
-            minute5:       /**/ false
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
         },
         name: "Увеличенние талантов [Increased Talent]", 
         requirements: "",
@@ -3187,7 +3396,9 @@ const armamentAbilitiesContent = [
             round1:        /**/ false,
             instantaneous: /**/ false,
             hour1:         /**/ false,
-            minute5:       /**/ false
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
         },
         name: "Увеличенная концентрация [Increased Concentration]", 
         requirements: "Одна способность вооружения",
@@ -3214,7 +3425,9 @@ const armamentAbilitiesContent = [
             round1:        /**/ false,
             instantaneous: /**/ true,
             hour1:         /**/ false,
-            minute5:       /**/ false
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
         },
         name: "Духовный луч [Spirit Blast]", 
         requirements: "Одна способность вооружения",
@@ -3246,7 +3459,9 @@ const armamentAbilitiesContent = [
             round1:        /**/ false,
             instantaneous: /**/ false,
             hour1:         /**/ false,
-            minute5:       /**/ false
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
         },
         name: "Увеличенная внимательность [Increased Awareness]", 
         requirements: "Четыре способности вооружения",
@@ -3276,7 +3491,9 @@ const armamentAbilitiesContent = [
             round1:        /**/ false,
             instantaneous: /**/ false,
             hour1:         /**/ false,
-            minute5:       /**/ false
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
         },
         name: "Полет [Flying]", 
         requirements: "Шесть способностей вооружения",
@@ -3307,7 +3524,9 @@ const armamentAbilitiesContent = [
             round1:        /**/ false,
             instantaneous: /**/ false,
             hour1:         /**/ false,
-            minute5:       /**/ false
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
         },
         name: "Ускоренная способность (возвышенная) [Quickened Ability (Ascended)]", 
         requirements: "Шесть способностей вооружения",
@@ -3335,7 +3554,9 @@ const armamentAbilitiesContent = [
             round1:        /**/ false,
             instantaneous: /**/ false,
             hour1:         /**/ false,
-            minute5:       /**/ false
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
         },
         name: "Улучшенное Вознесение (Вознесенный) [Improved Ascencion (Ascended)]", 
         requirements: "Форма высвобождения",
@@ -3363,7 +3584,9 @@ const armamentAbilitiesContent = [
             round1:        /**/ false,
             instantaneous: /**/ false,
             hour1:         /**/ false,
-            minute5:       /**/ false
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
         },
         name: "Гравитационный клинок [Gravity Blade]", 
         requirements: "",
@@ -3395,7 +3618,9 @@ const armamentAbilitiesContent = [
             round1:        /**/ false,
             instantaneous: /**/ false,
             hour1:         /**/ false,
-            minute5:       /**/ false
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
         },
         name: "Контроль гравитации [Control Gravity]", 
         requirements: "",
@@ -3440,7 +3665,9 @@ const armamentAbilitiesContent = [
             round1:        /**/ false,
             instantaneous: /**/ false,
             hour1:         /**/ false,
-            minute5:       /**/ false
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
         },
         name: "Гравитационное оружие [Graviton Weapon]", 
         requirements: "Одна гравитационная способность",
@@ -3470,7 +3697,9 @@ const armamentAbilitiesContent = [
             round1:        /**/ false,
             instantaneous: /**/ true,
             hour1:         /**/ false,
-            minute5:       /**/ false
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
         },
         name: "Отталкивание [Repulsion]", 
         requirements: "Способность Контроль гравитации [Control Gravity]",
@@ -3502,7 +3731,9 @@ const armamentAbilitiesContent = [
             round1:        /**/ false,
             instantaneous: /**/ true,
             hour1:         /**/ false,
-            minute5:       /**/ false
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
         },
         name: "Гравитас [Gravitas]", 
         requirements: "Две гравитационные способности",
@@ -3533,7 +3764,9 @@ const armamentAbilitiesContent = [
             round1:        /**/ false,
             instantaneous: /**/ true,
             hour1:         /**/ false,
-            minute5:       /**/ false
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
         },
         name: "Гравитационная волна [Gravity Wave]", 
         requirements: "Две гравитационные способности",
@@ -3564,7 +3797,9 @@ const armamentAbilitiesContent = [
             round1:        /**/ false,
             instantaneous: /**/ true,
             hour1:         /**/ false,
-            minute5:       /**/ false
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
         },
         name: "Вытеснитель [Displacer]", 
         requirements: "Три гравитационные способности",
@@ -3576,4 +3811,321 @@ const armamentAbilitiesContent = [
         <p> &mdash; Вы можете выбрать любые две цели вместо одной цели и себя.</p>
         ` 
     }, //Displacer 7
+    {
+        type: tp.gravity,
+        cost: 3,
+        rules: true, 
+        castingTime:      castTime.action,
+        range:            rng.touch,
+        components: {
+            verbal:       /*v*/ true,  
+            somatic:      /*s*/ true,  
+            material:     /*m*/ false, 
+            released:     /*w*/ true  
+        },
+        duration: {
+            until_sealed:  /**/ false,
+            concentration: /**/ false,
+            minute1:       /**/ false,
+            round1:        /**/ true,
+            instantaneous: /**/ false,
+            hour1:         /**/ false,
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
+        },
+        name: "Гравитационный карман [Gravitational Pocket]", 
+        requirements: "Три гравитационные способности",
+        data:`
+        <p>Совершите рукопашную атаку по существу, до которого можете дотянуться. При попадании цель получает силовой урон 1d10 и схлопывается в невероятно крошечную точку в пространстве, где она стояла, исчезая, а затем снова появляясь в конце хода в том же пространстве, из которого она вышла. Если какой-либо объект или существо занимает это пространство, они перемещаются в ближайшее незанятое пространство по своему выбору. Существо, находящееся под действием этой способности, получает к ней иммунитет на 1 раунд.</p>
+        <p>Вы можете повторно выбрать эту способность несколько раз, каждый раз выбирая один из следующих вариантов:</p>
+        <p> &mdash; Увеличьте урон еще на 1d10.</p>
+        <p> &mdash; Увеличьте количество раундов, в течение которых цель исчезает на 1.</p>
+        ` 
+    }, //Gravitational Pocket 8
+    {
+        type: tp.gravity,
+        cost: 3,
+        rules: true, 
+        castingTime:      castTime.action,
+        range:            rng.ft60,
+        components: {
+            verbal:       /*v*/ true,  
+            somatic:      /*s*/ true,  
+            material:     /*m*/ false, 
+            released:     /*w*/ true  
+        },
+        duration: {
+            until_sealed:  /**/ false,
+            concentration: /**/ true,
+            minute1:       /**/ true,
+            round1:        /**/ false,
+            instantaneous: /**/ false,
+            hour1:         /**/ false,
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
+        },
+        name: "Энтропия [Entropy]", 
+        requirements: "Три гравитационные способности",
+        data:`
+        <p>Вы создаете дестабилизированное гравитационное поле вокруг цели, которую видите в пределах дистанции. Совершите дальнюю атаку по цели. При попадании цель получает урон силой 1d6 и в течение этого времени в начале каждого хода цели она перемещается на 20 футов в случайном направлении: вперед, назад, влево или вправо. Цель может сопротивляться принудительному движению с шагом 5 футов, но за каждые 5 футов, которые она не двигается, она получает 1d6 урона силой.</p>
+        <p>Вы можете повторно выбрать эту способность несколько раз, каждый раз выбирая один из следующих вариантов:</p>
+        <p> &mdash; Эта способность больше не требует концентрации</p>
+        <p> &mdash; Увеличение продолжительности на 1 минуту.</p>
+        <p> &mdash; Увеличьте величину перемещения существа на 5 футов.</p>
+        ` 
+    }, //Entropy 9
+    {
+        type: tp.gravity,
+        cost: 2,
+        rules: true, 
+        castingTime:      castTime.action,
+        range:            rng.self,
+        components: {
+            verbal:       /*v*/ true,  
+            somatic:      /*s*/ true,  
+            material:     /*m*/ false, 
+            released:     /*w*/ true  
+        },
+        duration: {
+            until_sealed:  /**/ false,
+            concentration: /**/ true,
+            minute1:       /**/ true,
+            round1:        /**/ false,
+            instantaneous: /**/ false,
+            hour1:         /**/ false,
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
+        },
+        name: "Безграничная гравитация [Gravity Unbound]", 
+        requirements: "Четыре гравитационные способности",
+        data:`
+        <p>Вы обрушиваете гравитацию вокруг себя в 20-футовой сфере с центром вокруг вас, которая движется вместе с вами. На время действия поле оказывает следующие эффекты:</p>
+        <p> &mdash; Скорость каждого другого существа на поле снижается до 0.</p>
+        <p> &mdash; Все остальные существа имеют помеху при атаке оружием.</p>
+        <p> &mdash; В этом случае другие ваши гравитационные способности притягивают или толкают существ еще на 10 футов.</p>
+        ` 
+    }, //Gravity Unbound 10
+    {
+        type: tp.gravity,
+        cost: 5,
+        rules: true, 
+        castingTime:      castTime.action,
+        range:            rng.ft100,
+        components: {
+            verbal:       /*v*/ true,  
+            somatic:      /*s*/ true,  
+            material:     /*m*/ false, 
+            released:     /*w*/ true  
+        },
+        duration: {
+            until_sealed:  /**/ false,
+            concentration: /**/ true,
+            minute1:       /**/ true,
+            round1:        /**/ false,
+            instantaneous: /**/ false,
+            hour1:         /**/ false,
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
+        },
+        name: "Сингулярность (ультимативная) [Singularity (Ultimate)]", 
+        requirements: "Пять гравитационных способностей",
+        data:`
+        <p>Вы создаете черную сферу диаметром 2 фута в точке, которую видите в пределах дистанции, и она зависает в этом пространстве.</p>
+        <p>Сфера уничтожает всю материю, проходящую через нее. Артефакты являются исключением. Все, что касается сферы, но не полностью поглощено и уничтожено ею, получает урон силой 10d6.</p>
+        <p>При инициативе 30 каждое существо в пределах 60 футов от сферы должно совершить спасбросок Силы, в случае неудачи оно притягивается на 35 футов к ее центру.</p>
+        <p>Если сфера вступает в контакт с планарным порталом, например, созданным заклинанием врата, или межпространственным пространством, например, внутри переносной дыры, ГМ определяет, какое катастрофическое событие произойдет.</p>
+        <p>Вы можете повторно выбрать эту способность несколько раз, каждый раз выбирая один из следующих вариантов:</p>
+        <p> &mdash; Увеличьте количество создаваемых вами сингулярностей на 1 до максимума 3.</p>
+        <p> &mdash; Вместо этого сфера наносит 10d8 урона.</p>
+        ` 
+    }, //Singularity (Ultimate) 11
+    {
+        type: tp.gravity,
+        cost: 6,
+        rules: true, 
+        castingTime:      castTime.action,
+        range:            rng.varies,
+        components: {
+            verbal:       /*v*/ true,  
+            somatic:      /*s*/ true,  
+            material:     /*m*/ false, 
+            released:     /*w*/ true  
+        },
+        duration: {
+            until_sealed:  /**/ true,
+            concentration: /**/ false,
+            minute1:       /**/ false,
+            round1:        /**/ false,
+            instantaneous: /**/ false,
+            hour1:         /**/ false,
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
+        },
+        name: "Гравитационная бомбардировка (вознесенный) [Gravitational Bombardment (Ascended)]", 
+        requirements: "Пять гравитационных способностей",
+        data:`
+        <p>Вы создаете 10 сфер сжимающегося пространства диаметром в один дюйм, которые вращаются вокруг вас. Пока существо подвергается воздействию другой вашей гравитационной способности или заклинания, которое принудительно перемещает существо, вы можете запустить в существо до 3 сфер. Каждая сфера наносит 3d8 силового урона. Кроме того, когда в существо попадает сфера, оно взрывается и излучает гравитационную энергию из существа в сфере радиусом 20 футов. Каждое другое существо в сфере должно совершить спасбросок ловкости. Существо получает 2d6 урона силовым полем за каждый метеор при неудачном спасброске или половину этого урона при успешном.</p>
+        ` 
+    }, // Gravitational Bombardment (Ascended) 12
+    {
+        type: tp.gravity,
+        cost: 6,
+        rules: true, 
+        castingTime:      castTime.action,
+        range:            rng.self,
+        components: {
+            verbal:       /*v*/ true,  
+            somatic:      /*s*/ true,  
+            material:     /*m*/ false, 
+            released:     /*w*/ true  
+        },
+        duration: {
+            until_sealed:  /**/ false,
+            concentration: /**/ false,
+            minute1:       /**/ false,
+            round1:        /**/ false,
+            instantaneous: /**/ true,
+            hour1:         /**/ false,
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
+        },
+        name: "Падающая звезда (вознесенный) [Falling Star (Ascended)]", 
+        requirements: "Шесть гравитационных способностей",
+        data:`
+        <p>Вы создаете вокруг себя сферу нестабильной гравитации. В рамках этого действия вы получаете скорость полета 600 футов и можете перемещаться на расстояние до 600 футов. Если во время этого движения вы столкнетесь с какой-либо поверхностью или существом, сфера разряжается с огромной силой. Объект или существо, подвергшееся воздействию, и все остальные существа в пределах 80 футов от него должны совершить спасбросок Силы. Затронутое существо или объект получает урон силой 30d6 при проваленном спасброске и отбрасывается на 30 футов назад в выбранном вами направлении. Предметы и существа при успешном забирают вдвое меньше и не перемещаются.</p>
+        ` 
+    }, // Falling Star (Ascended) 13
+    {
+        type: tp.gravity,
+        cost: 0,
+        rules: false, 
+        castingTime:      castTime.none,
+        range:            rng.none,
+        components: {
+            verbal:       /*v*/ false,  
+            somatic:      /*s*/ false,  
+            material:     /*m*/ false, 
+            released:     /*w*/ false  
+        },
+        duration: {
+            until_sealed:  /**/ false,
+            concentration: /**/ false,
+            minute1:       /**/ false,
+            round1:        /**/ false,
+            instantaneous: /**/ false,
+            hour1:         /**/ false,
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
+        },
+        name: "Расширенный кайдо [Expanded Kaido]", 
+        requirements: "Способность 'Пакт Магии' или врзможность создавать заклинания",
+        data:`
+        <p>Вы изучаете два новых заклинания Кайдо по вашему выбору из списка заклинаний синигами или два заклинания из любого другого списка заклинаний, которые восстанавливают или предоставляют временные очки жизни.</p>
+        <p>Вы можете повторно выбрать эту способность несколько раз.</p>
+        ` 
+    }, // Expanded Kaido 1 --------------------------------- healing
+    {
+        type: tp.gravity,
+        cost: 2,
+        rules: true, 
+        castingTime:      castTime.action,
+        range:            rng.self,
+        components: {
+            verbal:       /*v*/ true,  
+            somatic:      /*s*/ true,  
+            material:     /*m*/ false, 
+            released:     /*w*/ true  
+        },
+        duration: {
+            until_sealed:  /**/ false,
+            concentration: /**/ true,
+            minute1:       /**/ false,
+            round1:        /**/ false,
+            instantaneous: /**/ false,
+            hour1:         /**/ false,
+            minute5:       /**/ false,
+            round2:        /**/ true,
+            special:       /**/ false
+        },
+        name: "Исцеляющий клинок [Healing Blade]", 
+        requirements: "",
+        data:`
+        <p>Ваше вооружение больше не наносит смертельный урон.</p>
+        <p>Всякий раз, когда ваше вооружение наносит урон существу, оно вместо этого восстанавливает очки жизни, равные нанесенному урону. Вы можете отклонить эту способность как бонусное действие.</p>
+        <p>Вы можете повторно выбрать эту способность несколько раз, каждый раз выбирая один из следующих вариантов:</p>
+        <p> &mdash; Вы можете активировать эту способность как бонусное действие и отключить ее по своему желанию.</p>
+        <p> &mdash; Эта способность больше не требует компонентов V или S.</p>
+        <p> &mdash; Увеличьте длительность этой способности на 1 раунд.</p>
+        ` 
+    }, //Healing Blade 2
+    {
+        type: tp.gravity,
+        cost: 1,
+        rules: true, 
+        castingTime:      castTime.action,
+        range:            rng.self,
+        components: {
+            verbal:       /*v*/ true,  
+            somatic:      /*s*/ true,  
+            material:     /*m*/ false, 
+            released:     /*w*/ true  
+        },
+        duration: {
+            until_sealed:  /**/ false,
+            concentration: /**/ true,
+            minute1:       /**/ false,
+            round1:        /**/ true,
+            instantaneous: /**/ false,
+            hour1:         /**/ false,
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
+        },
+        name: "Улучшенное исцеление [Improved Healing]", 
+        requirements: "Способность 'Пакт Магии' или врзможность создавать заклинания",
+        data:`
+        <p>Пока эта способность активна, когда вы произносите заклинание, восстанавливающее хиты или предоставляющее временные хиты, существо восстанавливает дополнительные 1d4 хитов или получает дополнительные 1d4 временных хитов.</p>
+        <p>Вы можете повторно выбрать эту способность несколько раз, каждый раз выбирая один из следующих вариантов:</p>
+        <p> &mdash; Эта способность больше не требует компонентов V или S.</p>
+        <p> &mdash; Увеличьте размер кубика на один шаг, максимум до 1d12.</p>
+        <p> &mdash; Увеличьте длительность этой способности на 1 раунд.</p>
+        ` 
+    }, //Improved Healing 3
+    {
+        type: tp.gravity,
+        cost: 2,
+        rules: true, 
+        castingTime:      castTime.action,
+        range:            rng.special,
+        components: {
+            verbal:       /*v*/ true,  
+            somatic:      /*s*/ true,  
+            material:     /*m*/ false, 
+            released:     /*w*/ true  
+        },
+        duration: {
+            until_sealed:  /**/ false,
+            concentration: /**/ false,
+            minute1:       /**/ false,
+            round1:        /**/ false,
+            instantaneous: /**/ false,
+            hour1:         /**/ false,
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ true
+        },
+        name: "Исцеляющее прикосновение [Healing Touch]", 
+        requirements: "Лечение ран и одна способность исцеления",
+        data:`
+        <p>В рамках этой способности вы произносите заклинание Кайдо или любое другое заклинание, которое восстанавливает очки жизни или предоставляет временные очки жизни 1-го уровня или ниже, которые вам известны, не тратя SP и не требуя материальных компонентов.</p>
+        <p>Вы можете повторно выбирать эту способность несколько раз, каждый раз повышая уровень заклинания на один, максимум 7.</p>
+        ` 
+    }, //Healing Touch 4
 ]
