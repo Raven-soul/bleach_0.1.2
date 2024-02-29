@@ -45,7 +45,8 @@ const tp = {
     fire: "Fire",
     common: "Common",
     gravity: "Gravity",
-    healing: "Healing"
+    healing: "Healing",
+    hollow: "Hollow"
 }
 
 const armamentAbilitiesContent = [
@@ -4002,7 +4003,7 @@ const armamentAbilitiesContent = [
         ` 
     }, // Falling Star (Ascended) 13
     {
-        type: tp.gravity,
+        type: tp.healing,
         cost: 0,
         rules: false, 
         castingTime:      castTime.none,
@@ -4032,7 +4033,7 @@ const armamentAbilitiesContent = [
         ` 
     }, // Expanded Kaido 1 --------------------------------- healing
     {
-        type: tp.gravity,
+        type: tp.healing,
         cost: 2,
         rules: true, 
         castingTime:      castTime.action,
@@ -4066,7 +4067,7 @@ const armamentAbilitiesContent = [
         ` 
     }, //Healing Blade 2
     {
-        type: tp.gravity,
+        type: tp.healing,
         cost: 1,
         rules: true, 
         castingTime:      castTime.action,
@@ -4099,7 +4100,7 @@ const armamentAbilitiesContent = [
         ` 
     }, //Improved Healing 3
     {
-        type: tp.gravity,
+        type: tp.healing,
         cost: 2,
         rules: true, 
         castingTime:      castTime.action,
@@ -4128,4 +4129,206 @@ const armamentAbilitiesContent = [
         <p>Вы можете повторно выбирать эту способность несколько раз, каждый раз повышая уровень заклинания на один, максимум 7.</p>
         ` 
     }, //Healing Touch 4
+    {
+        type: tp.healing,
+        cost: 0,
+        rules: false, 
+        castingTime:      castTime.action,
+        range:            rng.special,
+        components: {
+            verbal:       /*v*/ true,  
+            somatic:      /*s*/ true,  
+            material:     /*m*/ false, 
+            released:     /*w*/ true  
+        },
+        duration: {
+            until_sealed:  /**/ false,
+            concentration: /**/ false,
+            minute1:       /**/ false,
+            round1:        /**/ false,
+            instantaneous: /**/ false,
+            hour1:         /**/ false,
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ true
+        },
+        name: "Исцеляющий фактор [Healing Factor]", 
+        requirements: "Две исцеляющие способности",
+        data:`
+        <p>Находясь в сознании, вы восстанавливаете 1 очко жизни в начале своего хода.</p>
+        <p>Вы получаете дополнительные преимущества в зависимости от того, сколько раз вы выбрали эту способность:</p>
+        <p> 2 – Когда вы преуспеваете в спасброске от смерти, вы получаете дополнительный успех.</p>
+        <p> 3 – Вы совершаете с преимуществом спасброски от отравления.</p>
+        <p> 4 – Вы невосприимчивы к болезням.</p>
+        <p>Вы можете повторно выбрать эту способность несколько раз, каждый раз выбирая один из следующих вариантов:</p>
+        <p> &mdash; Увеличьте количество восстанавливаемых очков жизни на 1, максимум до 8.</p>
+        <p> &mdash; Кроме того, в начале вашего хода вы исцеляете одно очко урона от характеристики.</p>
+        <p> &mdash; Кроме того, в начале вашего хода у вас вырастает один отрезанный придаток, кроме головы. Вы должны выбрать эту способность трижды, прежде чем сможете выбрать эту опцию.</p>
+        <p> &mdash; Кроме того, в начале вашего хода вы можете прекратить одно из следующих состояний: ослепление, оглушение, паралич или отравление. Вы должны выбрать эту способность трижды, прежде чем сможете выбрать эту опцию.</p>
+        ` 
+    }, //Healing Factor 5
+    {
+        type: tp.healing,
+        cost: 1,
+        rules: true, 
+        castingTime:      castTime.action,
+        range:            rng.ft60,
+        components: {
+            verbal:       /*v*/ true,  
+            somatic:      /*s*/ true,  
+            material:     /*m*/ false, 
+            released:     /*w*/ true  
+        },
+        duration: {
+            until_sealed:  /**/ false,
+            concentration: /**/ true,
+            minute1:       /**/ true,
+            round1:        /**/ false,
+            instantaneous: /**/ false,
+            hour1:         /**/ false,
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
+        },
+        name: "Армия исцеления [Panoply of Healing]", 
+        requirements: "Три исцеляющие способности",
+        data:`
+        <p>Вы даруете до трех существ в радиусе действия количество временных очков жизни, равное вашему уровню + количеству имеющихся у вас исцеляющих способностей.</p>
+        <p>Каждый раз, когда вы повторно выбираете эту способность, дальность увеличивается на 10 футов.</p>
+        <p>Вы можете повторно выбрать эту способность несколько раз, каждый раз выбирая один из следующих вариантов:</p>
+        <p> &mdash; Эта способность больше не требует компонентов V или S.</p>
+        <p> &mdash; Эта способность больше не требует концентрации.</p>
+        <p> &mdash; Увеличьте продолжительность на 1 минуту.</p>
+        <p> &mdash; Затронутые существа также получают выгоду от вашего Исцеляющего Фактора (если у вас есть такая способность). Вы должны выбрать эту способность четыре раза, прежде чем сможете выбрать эту опцию.</p>
+        ` 
+    }, //Panoply of Healing 6
+    {
+        type: tp.healing,
+        cost: 3,
+        rules: true, 
+        castingTime:      castTime.action,
+        range:            rng.self,
+        components: {
+            verbal:       /*v*/ true,  
+            somatic:      /*s*/ true,  
+            material:     /*m*/ false, 
+            released:     /*w*/ true  
+        },
+        duration: {
+            until_sealed:  /**/ false,
+            concentration: /**/ false,
+            minute1:       /**/ false,
+            round1:        /**/ false,
+            instantaneous: /**/ true,
+            hour1:         /**/ false,
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
+        },
+        name: "Снятие боли [Pain Release]", 
+        requirements: "Четыре исцеляющие способности",
+        data:`
+        <p>Вы совершаете одну рукопашную или одну дальнюю атаку оружием с нормальной дальностью 80 футов и большой дальностью 120 футов своим вооружением. В случае успеха вы наносите урон, равный количеству очков жизни, которые существа восстановили с помощью вашего Кидо или способностей вооружения с предыдущего рассвета.</p>
+        <p>Вы можете повторно выбрать эту способность несколько раз, каждый раз выбирая один из следующих вариантов:</p>
+        <p> &mdash; Если вы решите совершить рукопашную атаку, вы получите преимущество на бросок атаки.</p>
+        <p> &mdash; Если вы решите совершить дальнюю атаку, нормальная и дальняя дистанция удваивается.</p>
+        ` 
+    }, //Pain Release 7
+    {
+        type: tp.healing,
+        cost: 4,
+        rules: true, 
+        castingTime:      castTime.hour1,
+        range:            rng.touch,
+        components: {
+            verbal:       /*v*/ true,  
+            somatic:      /*s*/ true,  
+            material:     /*m*/ false, 
+            released:     /*w*/ true  
+        },
+        duration: {
+            until_sealed:  /**/ false,
+            concentration: /**/ false,
+            minute1:       /**/ false,
+            round1:        /**/ false,
+            instantaneous: /**/ true,
+            hour1:         /**/ false,
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
+        },
+        name: "Воскрешение (ультимативная) [Resurrection (Ultimate)]", 
+        requirements: "Пять исцеляющих способностей",
+        data:`
+        <p>Вы прикасаетесь к мертвому существу, которое умерло не более столетия, которое не умерло от старости и не является нежитью. Если его душа свободна, желает и не перевоплощалась, цель возвращается к жизни со всеми своими хитами.</p>
+        <p>Это заклинание нейтрализует любые яды и лечит обычные болезни, поразившие существо после его смерти. Однако это не удаляет магические болезни, проклятия и жизнь; если такие эффекты не удалены до применения заклинания, они поражают цель при ее возвращении к жизни.</p>
+        <p>Это заклинание закрывает все смертельные раны и восстанавливает недостающие части тела.</p>
+        <p>Возвращение из мертвых – это испытание. Цель получает штраф -4 ко всем броскам D20. Каждый раз, когда цель заканчивает длительный отдых, штраф уменьшается на 1, пока не исчезнет.</p>
+        <p>Восстановление жизни существу, которое не было мертвым в течение года или дольше, требует от вас больших затрат. Пока ваше вооружение восстанавливается, вы совершаете с помехой все броски атаки, проверки характеристик и спасброски.</p>
+        ` 
+    }, //Resurrection (Ultimate) 8
+    {
+        type: tp.healing,
+        cost: 4,
+        rules: true, 
+        castingTime:      castTime.action,
+        range:            rng.ft60,
+        components: {
+            verbal:       /*v*/ true,  
+            somatic:      /*s*/ true,  
+            material:     /*m*/ false, 
+            released:     /*w*/ true  
+        },
+        duration: {
+            until_sealed:  /**/ false,
+            concentration: /**/ true,
+            minute1:       /**/ true,
+            round1:        /**/ false,
+            instantaneous: /**/ false,
+            hour1:         /**/ false,
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
+        },
+        name: "Круг Жизни (Вознесенный) [Circle of Life (Ascended)]", 
+        requirements: "Шесть исцеляющих способностей",
+        data:`
+        <p>Сфера положительной энергии струится в сфере радиусом 60 футов из выбранной вами точки в пределах досягаемости. Если хиты существа должны быть уменьшены до 0 или меньше, вместо этого их хиты уменьшаются до 1. Вы можете отказаться от этой способности по своему желанию.</p>
+        <p>Каждый раз, когда вы повторно выбираете эту способность, дальность увеличивается на 10 футов, а радиус увеличивается на 10 футов.</p>
+        <p>Вы можете повторно выбрать эту способность несколько раз, каждый раз выбирая один из следующих вариантов:</p>
+        <p> &mdash; Эта способность больше не требует компонентов V или S.</p>
+        <p> &mdash; Эта способность больше не требует концентрации.</p>
+        <p> &mdash; Вы можете использовать эту способность как реакцию, триггером которой является союзник, которого вы видите в пределах дистанции, получающий урон.</p>
+        <p> &mdash; Кроме того, когда эта способность заканчивается по истечении срока действия или вы отклоняете способность, любое существо в сфере восстанавливает 8d4 хитов.</p>
+        ` 
+    }, //Circle of Life (Ascended) 9
+    {
+        type: tp.healing,
+        cost: 0,
+        rules: false, 
+        castingTime:      castTime.none,
+        range:            rng.none,
+        components: {
+            verbal:       /*v*/ false,  
+            somatic:      /*s*/ false,  
+            material:     /*m*/ false, 
+            released:     /*w*/ false  
+        },
+        duration: {
+            until_sealed:  /**/ false,
+            concentration: /**/ false,
+            minute1:       /**/ false,
+            round1:        /**/ false,
+            instantaneous: /**/ false,
+            hour1:         /**/ false,
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
+        },
+        name: "Высшее Исцеление (Вознесенный) [Supreme Healing (Ascended)]", 
+        requirements: "Шесть исцеляющих способностей",
+        data:`
+        <p>Когда вы обычно бросаете один или несколько кубиков, чтобы восстановить очки жизни с помощью Кидо или способности вооружения, вместо этого вы используете максимально возможное число для каждого кубика. Например, вместо того, чтобы восстанавливать существу 2d6 очков жизни, вы восстанавливаете 12.</p>
+        ` 
+    }, //Supreme Healing (Ascended) 10
 ]
