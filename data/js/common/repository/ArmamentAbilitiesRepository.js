@@ -49,6 +49,13 @@ const tp = {
     hollow: "Hollow"
 }
 
+const rch = {
+    none: "none",
+    rch6: "6",
+    rch1_6: "1—6",
+    rchDay1: "1/Day"
+}
+
 const armamentAbilitiesContent = [
     {
         type: tp.acid,
@@ -73,6 +80,7 @@ const armamentAbilitiesContent = [
             round2:        /**/ false,
             special:       /**/ false
         },
+        recharge: rch.none,
         name: "Кислотная форма [Acid Form]", 
         requirements: "",
         data:`
@@ -107,6 +115,7 @@ const armamentAbilitiesContent = [
             round2:        /**/ false,
             special:       /**/ false
         },
+        recharge: rch.none,
         name: "Кислотное оружие [Acidic Weapon]", 
         requirements: "",
         data:`
@@ -140,6 +149,7 @@ const armamentAbilitiesContent = [
             round2:        /**/ false,
             special:       /**/ false
         },
+        recharge: rch.none,
         name: "Едкое оружие [Caustic Weapon]", 
         requirements: "Одна кислотная способность",
         data:`
@@ -173,6 +183,7 @@ const armamentAbilitiesContent = [
             round2:        /**/ false,
             special:       /**/ false
         },
+        recharge: rch.none,
         name: "Кислотная броня [Acid Armor]", 
         requirements: "Одна кислотная способность",
         data:`
@@ -209,6 +220,7 @@ const armamentAbilitiesContent = [
             round2:        /**/ false,
             special:       /**/ false
         },
+        recharge: rch.none,
         name: "Кислотный выстрел [Acid Shot]", 
         requirements: "Одна кислотная способность",
         data:`
@@ -241,6 +253,7 @@ const armamentAbilitiesContent = [
             round2:        /**/ false,
             special:       /**/ false
         },
+        recharge: rch.none,
         name: "Кислотный плевок [Acid Spit]", 
         requirements: "Две кислотные способности",
         data:`
@@ -274,6 +287,7 @@ const armamentAbilitiesContent = [
             round2:        /**/ false,
             special:       /**/ false
         },
+        recharge: rch.none,
         name: "Кислотный бассейн [Acid Pool]", 
         requirements: "Две кислотные способности",
         data:`
@@ -309,6 +323,7 @@ const armamentAbilitiesContent = [
             round2:        /**/ false,
             special:       /**/ false
         },
+        recharge: rch.none,
         name: "Кислотный дождь [Acid Rain]", 
         requirements: "Три кислотные способности",
         data:`
@@ -344,6 +359,7 @@ const armamentAbilitiesContent = [
             round2:        /**/ false,
             special:       /**/ false
         },
+        recharge: rch.none,
         name: "Прикосновение коррозии [Corrosive Touch]", 
         requirements: "Четыре кислотные способности",
         data:`
@@ -379,6 +395,7 @@ const armamentAbilitiesContent = [
             round2:        /**/ false,
             special:       /**/ false
         },
+        recharge: rch.none,
         name: "Атака коррозией (Финальный) [Corrosive Attack (Ultimate)]", 
         requirements: "Пять кислотных способностей",
         data:`
@@ -412,6 +429,7 @@ const armamentAbilitiesContent = [
             round2:        /**/ false,
             special:       /**/ false
         },
+        recharge: rch.none,
         name: "Разъедающая форма (Вознесенная) [Corrosive Form (Ascended)]", 
         requirements: "Атака коррозией и шесть кислотных способностей",
         data:`
@@ -441,6 +459,7 @@ const armamentAbilitiesContent = [
             round2:        /**/ false,
             special:       /**/ false
         },
+        recharge: rch.none,
         name: "Суперкислота (Вознесенная) [Superacid (Ascended)]", 
         requirements: "Шесть кислотных способностей",
         data:`
@@ -471,6 +490,7 @@ const armamentAbilitiesContent = [
             round2:        /**/ false,
             special:       /**/ false
         },
+        recharge: rch.none,
         name: "Клинок Крови [Blade of Blood]", 
         requirements: "Шесть кислотных способностей",
         data:`
@@ -505,6 +525,7 @@ const armamentAbilitiesContent = [
             round2:        /**/ false,
             special:       /**/ false
         },
+        recharge: rch.none,
         name: "Кровоточащий удар [Bleeding Strike]", 
         requirements: "",
         data:`
@@ -539,6 +560,7 @@ const armamentAbilitiesContent = [
             round2:        /**/ false,
             special:       /**/ false
         },
+        recharge: rch.none,
         name: "Ранящий клинок [Wounding Blade]", 
         requirements: "Клинок крови (3)",
         data:`
@@ -568,6 +590,7 @@ const armamentAbilitiesContent = [
             round2:        /**/ false,
             special:       /**/ false
         },
+        recharge: rch.none,
         name: "Щит крови [Blood Shield]", 
         requirements: "Одна кровавая способность",
         data:`
@@ -601,6 +624,7 @@ const armamentAbilitiesContent = [
             round2:        /**/ false,
             special:       /**/ false
         },
+        recharge: rch.none,
         name: "Кровавое ремесло [Bloodcraft]", 
         requirements: "Одна кровавая способность",
         data:`
@@ -635,6 +659,7 @@ const armamentAbilitiesContent = [
             round2:        /**/ false,
             special:       /**/ false
         },
+        recharge: rch.none,
         name: "Вампирский удар [Vampiric Strike]", 
         requirements: "Одна кровавая способность",
         data:`
@@ -668,6 +693,7 @@ const armamentAbilitiesContent = [
             round2:        /**/ false,
             special:       /**/ false
         },
+        recharge: rch.none,
         name: "Опустошение реацу [Drain Reiatsu]", 
         requirements: "Вампирский удар и одна кровавая способность",
         data:`
@@ -701,6 +727,7 @@ const armamentAbilitiesContent = [
             round2:        /**/ false,
             special:       /**/ false
         },
+        recharge: rch.none,
         name: "Кровавый выстрел [Blood Shot]", 
         requirements: "Две кровавых способности",
         data:`
@@ -735,6 +762,7 @@ const armamentAbilitiesContent = [
             round2:        /**/ false,
             special:       /**/ false
         },
+        recharge: rch.none,
         name: "Магия крови [Blood Magic]", 
         requirements: "Три кровавых способности",
         data:`
@@ -765,6 +793,7 @@ const armamentAbilitiesContent = [
             round2:        /**/ false,
             special:       /**/ false
         },
+        recharge: rch.none,
         name: "Кровавый взрыв [Blood Burst]", 
         requirements: "Три кровавых способности",
         data:`
@@ -800,6 +829,7 @@ const armamentAbilitiesContent = [
             round2:        /**/ false,
             special:       /**/ false
         },
+        recharge: rch.none,
         name: "Предвидящий выстрел [Anticipating Shot]", 
         requirements: "",
         data:`
@@ -830,6 +860,7 @@ const armamentAbilitiesContent = [
             round2:        /**/ false,
             special:       /**/ false
         },
+        recharge: rch.none,
         name: "Изгоняющая стрела (Мастерский выстрел) [Banishing Arrow (Master Shot)]", 
         requirements: "",
         data:`
@@ -859,6 +890,7 @@ const armamentAbilitiesContent = [
             round2:        /**/ false,
             special:       /**/ false
         },
+        recharge: rch.none,
         name: "Обманчивая стрела [Beguiling Arrow]", 
         requirements: "",
         data:`
@@ -889,6 +921,7 @@ const armamentAbilitiesContent = [
             round2:        /**/ false,
             special:       /**/ false
         },
+        recharge: rch.none,
         name: "Разрывная стрела [Bursting Arrow]", 
         requirements: "",
         data:`
@@ -919,6 +952,7 @@ const armamentAbilitiesContent = [
             round2:        /**/ false,
             special:       /**/ false
         },
+        recharge: rch.none,
         name: "Критическая стрела [Critical Arrow]", 
         requirements: "",
         data:`
@@ -949,6 +983,7 @@ const armamentAbilitiesContent = [
             round2:        /**/ false,
             special:       /**/ false
         },
+        recharge: rch.none,
         name: "Изогнутая стрела [Curving Arrow]", 
         requirements: "",
         data:`
@@ -979,6 +1014,7 @@ const armamentAbilitiesContent = [
             round2:        /**/ false,
             special:       /**/ false
         },
+        recharge: rch.none,
         name: "Ослепительная стрела [Dazing Arrow]", 
         requirements: "",
         data:`
@@ -1009,6 +1045,7 @@ const armamentAbilitiesContent = [
             round2:        /**/ false,
             special:       /**/ false
         },
+        recharge: rch.none,
         name: "Отклоняющая стрела [Deflecting Arrow]", 
         requirements: "",
         data:`
@@ -1039,6 +1076,7 @@ const armamentAbilitiesContent = [
             round2:        /**/ false,
             special:       /**/ false
         },
+        recharge: rch.none,
         name: "Рассеивающая стрела [Dispelling Arrow]", 
         requirements: "",
         data:`
@@ -1069,6 +1107,7 @@ const armamentAbilitiesContent = [
             round2:        /**/ false,
             special:       /**/ false
         },
+        recharge: rch.none,
         name: "Разрушающая стрела [Disrupting Arrow]", 
         requirements: "",
         data:`
@@ -1101,6 +1140,7 @@ const armamentAbilitiesContent = [
             round2:        /**/ false,
             special:       /**/ false
         },
+        recharge: rch.none,
         name: "Дальняя стрела [Distant Arrow]", 
         requirements: "",
         data:`
@@ -1131,6 +1171,7 @@ const armamentAbilitiesContent = [
             round2:        /**/ false,
             special:       /**/ false
         },
+        recharge: rch.none,
         name: "Отвлекающая стрела [Distracting Arrow]", 
         requirements: "",
         data:`
@@ -1161,6 +1202,7 @@ const armamentAbilitiesContent = [
             round2:        /**/ false,
             special:       /**/ false
         },
+        recharge: rch.none,
         name: "Элементальная стрела [Elemental Arrow]", 
         requirements: "",
         data:`
@@ -1191,6 +1233,7 @@ const armamentAbilitiesContent = [
             round2:        /**/ false,
             special:       /**/ false
         },
+        recharge: rch.none,
         name: "Ослабляющая стрела (Мастерский выстрел) [Enfeebling Arrow (Master Shot)]", 
         requirements: "",
         data:`
@@ -1220,6 +1263,7 @@ const armamentAbilitiesContent = [
             round2:        /**/ false,
             special:       /**/ false
         },
+        recharge: rch.none,
         name: "Цепкая стрела (Мастерский выстрел) [Grasping Arrow (Master Shot)]", 
         requirements: "",
         data:`
@@ -1249,6 +1293,7 @@ const armamentAbilitiesContent = [
             round2:        /**/ false,
             special:       /**/ false
         },
+        recharge: rch.none,
         name: "Клавир [Klavier]", 
         requirements: "",
         data:`
@@ -1280,6 +1325,7 @@ const armamentAbilitiesContent = [
             round2:        /**/ false,
             special:       /**/ false
         },
+        recharge: rch.none,
         name: "Лихт Реген (Мастерский выстрел) [Licht Regen (Master Shot)]", 
         requirements: "",
         data:`
@@ -1309,6 +1355,7 @@ const armamentAbilitiesContent = [
             round2:        /**/ false,
             special:       /**/ false
         },
+        recharge: rch.none,
         name: "Пронзающая стрела [Piercing Arrow]", 
         requirements: "",
         data:`
@@ -1339,6 +1386,7 @@ const armamentAbilitiesContent = [
             round2:        /**/ false,
             special:       /**/ false
         },
+        recharge: rch.none,
         name: "Точная стрела [Precise Arrow]", 
         requirements: "",
         data:`
@@ -1369,6 +1417,7 @@ const armamentAbilitiesContent = [
             round2:        /**/ false,
             special:       /**/ false
         },
+        recharge: rch.none,
         name: "Отталкивающая стрела [Pushing Arrow]", 
         requirements: "",
         data:`
@@ -1399,6 +1448,7 @@ const armamentAbilitiesContent = [
             round2:        /**/ false,
             special:       /**/ false
         },
+        recharge: rch.none,
         name: "Отталкивающая стрела [Seeking Arrow]", 
         requirements: "",
         data:`
@@ -1430,6 +1480,7 @@ const armamentAbilitiesContent = [
             round2:        /**/ false,
             special:       /**/ false
         },
+        recharge: rch.none,
         name: "Теневая стрела (Мастерский выстрел) [Shadow Arrow (Master Shot)]", 
         requirements: "",
         data:`
@@ -1459,6 +1510,7 @@ const armamentAbilitiesContent = [
             round2:        /**/ false,
             special:       /**/ false
         },
+        recharge: rch.none,
         name: "Духовная стрела (Мастерский выстрел) [Soul Arrow (Master Shot)]", 
         requirements: "",
         data:`
@@ -1488,6 +1540,7 @@ const armamentAbilitiesContent = [
             round2:        /**/ false,
             special:       /**/ false
         },
+        recharge: rch.none,
         name: "Шагающий выстрел [Stepping Shot]", 
         requirements: "",
         data:`
@@ -1517,6 +1570,7 @@ const armamentAbilitiesContent = [
             round2:        /**/ false,
             special:       /**/ false
         },
+        recharge: rch.none,
         name: "Ранящая стрела (Мастерский выстрел) [Wounding Arrow (Master Shot)]", 
         requirements: "",
         data:`
@@ -1546,6 +1600,7 @@ const armamentAbilitiesContent = [
             round2:        /**/ false,
             special:       /**/ false
         },
+        recharge: rch.none,
         name: "Некротическая форма [Necrotic Form]", 
         requirements: "",
         data:`
@@ -1579,6 +1634,7 @@ const armamentAbilitiesContent = [
             round2:        /**/ false,
             special:       /**/ false
         },
+        recharge: rch.none,
         name: "Оружие тьмы [Dark Weapon]", 
         requirements: "",
         data:`
@@ -1613,6 +1669,7 @@ const armamentAbilitiesContent = [
             round2:        /**/ false,
             special:       /**/ false
         },
+        recharge: rch.none,
         name: "Теневое оружие [Umbral Weapon]", 
         requirements: "Одна способность тьмы",
         data:`
@@ -1646,6 +1703,7 @@ const armamentAbilitiesContent = [
             round2:        /**/ false,
             special:       /**/ false
         },
+        recharge: rch.none,
         name: "Аура Тьмы [Aura of Dark]", 
         requirements: "Две способности тьмы",
         data:`
@@ -1682,6 +1740,7 @@ const armamentAbilitiesContent = [
             round2:        /**/ false,
             special:       /**/ false
         },
+        recharge: rch.none,
         name: "Тьма [Darkness]", 
         requirements: "Одна способность тьмы",
         data:`
@@ -1720,6 +1779,7 @@ const armamentAbilitiesContent = [
             round2:        /**/ false,
             special:       /**/ false
         },
+        recharge: rch.none,
         name: "Темное зрение [Darkvision]", 
         requirements: "Способность Тьма [Darkness]",
         data:`
@@ -1754,6 +1814,7 @@ const armamentAbilitiesContent = [
             round2:        /**/ false,
             special:       /**/ false
         },
+        recharge: rch.none,
         name: "Теневой луч [Umbral Blast]", 
         requirements: "Две способности тьмы",
         data:`
@@ -1789,6 +1850,7 @@ const armamentAbilitiesContent = [
             round2:        /**/ false,
             special:       /**/ false
         },
+        recharge: rch.none,
         name: "Стена Тьмы [Wall of Dark]", 
         requirements: "Три способности тьмы",
         data:`
@@ -1828,6 +1890,7 @@ const armamentAbilitiesContent = [
             round2:        /**/ false,
             special:       /**/ false
         },
+        recharge: rch.none,
         name: "Всплеск тьмы (Ультимативный) [Burst of Dark (Ultimate)]", 
         requirements: "Четыре способности тьмы",
         data:`
@@ -1864,6 +1927,7 @@ const armamentAbilitiesContent = [
             round2:        /**/ false,
             special:       /**/ false
         },
+        recharge: rch.none,
         name: "Черная дыра (Ультимативный) [Black Hole (Ascended)]", 
         requirements: "Пять способностей тьмы",
         data:`
@@ -1897,6 +1961,7 @@ const armamentAbilitiesContent = [
             round2:        /**/ false,
             special:       /**/ false
         },
+        recharge: rch.none,
         name: "Нечестивая Тьма (Вознесенный) [Unholy Dark (Ascended)]", 
         requirements: "Шесть способностей тьмы",
         data:`
@@ -1927,6 +1992,7 @@ const armamentAbilitiesContent = [
             round2:        /**/ false,
             special:       /**/ false
         },
+        recharge: rch.none,
         name: "Броня [Armor]", 
         requirements: "",
         data:`
@@ -1962,6 +2028,7 @@ const armamentAbilitiesContent = [
             round2:        /**/ false,
             special:       /**/ false
         },
+        recharge: rch.none,
         name: "Щит [Shield]", 
         requirements: "",
         data:`
@@ -1992,6 +2059,7 @@ const armamentAbilitiesContent = [
             round2:        /**/ false,
             special:       /**/ false
         },
+        recharge: rch.none,
         name: "Удар щитом [Shield Bash]", 
         requirements: "Способность Щит [Shield]",
         data:`
@@ -2024,6 +2092,7 @@ const armamentAbilitiesContent = [
             round2:        /**/ false,
             special:       /**/ false
         },
+        recharge: rch.none,
         name: "Оборонительный всплеск [Defensive Surge]", 
         requirements: "Одна оборонительная способность",
         data:`
@@ -2056,6 +2125,7 @@ const armamentAbilitiesContent = [
             round2:        /**/ false,
             special:       /**/ false
         },
+        recharge: rch.none,
         name: "Большой спасбросок [Greater Saving Throw]", 
         requirements: "Две оборонительные способности",
         data:`
@@ -2088,6 +2158,7 @@ const armamentAbilitiesContent = [
             round2:        /**/ false,
             special:       /**/ false
         },
+        recharge: rch.none,
         name: "Железное тело [Iron Body]", 
         requirements: "Три оборонительные способности",
         data:`
@@ -2118,6 +2189,7 @@ const armamentAbilitiesContent = [
             round2:        /**/ false,
             special:       /**/ false
         },
+        recharge: rch.none,
         name: "Шипованный доспех [Thornmail]", 
         requirements: "Четыре оборонительные способности",
         data:`
@@ -2148,6 +2220,7 @@ const armamentAbilitiesContent = [
             round2:        /**/ false,
             special:       /**/ false
         },
+        recharge: rch.none,
         name: "Сопротивление заклинаниям [Spell Resistance]", 
         requirements: "Пять оборонительных способностей",
         data:`
@@ -2177,6 +2250,7 @@ const armamentAbilitiesContent = [
             round2:        /**/ false,
             special:       /**/ false
         },
+        recharge: rch.none,
         name: "Сопротивление заклинаниям [Quick Defense]", 
         requirements: "Шесть оборонительных способностей",
         data:`
@@ -2207,6 +2281,7 @@ const armamentAbilitiesContent = [
             round2:        /**/ false,
             special:       /**/ false
         },
+        recharge: rch.none,
         name: "Защитник [Quick Defense]", 
         requirements: "Шесть оборонительных способностей",
         data:`
@@ -2237,6 +2312,7 @@ const armamentAbilitiesContent = [
             round2:        /**/ false,
             special:       /**/ false
         },
+        recharge: rch.none,
         name: "Повышенное сопротивление заклинаниям (возвышенный) [Greater Spell Resistance (Ascended)]", 
         requirements: "Семь оборонительных способностей",
         data:`
@@ -2266,6 +2342,7 @@ const armamentAbilitiesContent = [
             round2:        /**/ false,
             special:       /**/ false
         },
+        recharge: rch.none,
         name: "Форма Земли [Earth Form]", 
         requirements: "Семь оборонительных способностей",
         data:`
@@ -2299,6 +2376,7 @@ const armamentAbilitiesContent = [
             round2:        /**/ false,
             special:       /**/ false
         },
+        recharge: rch.none,
         name: "Каменное оружие [Stone Weapon]", 
         requirements: "",
         data:`
@@ -2332,6 +2410,7 @@ const armamentAbilitiesContent = [
             round2:        /**/ false,
             special:       /**/ false
         },
+        recharge: rch.none,
         name: "Гранитное оружие [Granite Weapon]", 
         requirements: "Одна земляная способность",
         data:`
@@ -2364,6 +2443,7 @@ const armamentAbilitiesContent = [
             round2:        /**/ false,
             special:       /**/ false
         },
+        recharge: rch.none,
         name: "Лепка земли [Mold Earth]", 
         requirements: "Одна земляная способность",
         data:`
@@ -2404,6 +2484,7 @@ const armamentAbilitiesContent = [
             round2:        /**/ false,
             special:       /**/ false
         },
+        recharge: rch.none,
         name: "Земляной щит [Earth Shield]", 
         requirements: "Две земляной способности",
         data:`
@@ -2442,6 +2523,7 @@ const armamentAbilitiesContent = [
             round2:        /**/ false,
             special:       /**/ false
         },
+        recharge: rch.none,
         name: "Стена камня [Wall of Stone]", 
         requirements: "Лепка земли [Mold Earth] и одна другая земляная способности",
         data:`
@@ -2483,6 +2565,7 @@ const armamentAbilitiesContent = [
             round2:        /**/ false,
             special:       /**/ false
         },
+        recharge: rch.none,
         name: "Земляной луч [Earth Blast]", 
         requirements: "Три земляных способности",
         data:`
@@ -2519,6 +2602,7 @@ const armamentAbilitiesContent = [
             round2:        /**/ false,
             special:       /**/ false
         },
+        recharge: rch.none,
         name: "Тремор [Tremor]", 
         requirements: "Четыре земляных способности",
         data:`
@@ -2554,6 +2638,7 @@ const armamentAbilitiesContent = [
             round2:        /**/ false,
             special:       /**/ false
         },
+        recharge: rch.none,
         name: "Каменные Столпы (Ультимативный) [Pillars of Stone (Ultimate)]", 
         requirements: "Пять земляных способностей",
         data:`
@@ -2592,6 +2677,7 @@ const armamentAbilitiesContent = [
             round2:        /**/ false,
             special:       /**/ false
         },
+        recharge: rch.none,
         name: "Землетресение (возвышенный) [Earthquake (Ascended)]", 
         requirements: "Шесть земляных способностей",
         data:`
@@ -2632,6 +2718,7 @@ const armamentAbilitiesContent = [
             round2:        /**/ false,
             special:       /**/ false
         },
+        recharge: rch.none,
         name: "Бедрок  (возвышенный) [Bedrock (Ascended)]", 
         requirements: "Шесть земляных способностей",
         data:`
@@ -2661,6 +2748,7 @@ const armamentAbilitiesContent = [
             round2:        /**/ false,
             special:       /**/ false
         },
+        recharge: rch.none,
         name: "Форма огня [Fire Form]", 
         requirements: "",
         data:`
@@ -2694,6 +2782,7 @@ const armamentAbilitiesContent = [
             round2:        /**/ false,
             special:       /**/ false
         },
+        recharge: rch.none,
         name: "Пылающее оружие [Flaming Weapon]", 
         requirements: "",
         data:`
@@ -2727,6 +2816,7 @@ const armamentAbilitiesContent = [
             round2:        /**/ false,
             special:       /**/ false
         },
+        recharge: rch.none,
         name: "Опаляющее оружие [Scorching Weapon]", 
         requirements: "Одна огненная способность",
         data:`
@@ -2758,6 +2848,7 @@ const armamentAbilitiesContent = [
             round2:        /**/ false,
             special:       /**/ false
         },
+        recharge: rch.none,
         name: "Контроль пламени [Control Flames]", 
         requirements: "Одна огненная способность",
         data:`
@@ -2797,6 +2888,7 @@ const armamentAbilitiesContent = [
             round2:        /**/ false,
             special:       /**/ false
         },
+        recharge: rch.none,
         name: "Щит пламени [Fire Shield]", 
         requirements: "Две огненные способности",
         data:`
@@ -2837,6 +2929,7 @@ const armamentAbilitiesContent = [
             round2:        /**/ false,
             special:       /**/ false
         },
+        recharge: rch.none,
         name: "Конус огня [Cone of Fire]", 
         requirements: "Три огненные способности",
         data:`
@@ -2872,6 +2965,7 @@ const armamentAbilitiesContent = [
             round2:        /**/ false,
             special:       /**/ false
         },
+        recharge: rch.none,
         name: "Стена огня [Wall of Fire]", 
         requirements: "Четыре огненные способности",
         data:`
@@ -2911,6 +3005,7 @@ const armamentAbilitiesContent = [
             round2:        /**/ false,
             special:       /**/ false
         },
+        recharge: rch.none,
         name: "Столп Пламени [Pillar of Flame]", 
         requirements: "Четыре огненные способности",
         data:`
@@ -2946,6 +3041,7 @@ const armamentAbilitiesContent = [
             round2:        /**/ false,
             special:       /**/ false
         },
+        recharge: rch.none,
         name: "Огненный шторм (Ультимативный) [Fire Storm (Ultimate)]", 
         requirements: "Пять огненных способностей",
         data:`
@@ -2982,6 +3078,7 @@ const armamentAbilitiesContent = [
             round2:        /**/ false,
             special:       /**/ false
         },
+        recharge: rch.none,
         name: "Метеоритный рой (вознесенный) [Meteor Swarm (Ascended)]", 
         requirements: "Шесть огненных способностей",
         data:`
@@ -3014,6 +3111,7 @@ const armamentAbilitiesContent = [
             round2:        /**/ false,
             special:       /**/ false
         },
+        recharge: rch.none,
         name: "Адское Пламя (Вознесенный) [Hellfire (Ascended)]", 
         requirements: "Шесть огненных способностей",
         data:`
@@ -3043,6 +3141,7 @@ const armamentAbilitiesContent = [
             round2:        /**/ false,
             special:       /**/ false
         },
+        recharge: rch.none,
         name: "Повышенная сила [Increased Strength]", 
         requirements: "",
         data:`
@@ -3073,6 +3172,7 @@ const armamentAbilitiesContent = [
             round2:        /**/ false,
             special:       /**/ false
         },
+        recharge: rch.none,
         name: "Повышенная ловкость [Increased Dexterity]", 
         requirements: "",
         data:`
@@ -3103,6 +3203,7 @@ const armamentAbilitiesContent = [
             round2:        /**/ false,
             special:       /**/ false
         },
+        recharge: rch.none,
         name: "Повышенное телосложение [Increased Constitution]", 
         requirements: "",
         data:`
@@ -3133,6 +3234,7 @@ const armamentAbilitiesContent = [
             round2:        /**/ false,
             special:       /**/ false
         },
+        recharge: rch.none,
         name: "Повышенный интеллект [Increased Intelligence]", 
         requirements: "",
         data:`
@@ -3163,6 +3265,7 @@ const armamentAbilitiesContent = [
             round2:        /**/ false,
             special:       /**/ false
         },
+        recharge: rch.none,
         name: "Повышенная мудрость [Increased Wisdom]", 
         requirements: "",
         data:`
@@ -3193,6 +3296,7 @@ const armamentAbilitiesContent = [
             round2:        /**/ false,
             special:       /**/ false
         },
+        recharge: rch.none,
         name: "Повышенная харизма [Increased Charisma]", 
         requirements: "",
         data:`
@@ -3223,6 +3327,7 @@ const armamentAbilitiesContent = [
             round2:        /**/ false,
             special:       /**/ false
         },
+        recharge: rch.none,
         name: "Увеличенный спасбросок [Increased Saving Throw]", 
         requirements: "Три способности вооружения",
         data:`
@@ -3253,6 +3358,7 @@ const armamentAbilitiesContent = [
             round2:        /**/ false,
             special:       /**/ false
         },
+        recharge: rch.none,
         name: "Увеличенный навык [Increased Skill]", 
         requirements: "",
         data:`
@@ -3283,6 +3389,7 @@ const armamentAbilitiesContent = [
             round2:        /**/ false,
             special:       /**/ false
         },
+        recharge: rch.none,
         name: "Увеличенная скорость [Increased Speed]", 
         requirements: "",
         data:`
@@ -3313,6 +3420,7 @@ const armamentAbilitiesContent = [
             round2:        /**/ false,
             special:       /**/ false
         },
+        recharge: rch.none,
         name: "Быстрое высвобождение [Quick Release]", 
         requirements: "",
         data:`
@@ -3342,6 +3450,7 @@ const armamentAbilitiesContent = [
             round2:        /**/ false,
             special:       /**/ false
         },
+        recharge: rch.none,
         name: "Великое быстрое высвобождение [Quick Release Greater]", 
         requirements: "Форма высвобождения",
         data:`
@@ -3371,6 +3480,7 @@ const armamentAbilitiesContent = [
             round2:        /**/ false,
             special:       /**/ false
         },
+        recharge: rch.none,
         name: "Увеличенние талантов [Increased Talent]", 
         requirements: "",
         data:`
@@ -3401,6 +3511,7 @@ const armamentAbilitiesContent = [
             round2:        /**/ false,
             special:       /**/ false
         },
+        recharge: rch.none,
         name: "Увеличенная концентрация [Increased Concentration]", 
         requirements: "Одна способность вооружения",
         data:`
@@ -3430,6 +3541,7 @@ const armamentAbilitiesContent = [
             round2:        /**/ false,
             special:       /**/ false
         },
+        recharge: rch.none,
         name: "Духовный луч [Spirit Blast]", 
         requirements: "Одна способность вооружения",
         data:`
@@ -3464,6 +3576,7 @@ const armamentAbilitiesContent = [
             round2:        /**/ false,
             special:       /**/ false
         },
+        recharge: rch.none,
         name: "Увеличенная внимательность [Increased Awareness]", 
         requirements: "Четыре способности вооружения",
         data:`
@@ -3496,6 +3609,7 @@ const armamentAbilitiesContent = [
             round2:        /**/ false,
             special:       /**/ false
         },
+        recharge: rch.none,
         name: "Полет [Flying]", 
         requirements: "Шесть способностей вооружения",
         data:`
@@ -3529,6 +3643,7 @@ const armamentAbilitiesContent = [
             round2:        /**/ false,
             special:       /**/ false
         },
+        recharge: rch.none,
         name: "Ускоренная способность (возвышенная) [Quickened Ability (Ascended)]", 
         requirements: "Шесть способностей вооружения",
         data:`
@@ -3559,6 +3674,7 @@ const armamentAbilitiesContent = [
             round2:        /**/ false,
             special:       /**/ false
         },
+        recharge: rch.none,
         name: "Улучшенное Вознесение (Вознесенный) [Improved Ascencion (Ascended)]", 
         requirements: "Форма высвобождения",
         data:`
@@ -3589,6 +3705,7 @@ const armamentAbilitiesContent = [
             round2:        /**/ false,
             special:       /**/ false
         },
+        recharge: rch.none,
         name: "Гравитационный клинок [Gravity Blade]", 
         requirements: "",
         data:`
@@ -3623,6 +3740,7 @@ const armamentAbilitiesContent = [
             round2:        /**/ false,
             special:       /**/ false
         },
+        recharge: rch.none,
         name: "Контроль гравитации [Control Gravity]", 
         requirements: "",
         data:`
@@ -3670,6 +3788,7 @@ const armamentAbilitiesContent = [
             round2:        /**/ false,
             special:       /**/ false
         },
+        recharge: rch.none,
         name: "Гравитационное оружие [Graviton Weapon]", 
         requirements: "Одна гравитационная способность",
         data:`
@@ -3702,6 +3821,7 @@ const armamentAbilitiesContent = [
             round2:        /**/ false,
             special:       /**/ false
         },
+        recharge: rch.none,
         name: "Отталкивание [Repulsion]", 
         requirements: "Способность Контроль гравитации [Control Gravity]",
         data:`
@@ -3736,6 +3856,7 @@ const armamentAbilitiesContent = [
             round2:        /**/ false,
             special:       /**/ false
         },
+        recharge: rch.none,
         name: "Гравитас [Gravitas]", 
         requirements: "Две гравитационные способности",
         data:`
@@ -3769,6 +3890,7 @@ const armamentAbilitiesContent = [
             round2:        /**/ false,
             special:       /**/ false
         },
+        recharge: rch.none,
         name: "Гравитационная волна [Gravity Wave]", 
         requirements: "Две гравитационные способности",
         data:`
@@ -3802,6 +3924,7 @@ const armamentAbilitiesContent = [
             round2:        /**/ false,
             special:       /**/ false
         },
+        recharge: rch.none,
         name: "Вытеснитель [Displacer]", 
         requirements: "Три гравитационные способности",
         data:`
@@ -3835,6 +3958,7 @@ const armamentAbilitiesContent = [
             round2:        /**/ false,
             special:       /**/ false
         },
+        recharge: rch.none,
         name: "Гравитационный карман [Gravitational Pocket]", 
         requirements: "Три гравитационные способности",
         data:`
@@ -3867,6 +3991,7 @@ const armamentAbilitiesContent = [
             round2:        /**/ false,
             special:       /**/ false
         },
+        recharge: rch.none,
         name: "Энтропия [Entropy]", 
         requirements: "Три гравитационные способности",
         data:`
@@ -3900,6 +4025,7 @@ const armamentAbilitiesContent = [
             round2:        /**/ false,
             special:       /**/ false
         },
+        recharge: rch.none,
         name: "Безграничная гравитация [Gravity Unbound]", 
         requirements: "Четыре гравитационные способности",
         data:`
@@ -3932,6 +4058,7 @@ const armamentAbilitiesContent = [
             round2:        /**/ false,
             special:       /**/ false
         },
+        recharge: rch.none,
         name: "Сингулярность (ультимативная) [Singularity (Ultimate)]", 
         requirements: "Пять гравитационных способностей",
         data:`
@@ -3967,6 +4094,7 @@ const armamentAbilitiesContent = [
             round2:        /**/ false,
             special:       /**/ false
         },
+        recharge: rch.none,
         name: "Гравитационная бомбардировка (вознесенный) [Gravitational Bombardment (Ascended)]", 
         requirements: "Пять гравитационных способностей",
         data:`
@@ -3996,6 +4124,7 @@ const armamentAbilitiesContent = [
             round2:        /**/ false,
             special:       /**/ false
         },
+        recharge: rch.none,
         name: "Падающая звезда (вознесенный) [Falling Star (Ascended)]", 
         requirements: "Шесть гравитационных способностей",
         data:`
@@ -4025,6 +4154,7 @@ const armamentAbilitiesContent = [
             round2:        /**/ false,
             special:       /**/ false
         },
+        recharge: rch.none,
         name: "Расширенный кайдо [Expanded Kaido]", 
         requirements: "Способность 'Пакт Магии' или врзможность создавать заклинания",
         data:`
@@ -4055,6 +4185,7 @@ const armamentAbilitiesContent = [
             round2:        /**/ true,
             special:       /**/ false
         },
+        recharge: rch.none,
         name: "Исцеляющий клинок [Healing Blade]", 
         requirements: "",
         data:`
@@ -4089,6 +4220,7 @@ const armamentAbilitiesContent = [
             round2:        /**/ false,
             special:       /**/ false
         },
+        recharge: rch.none,
         name: "Улучшенное исцеление [Improved Healing]", 
         requirements: "Способность 'Пакт Магии' или врзможность создавать заклинания",
         data:`
@@ -4122,6 +4254,7 @@ const armamentAbilitiesContent = [
             round2:        /**/ false,
             special:       /**/ true
         },
+        recharge: rch.none,
         name: "Исцеляющее прикосновение [Healing Touch]", 
         requirements: "Лечение ран и одна способность исцеления",
         data:`
@@ -4152,6 +4285,7 @@ const armamentAbilitiesContent = [
             round2:        /**/ false,
             special:       /**/ true
         },
+        recharge: rch.none,
         name: "Исцеляющий фактор [Healing Factor]", 
         requirements: "Две исцеляющие способности",
         data:`
@@ -4190,6 +4324,7 @@ const armamentAbilitiesContent = [
             round2:        /**/ false,
             special:       /**/ false
         },
+        recharge: rch.none,
         name: "Армия исцеления [Panoply of Healing]", 
         requirements: "Три исцеляющие способности",
         data:`
@@ -4225,6 +4360,7 @@ const armamentAbilitiesContent = [
             round2:        /**/ false,
             special:       /**/ false
         },
+        recharge: rch.none,
         name: "Снятие боли [Pain Release]", 
         requirements: "Четыре исцеляющие способности",
         data:`
@@ -4257,6 +4393,7 @@ const armamentAbilitiesContent = [
             round2:        /**/ false,
             special:       /**/ false
         },
+        recharge: rch.none,
         name: "Воскрешение (ультимативная) [Resurrection (Ultimate)]", 
         requirements: "Пять исцеляющих способностей",
         data:`
@@ -4290,6 +4427,7 @@ const armamentAbilitiesContent = [
             round2:        /**/ false,
             special:       /**/ false
         },
+        recharge: rch.none,
         name: "Круг Жизни (Вознесенный) [Circle of Life (Ascended)]", 
         requirements: "Шесть исцеляющих способностей",
         data:`
@@ -4325,10 +4463,537 @@ const armamentAbilitiesContent = [
             round2:        /**/ false,
             special:       /**/ false
         },
+        recharge: rch.none,
         name: "Высшее Исцеление (Вознесенный) [Supreme Healing (Ascended)]", 
         requirements: "Шесть исцеляющих способностей",
         data:`
         <p>Когда вы обычно бросаете один или несколько кубиков, чтобы восстановить очки жизни с помощью Кидо или способности вооружения, вместо этого вы используете максимально возможное число для каждого кубика. Например, вместо того, чтобы восстанавливать существу 2d6 очков жизни, вы восстанавливаете 12.</p>
         ` 
     }, //Supreme Healing (Ascended) 10
+    {
+        type: tp.hollow,
+        cost: 0,
+        rules: false, 
+        castingTime:      castTime.none,
+        range:            rng.none,
+        components: {
+            verbal:       /*v*/ false,  
+            somatic:      /*s*/ false,  
+            material:     /*m*/ false, 
+            released:     /*w*/ false  
+        },
+        duration: {
+            until_sealed:  /**/ false,
+            concentration: /**/ false,
+            minute1:       /**/ false,
+            round1:        /**/ false,
+            instantaneous: /**/ false,
+            hour1:         /**/ false,
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
+        },
+        recharge: rch.none,
+        name: "Усиление [Ability Increase]", 
+        requirements: "",
+        data:`
+        <p>Выберите один из показателей способности Пустых, он увеличится на 2.</p>
+        <p>Эту способность можно выбирать несколько раз.</p>
+        ` 
+    }, // Ability Increase 1 ------------------------------- hollow
+    {
+        type: tp.hollow,
+        cost: 4,
+        rules: false, 
+        castingTime:      castTime.none,
+        range:            rng.none,
+        components: {
+            verbal:       /*v*/ false,  
+            somatic:      /*s*/ false,  
+            material:     /*m*/ false, 
+            released:     /*w*/ false  
+        },
+        duration: {
+            until_sealed:  /**/ false,
+            concentration: /**/ false,
+            minute1:       /**/ false,
+            round1:        /**/ false,
+            instantaneous: /**/ false,
+            hour1:         /**/ false,
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
+        },
+        recharge: rch.none,
+        name: "Агрессия [Aggressive]", 
+        requirements: "6 HD",
+        data:`
+        <p>Бонусным действием Пустой может двигаться на своей скорости к враждебному существу, которое он может видеть.</p>
+        ` 
+    }, //Aggressive 2
+    {
+        type: tp.hollow,
+        cost: 0,
+        rules: false, 
+        castingTime:      castTime.none,
+        range:            rng.none,
+        components: {
+            verbal:       /*v*/ false,  
+            somatic:      /*s*/ false,  
+            material:     /*m*/ false, 
+            released:     /*w*/ false  
+        },
+        duration: {
+            until_sealed:  /**/ false,
+            concentration: /**/ false,
+            minute1:       /**/ false,
+            round1:        /**/ false,
+            instantaneous: /**/ false,
+            hour1:         /**/ false,
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
+        },
+        recharge: rch.none,
+        name: "Засада [Ambusher]", 
+        requirements: "4 HD",
+        data:`
+        <p>В первом раунде боя Пустой имеет преимущество в бросках атаки против любого существа, которого он застал врасплох.</p>
+        ` 
+    },  //Ambusher 3
+    {
+        type: tp.hollow,
+        cost: 0,
+        rules: false, 
+        castingTime:      castTime.none,
+        range:            rng.none,
+        components: {
+            verbal:       /*v*/ false,  
+            somatic:      /*s*/ false,  
+            material:     /*m*/ false, 
+            released:     /*w*/ false  
+        },
+        duration: {
+            until_sealed:  /**/ false,
+            concentration: /**/ false,
+            minute1:       /**/ false,
+            round1:        /**/ false,
+            instantaneous: /**/ false,
+            hour1:         /**/ false,
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
+        },
+        recharge: rch.none,
+        name: "Амфибия [Amphibious]", 
+        requirements: "2 HD",
+        data:`
+        <p>Пустой может дышать на воздухе и под водой</p>
+        ` 
+    }, // Amphibious 4
+    {
+        type: tp.hollow,
+        cost: 4,
+        rules: true, 
+        castingTime:      castTime.reaction,
+        range:            rng.ft60,
+        components: {
+            verbal:       /*v*/ false,  
+            somatic:      /*s*/ false,  
+            material:     /*m*/ false, 
+            released:     /*w*/ false  
+        },
+        duration: {
+            until_sealed:  /**/ false,
+            concentration: /**/ false,
+            minute1:       /**/ false,
+            round1:        /**/ false,
+            instantaneous: /**/ false,
+            hour1:         /**/ false,
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
+        },
+        recharge: rch.rch1_6,
+        name: "Чародейский оберег [Arcane Ward]", 
+        requirements: "Magia",
+        data:`
+        <p>Когда Пустой получает урон, он создает вокруг себя магический барьер. Барьер уменьшает урон на 1d10, минимум до 0, а затем исчезает.</p>
+        <p>Эту способность можно выбирать несколько раз, каждый раз выбирая одно из следующих дополнений:</p>
+        <p> &mdash; Увеличьте уменьшенный урон дополнительно на 1d10; максимум 4d10.</p>
+        <p> &mdash; Выберите невыбранное число: 2, 3, 4, 5. Эта способность также перезаряжается от этого результата.</p>
+        ` 
+    }, // Arcane Ward 5
+    {
+        type: tp.hollow,
+        cost: 0,
+        rules: false, 
+        castingTime:      castTime.none,
+        range:            rng.none,
+        components: {
+            verbal:       /*v*/ false,  
+            somatic:      /*s*/ false,  
+            material:     /*m*/ false, 
+            released:     /*w*/ false  
+        },
+        duration: {
+            until_sealed:  /**/ false,
+            concentration: /**/ false,
+            minute1:       /**/ false,
+            round1:        /**/ false,
+            instantaneous: /**/ false,
+            hour1:         /**/ false,
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
+        },
+        recharge: rch.none,
+        name: "Армадура [Armadura]", 
+        requirements: "1 HD, Арранкар (Дефенса)",
+        data:`
+        <p>Пока вы не носите доспехов и не владеете щитом, ваш КД равен 10 + модификатор вашего Телосложения.</p>
+        ` 
+    }, // Armadura 6
+    {
+        type: tp.hollow,
+        cost: 0,
+        rules: false, 
+        castingTime:      castTime.none,
+        range:            rng.none,
+        components: {
+            verbal:       /*v*/ false,  
+            somatic:      /*s*/ false,  
+            material:     /*m*/ false, 
+            released:     /*w*/ false  
+        },
+        duration: {
+            until_sealed:  /**/ false,
+            concentration: /**/ false,
+            minute1:       /**/ false,
+            round1:        /**/ false,
+            instantaneous: /**/ false,
+            hour1:         /**/ false,
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
+        },
+        recharge: rch.none,
+        name: "Убийца [Assassinate]", 
+        requirements: "10 HD, Засада [Ambusher]",
+        data:`
+        <p>Во время своего первого хода Пустой имеет преимущество на броски атаки против любого существа, которое еще не сделало ход. Любой удар, который Пустой наносит по застигнутому врасплох существу, является критическим.</p>
+        ` 
+    }, // Assassinate 7
+    {
+        type: tp.hollow,
+        cost: 0,
+        rules: false, 
+        castingTime:      castTime.none,
+        range:            rng.none,
+        components: {
+            verbal:       /*v*/ false,  
+            somatic:      /*s*/ false,  
+            material:     /*m*/ false, 
+            released:     /*w*/ false  
+        },
+        duration: {
+            until_sealed:  /**/ false,
+            concentration: /**/ false,
+            minute1:       /**/ false,
+            round1:        /**/ false,
+            instantaneous: /**/ false,
+            hour1:         /**/ false,
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
+        },
+        recharge: rch.none,
+        name: "Избегание [Avoidance]", 
+        requirements: "10 HD, Ловкость 16",
+        data:`
+        <p>Если Пустой подвергается эффекту, который позволяет ему совершить спасбросок, чтобы получить только половину урона, вместо этого он не получит никакого урона, если спасбросок преуспеет, и только половину урона, если он провалится.</p>
+        ` 
+    }, // Avoidance 8
+    {
+        type: tp.hollow,
+        cost: 0,
+        rules: false, 
+        castingTime:      castTime.none,
+        range:            rng.none,
+        components: {
+            verbal:       /*v*/ false,  
+            somatic:      /*s*/ false,  
+            material:     /*m*/ false, 
+            released:     /*w*/ false  
+        },
+        duration: {
+            until_sealed:  /**/ false,
+            concentration: /**/ false,
+            minute1:       /**/ false,
+            round1:        /**/ false,
+            instantaneous: /**/ false,
+            hour1:         /**/ false,
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
+        },
+        recharge: rch.none,
+        name: "Пробужденный разум [Awakened Mind]", 
+        requirements: "6 HD, Интелект 16",
+        data:`
+        <p>Пустой может телепатически разговаривать с любым существом, которое видит в пределах 30 футов от себя, при условии, что существо понимает хотя бы один язык.</p>
+        ` 
+    }, // Awakened Mind 9
+    {
+        type: tp.hollow,
+        cost: 2,
+        rules: true, 
+        castingTime:      castTime.bonus,
+        range:            rng.ft60,
+        components: {
+            verbal:       /*v*/ false,  
+            somatic:      /*s*/ true,  
+            material:     /*m*/ false, 
+            released:     /*w*/ false  
+        },
+        duration: {
+            until_sealed:  /**/ false,
+            concentration: /**/ false,
+            minute1:       /**/ false,
+            round1:        /**/ false,
+            instantaneous: /**/ true,
+            hour1:         /**/ false,
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
+        },
+        recharge: rch.none,
+        name: "Бала [Bala]", 
+        requirements: "4 HD",
+        data:`
+        <p>Пустой совершает дальнюю атаку по цели, которую он видит в пределах дистанции. При попадании цель получает 2d4 силового урона. Если у Пустого есть мультиатака, он может заменить одну или несколько своих атак Балой.</p>
+        <p>За каждые 4 HD сверх 4 HD дальность увеличивается на 5 футов.</p>
+        <p>Эту способность можно выбирать несколько раз, каждый раз выбирая одно из следующих дополнений:</p>
+        <p> &mdash; Увеличьте урон дополнительно на 1d4, максимум на 6d4.</p>
+        <p> &mdash; Увеличение дальности на 20 футов.</p>
+        <p> &mdash; Пустой получает бонус +1 к броску атаки, используя эту способность; максимум +4.</p>
+        ` 
+    }, // Bala 10
+    {
+        type: tp.hollow,
+        cost: 2,
+        rules: false, 
+        castingTime:      castTime.none,
+        range:            rng.none,
+        components: {
+            verbal:       /*v*/ false,  
+            somatic:      /*s*/ false,  
+            material:     /*m*/ false, 
+            released:     /*w*/ false  
+        },
+        duration: {
+            until_sealed:  /**/ false,
+            concentration: /**/ false,
+            minute1:       /**/ false,
+            round1:        /**/ false,
+            instantaneous: /**/ false,
+            hour1:         /**/ false,
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
+        },
+        recharge: rch.rchDay1,
+        name: "Боевой приказ [Battle Command]", 
+        requirements: "12 HD, Харизма 15",
+        data:`
+        <p>Бонусным действием Пустой выбирает одно существо в пределах 30 футов от себя, которое он может видеть. Если выбранное существо может видеть или слышать Пустого, оно может использовать свою реакцию, чтобы совершить одну рукопашную атаку или выполнить действие Уклонение или Спрятаться. За каждые 4 HD сверх 12 HD Пустой получает дополнительное использование этой способности, максимум 6 раз в день.</p>
+        ` 
+    }, // Battle Command 11
+    {
+        type: tp.hollow,
+        cost: 2,
+        rules: true, 
+        castingTime:      castTime.none,
+        range:            rng.none,
+        components: {
+            verbal:       /*v*/ false,  
+            somatic:      /*s*/ false,  
+            material:     /*m*/ false, 
+            released:     /*w*/ false  
+        },
+        duration: {
+            until_sealed:  /**/ false,
+            concentration: /**/ false,
+            minute1:       /**/ false,
+            round1:        /**/ false,
+            instantaneous: /**/ false,
+            hour1:         /**/ false,
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
+        },
+        recharge: rch.rchDay1,
+        name: "Боевой приказ [Battle Command]", 
+        requirements: "12 HD, Харизма 15",
+        data:`
+        <p>Бонусным действием Пустой выбирает одно существо в пределах 30 футов от себя, которое он может видеть. Если выбранное существо может видеть или слышать Пустого, оно может использовать свою реакцию, чтобы совершить одну рукопашную атаку или выполнить действие Уклонение или Спрятаться. За каждые 4 HD сверх 12 HD Пустой получает дополнительное использование этой способности, максимум 6 раз в день.</p>
+        ` 
+    }, // Battle Command 12
+    {
+        type: tp.hollow,
+        cost: 0,
+        rules: false, 
+        castingTime:      castTime.none,
+        range:            rng.none,
+        components: {
+            verbal:       /*v*/ false,  
+            somatic:      /*s*/ false,  
+            material:     /*m*/ false, 
+            released:     /*w*/ false  
+        },
+        duration: {
+            until_sealed:  /**/ false,
+            concentration: /**/ false,
+            minute1:       /**/ false,
+            round1:        /**/ false,
+            instantaneous: /**/ false,
+            hour1:         /**/ false,
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
+        },
+        recharge: rch.none,
+        name: "Берсерк [Berserk]", 
+        requirements: "10 HD, 40 HP, Сила 14",
+        data:`
+        <p>Каждый раз, когда Пустой начинает свой ход с 10 хитами или меньше, бросьте d6. Если выпадает 6, пустышка приходит в ярость. В каждый свой ход в состоянии берсерка Пустой атакует ближайшее существо, которое видит. Если ни одно существо не находится достаточно близко, чтобы атаковать, Пустой атакует объект, отдавая предпочтение объекту меньшему, чем он сам. Когда Пустой приходит в ярость, он продолжает это делать до тех пор, пока не будет уничтожен или не восстановит все свои очки жизни.</p>
+        ` 
+    }, // Berserk 13
+    {
+        type: tp.hollow,
+        cost: 0,
+        rules: false, 
+        castingTime:      castTime.none,
+        range:            rng.none,
+        components: {
+            verbal:       /*v*/ false,  
+            somatic:      /*s*/ false,  
+            material:     /*m*/ false, 
+            released:     /*w*/ false  
+        },
+        duration: {
+            until_sealed:  /**/ false,
+            concentration: /**/ false,
+            minute1:       /**/ false,
+            round1:        /**/ false,
+            instantaneous: /**/ false,
+            hour1:         /**/ false,
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
+        },
+        recharge: rch.none,
+        name: "Укус [Bite]", 
+        requirements: "3 HD, Рот",
+        data:`
+        <p>Вы получаете естественное оружие ближнего боя «Укус». Его дальность составляет 5 футов, а урон равен вашему урону от невооруженного удара.</p>
+        <p>Если у вас уже есть атака Укус, она наносит дополнительный кубик урона.</p>
+        ` 
+    }, // Bite 14
+    {
+        type: tp.hollow,
+        cost: 0,
+        rules: false, 
+        castingTime:      castTime.none,
+        range:            rng.none,
+        components: {
+            verbal:       /*v*/ false,  
+            somatic:      /*s*/ false,  
+            material:     /*m*/ false, 
+            released:     /*w*/ false  
+        },
+        duration: {
+            until_sealed:  /**/ false,
+            concentration: /**/ false,
+            minute1:       /**/ false,
+            round1:        /**/ false,
+            instantaneous: /**/ false,
+            hour1:         /**/ false,
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
+        },
+        recharge: rch.none,
+        name: "Кровавое безумие [Blood Frenzy]", 
+        requirements: "4 HD, Сила 13",
+        data:`
+        <p>Пустой имеет преимущество в бросках рукопашной атаки против любого существа, у которого нет полного запаса хп.</p>
+        ` 
+    }, //Blood Frenzy 15
+    {
+        type: tp.hollow,
+        cost: 4,
+        rules: true, 
+        castingTime:      castTime.action,
+        range:            rng.self,
+        components: {
+            verbal:       /*v*/ true,  
+            somatic:      /*s*/ true,  
+            material:     /*m*/ false, 
+            released:     /*w*/ false  
+        },
+        duration: {
+            until_sealed:  /**/ false,
+            concentration: /**/ false,
+            minute1:       /**/ false,
+            round1:        /**/ false,
+            instantaneous: /**/ true,
+            hour1:         /**/ false,
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
+        },
+        recharge: rch.rch6,
+        name: "Дыхательное оружие [Breath Weapon]", 
+        requirements: "4 HD",
+        data:`
+        <p>Пустой получает дыхательное оружие, имеющее форму 15-футового конуса или 30-футовой линии. Этот выбор является постоянным. Пустой также выбирает тип элемента из следующих: это тип урона, который наносит оружие Дыхания; Кислота, Холод, Огонь, Молния или Яд.</p>
+        <p>Каждое существо в этой области должно совершить спасбросок Ловкости, получая 4d6 урона при провале или половину этого урона при успехе.</p>
+        <p>Если у Пустого уже есть дыхательное оружие, вместо этого его дальность увеличивается на 10 футов, а урон увеличивается на 2d6 или оно также перезаряжается на 4.</p>
+        <p>Эту способность можно выбирать несколько раз, каждый раз выбирая одно из следующих дополнений:</p>
+        <p> &mdash; Выберите число от 1 до 6, при котором эта способность не перезаряжается, теперь она перезаряжается по выбранному номеру. Вы можете выбрать это улучшение только дважды.</p>
+        <p> &mdash; Увеличение дальности на 10 футов.</p>
+        <p> &mdash; Урон увеличивается на 2d6.</p>
+        ` 
+    }, // Breath Weapon 16
+    {
+        type: tp.hollow,
+        cost: 0,
+        rules: false, 
+        castingTime:      castTime.none,
+        range:            rng.none,
+        components: {
+            verbal:       /*v*/ false,  
+            somatic:      /*s*/ false,  
+            material:     /*m*/ false, 
+            released:     /*w*/ false  
+        },
+        duration: {
+            until_sealed:  /**/ false,
+            concentration: /**/ false,
+            minute1:       /**/ false,
+            round1:        /**/ false,
+            instantaneous: /**/ false,
+            hour1:         /**/ false,
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
+        },
+        recharge: rch.none,
+        name: "Грубый [Brute]", 
+        requirements: "5 HD, Сила 13",
+        data:`
+        <p>Выберите одно из оружия ближнего боя Пустых, оно нанесет один дополнительный кубик урона.</p>
+        ` 
+    }, // Brute 17
 ]
