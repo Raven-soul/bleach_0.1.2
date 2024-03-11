@@ -53,7 +53,8 @@ const rch = {
     none: "none",
     rch6: "6",
     rch1_6: "1—6",
-    rchDay1: "1/Day"
+    rchDay1: "1/Day",
+    rchRest_SL: "Short or Long Rest"
 }
 
 const armamentAbilitiesContent = [
@@ -4996,4 +4997,797 @@ const armamentAbilitiesContent = [
         <p>Выберите одно из оружия ближнего боя Пустых, оно нанесет один дополнительный кубик урона.</p>
         ` 
     }, // Brute 17
+    {
+        type: tp.hollow,
+        cost: 0,
+        rules: false, 
+        castingTime:      castTime.none,
+        range:            rng.none,
+        components: {
+            verbal:       /*v*/ false,  
+            somatic:      /*s*/ false,  
+            material:     /*m*/ false, 
+            released:     /*w*/ false  
+        },
+        duration: {
+            until_sealed:  /**/ false,
+            concentration: /**/ false,
+            minute1:       /**/ false,
+            round1:        /**/ false,
+            instantaneous: /**/ false,
+            hour1:         /**/ false,
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
+        },
+        recharge: rch.none,
+        name: "Нора [Burrow]", 
+        requirements: "4 HD",
+        data:`
+        <p>Пустой имеет скорость движения под землей 30 футов. За каждые 4 HD сверх 4 HD скорость копания увеличивается на 5 футов; максимум 60 футов.</p>
+        ` 
+    }, // Burrow 18
+    {
+        type: tp.hollow,
+        cost: 6,
+        rules: true, 
+        castingTime:      castTime.action,
+        range:            rng.self,
+        components: {
+            verbal:       /*v*/ true,  
+            somatic:      /*s*/ true,  
+            material:     /*m*/ false, 
+            released:     /*w*/ false  
+        },
+        duration: {
+            until_sealed:  /**/ false,
+            concentration: /**/ false,
+            minute1:       /**/ false,
+            round1:        /**/ false,
+            instantaneous: /**/ true,
+            hour1:         /**/ false,
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
+        },
+        recharge: rch.rch1_6,
+        name: "Серо [Cero]", 
+        requirements: "6 HD, Бала [Bala]",
+        data:`
+        <p>Пустой выпускает мощный заряд концентрированной духовной энергии. Луч, образующий линию длиной 100 футов и шириной 5 футов, вылетает из Пустого в выбранном им направлении. Каждое существо в линии должно совершить спасбросок Ловкости. Существо получает урон силовым полем 6d6 при провале или половину этого урона при успехе.</p>
+        <p>За каждые 2 HD сверх 6 HD длина линии увеличивается на 10 футов.</p>
+        <p>Эту способность можно выбирать несколько раз, каждый раз выбирая одно из следующих дополнений:</p>
+        <p> &mdash;  Увеличить урон дополнительно на 1d6; максимум 10d6.</p>
+        <p> &mdash;  Выберите число от 1 до 6, при котором эта способность не перезаряжается, теперь она перезаряжается по выбранному номеру. Вы можете выбрать это улучшение только дважды.</p>
+        <p> &mdash;  Увеличьте DC спасброска на +1; максимум +4.</p>
+        <p> &mdash;  Если у Пустого есть Мультиатака, он может заменить одну из своих атак Серо. Прежде чем эту опцию можно будет выбрать, эта способность должна быть выбрана трижды.</p>
+        ` 
+    }, // Cero 19
+    {
+        type: tp.hollow,
+        cost: 10,
+        rules: true, 
+        castingTime:      castTime.action,
+        range:            rng.self,
+        components: {
+            verbal:       /*v*/ true,  
+            somatic:      /*s*/ true,  
+            material:     /*m*/ false, 
+            released:     /*w*/ true  
+        },
+        duration: {
+            until_sealed:  /**/ false,
+            concentration: /**/ false,
+            minute1:       /**/ false,
+            round1:        /**/ false,
+            instantaneous: /**/ true,
+            hour1:         /**/ false,
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
+        },
+        recharge: rch.rch6,
+        name: "Серо Оскурас [Cero Oscuras]", 
+        requirements: "18 HD, Серо [Cero], Гран Рей Серо [Gran Rey Cero]",
+        data:`
+        <p>Пустой выпускает мощный темный заряд концентрированной духовной энергии. Луч, образующий линию длиной 500 футов и шириной 5 футов, вырывается из Пустого в выбранном им направлении. Каждое существо в линии должно совершить спасбросок Ловкости. При провале существо получает урон силовым полем 6d12 или половину этого количества. урон при удачном.</p>
+        <p>За каждые 4 HD сверх 18 HD урон увеличивается на 1d12.</p>
+        ` 
+    }, // Cero Oscuras 20
+    {
+        type: tp.hollow,
+        cost: 0,
+        rules: false, 
+        castingTime:      castTime.none,
+        range:            rng.none,
+        components: {
+            verbal:       /*v*/ false,  
+            somatic:      /*s*/ false,  
+            material:     /*m*/ false, 
+            released:     /*w*/ false  
+        },
+        duration: {
+            until_sealed:  /**/ false,
+            concentration: /**/ false,
+            minute1:       /**/ false,
+            round1:        /**/ false,
+            instantaneous: /**/ false,
+            hour1:         /**/ false,
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
+        },
+        recharge: rch.none,
+        name: "Покров хамелиона [Chameleon Skin]", 
+        requirements: "10 HD, Ловкость 14",
+        data:`
+        <p>Пустой может менять цвет и текстуру своей внешности, чтобы они соответствовали цвету и текстуре окружающей среды. В результате он имеет преимущество на проверки Ловкости (Скрытность), сделанные для того, чтобы спрятаться.</p>
+        ` 
+    }, // Chameleon Skin 21
+    {
+        type: tp.hollow,
+        cost: 0,
+        rules: false, 
+        castingTime:      castTime.none,
+        range:            rng.none,
+        components: {
+            verbal:       /*v*/ false,  
+            somatic:      /*s*/ false,  
+            material:     /*m*/ false, 
+            released:     /*w*/ false  
+        },
+        duration: {
+            until_sealed:  /**/ false,
+            concentration: /**/ false,
+            minute1:       /**/ false,
+            round1:        /**/ false,
+            instantaneous: /**/ false,
+            hour1:         /**/ false,
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
+        },
+        recharge: rch.none,
+        name: "Натиск [Charge]", 
+        requirements: "4 HD",
+        data:`
+        <p>Если Пустой переместится как минимум на 15 футов по прямой к цели, а затем в том же ходу попадет по ней естественным оружием, цель получит дополнительный урон 2d6.</p>
+        ` 
+    }, // Charge 22
+    {
+        type: tp.hollow,
+        cost: 0,
+        rules: false, 
+        castingTime:      castTime.none,
+        range:            rng.none,
+        components: {
+            verbal:       /*v*/ false,  
+            somatic:      /*s*/ false,  
+            material:     /*m*/ false, 
+            released:     /*w*/ false  
+        },
+        duration: {
+            until_sealed:  /**/ false,
+            concentration: /**/ false,
+            minute1:       /**/ false,
+            round1:        /**/ false,
+            instantaneous: /**/ false,
+            hour1:         /**/ false,
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
+        },
+        recharge: rch.none,
+        name: "Очарование [Charm]", 
+        requirements: "12 HD, Харизма 14",
+        data:`
+        <p>В качестве действия пустое нацеливается на одного гуманоида, которого оно видит в пределах 30 футов от себя. Если цель может видеть пустоту, она должна преуспеть в спасброске Мудрости против этой магии, иначе она будет очарована пустотой. Очарованная цель считает пустого верным другом, которого нужно слушать и защищать. Хотя цель не находится под контролем пустого, она принимает просьбы или действия пустого самым благоприятным образом.</p>
+        <p>Каждый раз, когда пустой или его спутники наносят урон цели, цель может повторить спасбросок, оканчивая эффект на себе при успехе. В противном случае эффект длится 12 часов или до тех пор, пока пустой не будет уничтожен, не окажется на другом плане существования, чем цель, или использует бонусное действие, чтобы прекратить эффект.</p>
+        ` 
+    }, // Charm 23
+    {
+        type: tp.hollow,
+        cost: 4,
+        rules: true, 
+        castingTime:      castTime.bonus,
+        range:            rng.self,
+        components: {
+            verbal:       /*v*/ false,  
+            somatic:      /*s*/ true,  
+            material:     /*m*/ false, 
+            released:     /*w*/ false  
+        },
+        duration: {
+            until_sealed:  /**/ false,
+            concentration: /**/ true,
+            minute1:       /**/ false,
+            round1:        /**/ false,
+            instantaneous: /**/ false,
+            hour1:         /**/ false,
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
+        },
+        recharge: rch.none,
+        name: "Синхронизация сознаний [Cognition Synchronization]", 
+        requirements: "24 HD, Пескиса [Pesquisa], Мудрость 16",
+        data:`
+        <p>Пустой выбирает до 11 знакомых ему существ. Если эти существа находятся на одном плане, то в то время как Пустой концентрируется на этой способности, он может передавать выбранным существам информацию о том, что он в данный момент видит или испытывает.</p>
+        ` 
+    }, // Cognition Synchronization 24
+    {
+        type: tp.hollow,
+        cost: 0,
+        rules: false, 
+        castingTime:      castTime.none,
+        range:            rng.none,
+        components: {
+            verbal:       /*v*/ false,  
+            somatic:      /*s*/ false,  
+            material:     /*m*/ false, 
+            released:     /*w*/ false  
+        },
+        duration: {
+            until_sealed:  /**/ false,
+            concentration: /**/ false,
+            minute1:       /**/ false,
+            round1:        /**/ false,
+            instantaneous: /**/ false,
+            hour1:         /**/ false,
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
+        },
+        recharge: rch.none,
+        name: "Сокрушительный прыжок [Crushing Leap]", 
+        requirements: "12 HD, Огромный размер",
+        data:`
+        <p>Если Пустой во время своего движения подпрыгнет как минимум на 20 футов, он может использовать это действие, чтобы приземлиться на ноги в пространстве, где находится одно или несколько других существ. Каждое из этих существ отталкивается на свободное место в пределах 5 футов от Пустотого и должно совершить спасбросок Ловкости. При провале существо получает дробящий урон 4d12 и сбивается с ног. При успешном спасброске существо получает вдвое меньше урона и не сбивается с ног.</p>
+        ` 
+    }, // Crushing Leap 25
+    {
+        type: tp.hollow,
+        cost: 4,
+        rules: false, 
+        castingTime:      castTime.none,
+        range:            rng.none,
+        components: {
+            verbal:       /*v*/ false,  
+            somatic:      /*s*/ false,  
+            material:     /*m*/ false, 
+            released:     /*w*/ false  
+        },
+        duration: {
+            until_sealed:  /**/ false,
+            concentration: /**/ false,
+            minute1:       /**/ false,
+            round1:        /**/ false,
+            instantaneous: /**/ false,
+            hour1:         /**/ false,
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
+        },
+        recharge: rch.rchRest_SL,
+        name: "Проклятие [Curse]", 
+        requirements: "14 HD",
+        data:`
+        <p>В качестве действия Пустой нацеливается на одно существо, которое он может видеть в пределах 30 футов. Цель должна преуспеть в спасброске Харизмы, иначе она будет проклята.</p>
+        <p>Будучи проклятой, цель имеет уязвимость к одному типу урона по выбору Пустого. Проклятие длится до тех пор, пока не будет прекращено заклинанием великого восстановления, заклинанием снятия проклятия или подобной магией.</p>
+        ` 
+    }, // Curse 26
+    {
+        type: tp.hollow,
+        cost: 0,
+        rules: false, 
+        castingTime:      castTime.none,
+        range:            rng.none,
+        components: {
+            verbal:       /*v*/ false,  
+            somatic:      /*s*/ false,  
+            material:     /*m*/ false, 
+            released:     /*w*/ false  
+        },
+        duration: {
+            until_sealed:  /**/ false,
+            concentration: /**/ false,
+            minute1:       /**/ false,
+            round1:        /**/ false,
+            instantaneous: /**/ false,
+            hour1:         /**/ false,
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
+        },
+        recharge: rch.none,
+        name: "Уменьшение перезарядки [Decrease Recharge]", 
+        requirements: "14 HD",
+        data:`
+        <p>Выберите способность пустого, которая перезаряжается, за исключением дыхательного оружия [Breath Weapon]. Выберите номер, на котором он не пополняется, теперь он пополняется на этом номере. Эту способность можно выбирать несколько раз, каждый раз выбирая способность, которая не была выбрана.</p>
+        ` 
+    }, // Decrease Recharge 27
+    {
+        type: tp.hollow,
+        cost: 4,
+        rules: false, 
+        castingTime:      castTime.none,
+        range:            rng.none,
+        components: {
+            verbal:       /*v*/ false,  
+            somatic:      /*s*/ false,  
+            material:     /*m*/ false, 
+            released:     /*w*/ false  
+        },
+        duration: {
+            until_sealed:  /**/ false,
+            concentration: /**/ false,
+            minute1:       /**/ false,
+            round1:        /**/ false,
+            instantaneous: /**/ false,
+            hour1:         /**/ false,
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
+        },
+        recharge: rch.none,
+        name: "Отразить атаку [Deflect Attack]", 
+        requirements: "14 HD",
+        data:`
+        <p>Используя реакцию Пустой добавляет 5 к своему КД на одну попадающую по нему атаку оружием ближнего боя. Для этого Пустой должен видеть нападавшего и иметь в руках оружие ближнего боя.</p>
+        ` 
+    }, // Deflect Attack 28
+    {
+        type: tp.hollow,
+        cost: 4,
+        rules: false, 
+        castingTime:      castTime.none,
+        range:            rng.none,
+        components: {
+            verbal:       /*v*/ false,  
+            somatic:      /*s*/ false,  
+            material:     /*m*/ false, 
+            released:     /*w*/ false  
+        },
+        duration: {
+            until_sealed:  /**/ false,
+            concentration: /**/ false,
+            minute1:       /**/ false,
+            round1:        /**/ false,
+            instantaneous: /**/ false,
+            hour1:         /**/ false,
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
+        },
+        recharge: rch.none,
+        name: "Отразить снаряд [Deflect Missiles]", 
+        requirements: "14 HD",
+        data:`
+        <p>Используя реакцию, в ответ на попадание в него дальнобойным оружием, Пустой отклоняет снаряд. Урон, получаемый им от атаки, уменьшается на 1d10. Если урон уменьшен до 0, Пустой ловит снаряд, если снаряд достаточно мал, чтобы ее можно было держать в одной руке, и у него свободна рука. За каждые 4 HD сверх 14 HD урон уменьшается на 1d10; максимум 4d10.</p>
+        ` 
+    }, // Deflect Missiles 29
+    {
+        type: tp.hollow,
+        cost: 6,
+        rules: false, 
+        castingTime:      castTime.none,
+        range:            rng.none,
+        components: {
+            verbal:       /*v*/ false,  
+            somatic:      /*s*/ false,  
+            material:     /*m*/ false, 
+            released:     /*w*/ false  
+        },
+        duration: {
+            until_sealed:  /**/ false,
+            concentration: /**/ false,
+            minute1:       /**/ false,
+            round1:        /**/ false,
+            instantaneous: /**/ false,
+            hour1:         /**/ false,
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
+        },
+        recharge: rch.rchRest_SL,
+        name: "Дизорер [Descorrer]", 
+        requirements: "23 HD, Кумон [Kūmon]",
+        data:`
+        <p>В качестве действия Пустой открывает путь в гарганту, и внутрь могут следовать до четырех желающих существ. Дескоррер — гораздо более стабильная форма путешествия, которая всегда обеспечивает безопасную и короткую прогулку до любого знакомого Пустому места на другом плане существования.</p>
+        ` 
+    }, // Descorrer 30
+    {
+        type: tp.hollow,
+        cost: 0,
+        rules: false, 
+        castingTime:      castTime.none,
+        range:            rng.none,
+        components: {
+            verbal:       /*v*/ false,  
+            somatic:      /*s*/ false,  
+            material:     /*m*/ false, 
+            released:     /*w*/ false  
+        },
+        duration: {
+            until_sealed:  /**/ false,
+            concentration: /**/ false,
+            minute1:       /**/ false,
+            round1:        /**/ false,
+            instantaneous: /**/ false,
+            hour1:         /**/ false,
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
+        },
+        recharge: rch.none,
+        name: "Дьявольский взгляд [Devil's Sight]", 
+        requirements: "12 HD, Темное зрение [Darkvision]",
+        data:`
+        <p>Магическая тьма не мешает темному зрению пустых.</p>
+        ` 
+    }, // Devil's Sight 31
+    {
+        type: tp.hollow,
+        cost: 0,
+        rules: false, 
+        castingTime:      castTime.none,
+        range:            rng.none,
+        components: {
+            verbal:       /*v*/ false,  
+            somatic:      /*s*/ false,  
+            material:     /*m*/ false, 
+            released:     /*w*/ false  
+        },
+        duration: {
+            until_sealed:  /**/ false,
+            concentration: /**/ false,
+            minute1:       /**/ false,
+            round1:        /**/ false,
+            instantaneous: /**/ false,
+            hour1:         /**/ false,
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
+        },
+        recharge: rch.none,
+        name: "Пикирующая атака [Displacement]", 
+        requirements: "10 HD",
+        data:`
+        <p>Пустой создает магическую иллюзию, из-за которой кажется, что он стоит недалеко от своего фактического местоположения, в результате чего броски атаки по нему становятся с помехой.</p>
+        <p>Если он поражен атакой, эта черта нарушается до конца следующего хода. Эта особенность также нарушается, когда Пустой выведен из строя или его скорость равна 0.</p>
+        ` 
+    }, // Displacement 32
+    {
+        type: tp.hollow,
+        cost: 2,
+        rules: false, 
+        castingTime:      castTime.none,
+        range:            rng.none,
+        components: {
+            verbal:       /*v*/ false,  
+            somatic:      /*s*/ false,  
+            material:     /*m*/ false, 
+            released:     /*w*/ false  
+        },
+        duration: {
+            until_sealed:  /**/ false,
+            concentration: /**/ false,
+            minute1:       /**/ false,
+            round1:        /**/ false,
+            instantaneous: /**/ false,
+            hour1:         /**/ false,
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
+        },
+        recharge: rch.none,
+        name: "Пикирующая атака [Dive Attack]", 
+        requirements: "3 HD, Скорость полета [Flying speed]",
+        data:`
+        <p>Если Пустой летит и ныряет как минимум на 30 футов прямо к цели, а затем поражает ее рукопашной атакой оружием, атака наносит цели дополнительный урон 1d6.</p>
+        ` 
+    }, // Dive Attack 33
+    {
+        type: tp.hollow,
+        cost: 0,
+        rules: false, 
+        castingTime:      castTime.none,
+        range:            rng.none,
+        components: {
+            verbal:       /*v*/ false,  
+            somatic:      /*s*/ false,  
+            material:     /*m*/ false, 
+            released:     /*w*/ false  
+        },
+        duration: {
+            until_sealed:  /**/ false,
+            concentration: /**/ false,
+            minute1:       /**/ false,
+            round1:        /**/ false,
+            instantaneous: /**/ false,
+            hour1:         /**/ false,
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
+        },
+        recharge: rch.none,
+        name: "Земляное скольжение [Earth Glide]", 
+        requirements: "15 HD",
+        data:`
+        <p>Пустой может проходить сквозь немагическую, необработанную землю и камень. При этом Пустой не нарушает материал, через который движется.</p>
+        ` 
+    }, // Earth Glide 34
+    {
+        type: tp.hollow,
+        cost: 6,
+        rules: false, 
+        castingTime:      castTime.none,
+        range:            rng.none,
+        components: {
+            verbal:       /*v*/ false,  
+            somatic:      /*s*/ false,  
+            material:     /*m*/ false, 
+            released:     /*w*/ false  
+        },
+        duration: {
+            until_sealed:  /**/ false,
+            concentration: /**/ false,
+            minute1:       /**/ false,
+            round1:        /**/ false,
+            instantaneous: /**/ false,
+            hour1:         /**/ false,
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
+        },
+        recharge: rch.none,
+        name: "Поглащение памяти [Eat Memories]", 
+        requirements: "18 HD",
+        data:`
+        <p>В качестве действия Пустой нацеливается на одно существо, которое он может видеть в пределах 5 футов от себя. Цель должна преуспеть в спасброске Мудрости, иначе она получит психический урон 4d8 и потеряет память до тех пор, пока не завершит короткий или длительный отдых или пока не получит выгоду от заклинания Великое восстановление или исцеление. Конструкты, слизи, растения и нежить автоматически преуспевают в спасброске.</p>
+        <p>Пока память истощена, цель должна бросить d4 и вычесть выпавшее число из проверок характеристик и бросков атаки. Каждый раз, когда у цели истощается память сверх первой, размер кубика увеличивается на единицу; максимум d12, после чего цель теряет сознание на 1 час. После этого эффект заканчивается.</p>
+        <p>Пустой изучает все языки, которые знает цель с истощенной памятью, и приобретает все ее навыки.</p>
+        ` 
+    }, // Eat Memories 35
+    {
+        type: tp.hollow,
+        cost: 0,
+        rules: false, 
+        castingTime:      castTime.none,
+        range:            rng.none,
+        components: {
+            verbal:       /*v*/ false,  
+            somatic:      /*s*/ false,  
+            material:     /*m*/ false, 
+            released:     /*w*/ false  
+        },
+        duration: {
+            until_sealed:  /**/ false,
+            concentration: /**/ false,
+            minute1:       /**/ false,
+            round1:        /**/ false,
+            instantaneous: /**/ false,
+            hour1:         /**/ false,
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
+        },
+        recharge: rch.none,
+        name: "Элементальное поглащение [Elemental Absorption]", 
+        requirements: "15 HD, Элементарное сопротивление [Elemental resistance]",
+        data:`
+        <p>Пустой выбирает тип урона, к которому он также устойчив. Всякий раз, когда Пустой подвергается выбранному урону, он не получает урона и вместо этого восстанавливает количество очков жизни, равное нанесенному урону.</p>
+        ` 
+    }, // Elemental Absorption 36
+    {
+        type: tp.hollow,
+        cost: 0,
+        rules: false, 
+        castingTime:      castTime.none,
+        range:            rng.none,
+        components: {
+            verbal:       /*v*/ false,  
+            somatic:      /*s*/ false,  
+            material:     /*m*/ false, 
+            released:     /*w*/ false  
+        },
+        duration: {
+            until_sealed:  /**/ false,
+            concentration: /**/ false,
+            minute1:       /**/ false,
+            round1:        /**/ false,
+            instantaneous: /**/ false,
+            hour1:         /**/ false,
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
+        },
+        recharge: rch.none,
+        name: "Элементарное сопротивление [Elemental resistance]", 
+        requirements: "8 HD",
+        data:`
+        <p>Пустой выбирает тип урона из следующих, к которым он неуязвим: кислота, холод, огонь, молния, некротический урон, яд, излучение и гром. Пустой имеет сопротивление выбранному типу урона.</p>
+        <p>Кроме того, пустые должны выбрать тип элемента, к которому они не уязвимы и не устойчивы. Теперь они уязвимы к выбранному типу урона.</p>
+        ` 
+    }, // Elemental resistance 37
+    {
+        type: tp.hollow,
+        cost: 0,
+        rules: false, 
+        castingTime:      castTime.none,
+        range:            rng.none,
+        components: {
+            verbal:       /*v*/ false,  
+            somatic:      /*s*/ false,  
+            material:     /*m*/ false, 
+            released:     /*w*/ false  
+        },
+        duration: {
+            until_sealed:  /**/ false,
+            concentration: /**/ false,
+            minute1:       /**/ false,
+            round1:        /**/ false,
+            instantaneous: /**/ false,
+            hour1:         /**/ false,
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
+        },
+        recharge: rch.none,
+        name: "Неуловимый [Elusive]", 
+        requirements: "24 HD, Ловкость 18",
+        data:`
+        <p>Ни один бросок атаки не дает преимущества против Пустого, если только он не выведен из строя.</p>
+        ` 
+    }, // Elusive 38
+    {
+        type: tp.hollow,
+        cost: 0,
+        rules: false, 
+        castingTime:      castTime.none,
+        range:            rng.none,
+        components: {
+            verbal:       /*v*/ false,  
+            somatic:      /*s*/ false,  
+            material:     /*m*/ false, 
+            released:     /*w*/ false  
+        },
+        duration: {
+            until_sealed:  /**/ false,
+            concentration: /**/ false,
+            minute1:       /**/ false,
+            round1:        /**/ false,
+            instantaneous: /**/ false,
+            hour1:         /**/ false,
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
+        },
+        recharge: rch.none,
+        name: "Загадочный разум [Enigmatic Mind]", 
+        requirements: "14 HD, Интеллект 18",
+        data:`
+        <p>Мысли Пустого невозможно прочитать, существа могут телепатически общаться с Пустым, только если он это позволяет, а магия не может определить, лжет ли Пустой.</p>
+        ` 
+    }, // Enigmatic Mind 39
+    {
+        type: tp.hollow,
+        cost: 4,
+        rules: false, 
+        castingTime:      castTime.none,
+        range:            rng.none,
+        components: {
+            verbal:       /*v*/ false,  
+            somatic:      /*s*/ false,  
+            material:     /*m*/ false, 
+            released:     /*w*/ false  
+        },
+        duration: {
+            until_sealed:  /**/ false,
+            concentration: /**/ false,
+            minute1:       /**/ false,
+            round1:        /**/ false,
+            instantaneous: /**/ false,
+            hour1:         /**/ false,
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
+        },
+        recharge: rch.none,
+        name: "Увеличение [Enlarge]", 
+        requirements: "4 HD, телосложение 13, размер Средний",
+        data:`
+        <p>В течение 1 минуты пустое действием магическим образом увеличивается в размерах вместе со всем, что оно носит или несет. В увеличенном состоянии пустое становится Большим, удваивает свои кубики урона при атаках оружием, основанных на Силе (включенных в атаки), и совершает проверки Силы и спасброски Силы с преимуществом. Если пустому не хватает места, чтобы стать Большим, он достигает максимально возможного размера в доступном пространстве.</p>
+        ` 
+    }, // Enlarge 40
+    {
+        type: tp.hollow,
+        cost: 0,
+        rules: false, 
+        castingTime:      castTime.none,
+        range:            rng.none,
+        components: {
+            verbal:       /*v*/ false,  
+            somatic:      /*s*/ false,  
+            material:     /*m*/ false, 
+            released:     /*w*/ false  
+        },
+        duration: {
+            until_sealed:  /**/ false,
+            concentration: /**/ false,
+            minute1:       /**/ false,
+            round1:        /**/ false,
+            instantaneous: /**/ false,
+            hour1:         /**/ false,
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
+        },
+        recharge: rch.none,
+        name: "Дополнительный навык [Extra Skill]", 
+        requirements: "2 HD",
+        data:`
+        <p>Выберите два навыка. Пустой теперь владеет этими навыками. Эту способность можно выбирать несколько раз.</p>
+        ` 
+    }, // Extra Skill 41
+    {
+        type: tp.hollow,
+        cost: 0,
+        rules: false, 
+        castingTime:      castTime.none,
+        range:            rng.none,
+        components: {
+            verbal:       /*v*/ false,  
+            somatic:      /*s*/ false,  
+            material:     /*m*/ false, 
+            released:     /*w*/ false  
+        },
+        duration: {
+            until_sealed:  /**/ false,
+            concentration: /**/ false,
+            minute1:       /**/ false,
+            round1:        /**/ false,
+            instantaneous: /**/ false,
+            hour1:         /**/ false,
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
+        },
+        recharge: rch.none,
+        name: "Безумный страх [Fear Frenzy]", 
+        requirements: "8 HD, Харизма 14",
+        data:`
+        <p>Пустой имеет преимущество при бросках атаки против напуганных существ.</p>
+        ` 
+    }, // Fear Frenzy 42
+    {
+        type: tp.hollow,
+        cost: 0,
+        rules: false, 
+        castingTime:      castTime.none,
+        range:            rng.none,
+        components: {
+            verbal:       /*v*/ false,  
+            somatic:      /*s*/ false,  
+            material:     /*m*/ false, 
+            released:     /*w*/ false  
+        },
+        duration: {
+            until_sealed:  /**/ false,
+            concentration: /**/ false,
+            minute1:       /**/ false,
+            round1:        /**/ false,
+            instantaneous: /**/ false,
+            hour1:         /**/ false,
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
+        },
+        recharge: rch.none,
+        name: "Фейское происхождение [Fey Ancestry]", 
+        requirements: "",
+        data:`
+        <p>Пустой имеет преимущество в спасбросках от очарования, и магия не может усыпить Пустого.</p>
+        ` 
+    }, // Fey Ancestry 43
 ]
