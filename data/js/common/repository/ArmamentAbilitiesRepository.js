@@ -5790,4 +5790,34 @@ const armamentAbilitiesContent = [
         <p>Пустой имеет преимущество в спасбросках от очарования, и магия не может усыпить Пустого.</p>
         ` 
     }, // Fey Ancestry 43
+    {
+        type: tp.hollow,
+        cost: 0,
+        rules: false, 
+        castingTime:      castTime.none,
+        range:            rng.none,
+        components: {
+            verbal:       /*v*/ false,  
+            somatic:      /*s*/ false,  
+            material:     /*m*/ false, 
+            released:     /*w*/ false  
+        },
+        duration: {
+            until_sealed:  /**/ false,
+            concentration: /**/ false,
+            minute1:       /**/ false,
+            round1:        /**/ false,
+            instantaneous: /**/ false,
+            hour1:         /**/ false,
+            minute5:       /**/ false,
+            round2:        /**/ false,
+            special:       /**/ false
+        },
+        recharge: rch.none,
+        name: "Дьявольское благословение [Fiendish Blessing]", 
+        requirements: "11 HD, Харизма 15",
+        data:`
+        <p>Пустой получает бонус к КД, равный его бонусу Харизмы.</p>
+        ` 
+    } // Fiendish Blessing 44
 ]

@@ -10,8 +10,8 @@
                             "ItemLogo":"<i class=\"fa-solid fa-fire\" aria-hidden=\"true\"></i>"
                         },
                         {
-                            "ItemName":"<strike>Магические предметы</strike>",
-                            "ItemLink":"#",
+                            "ItemName":"Способности вооружения",
+                            "ItemLink":"sites/armament_abilities/index.html", 
                             "ItemLogo":"<i class=\"fa-solid fa-circle-notch\" aria-hidden=\"true\"></i>"
                         },
                         {
