@@ -511,29 +511,36 @@ a.read-all:hover{
 /* ------------------------------------------------------------- image-block end */
 /* ------------------------------------------------------------- RACE-CLASS DATA PAGE end */
 /* ------------------------------------------------------------- armament abilities start */
+.filter-grid-group{
+    margin-bottom: 0px;
+}
 .filter-grid-group-data-item select {
     height: 30px;
     width: 100%;    
     border-radius: 5px;
     background-color: rgb(236,228,217);
 }
-.abilities-filters-row {
-    padding-left: 12px;
-    padding-right: 12px;
-}
 .filter-grid-group-data-item .col {
     padding: 0 4px 8px 4px;
     position: relative;
 }
-.filter-under-grig-oficial {
+.filter-above-grig-oficial {
     padding: 0 4px 0 4px;
     width: 100%;
     background-color: rgb(128,154,65);
     border-radius: 5px;
     margin-bottom: 8px;
     height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.filter-under-grig-oficial p {
+.filter-above-grig-oficial p {
     text-align: center;
+}
+.armament-abilities-content {
+    background-color: rgb(236,228,217);
+    padding: 2px;
+    border-radius: 5px;
 }
 /* ------------------------------------------------------------- armament abilities end */

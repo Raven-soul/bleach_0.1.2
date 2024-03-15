@@ -168,7 +168,7 @@
         width: 25%;
     }
 }
-@media (max-width: 576px){
+@media (max-width: 768px){
     .filter-grid-group-data-item{
         width: 50%;
     }
