@@ -157,6 +157,24 @@
 }
 /* ------------------------------------------------ class table end*/
 
+/* ------------------------------------------------ armament_abilities start */
+@media (min-width: 1200px){
+    .filter-grid-group-data-item{
+        width: 20%;
+    }
+}
+@media (max-width: 1200px){
+    .filter-grid-group-data-item{
+        width: 25%;
+    }
+}
+@media (max-width: 576px){
+    .filter-grid-group-data-item{
+        width: 50%;
+    }
+}
+/* ------------------------------------------------ armament_abilities end */
+
 /*  
 @media (min-width: 1200px) {
     
