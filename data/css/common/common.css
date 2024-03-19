@@ -540,7 +540,26 @@ a.read-all:hover{
 }
 .armament-abilities-content {
     background-color: rgb(236,228,217);
-    padding: 2px;
+    padding: 4px;
     border-radius: 5px;
+}
+.prompt-area {
+    display: flex;
+    justify-content: right;
+}
+
+.prompt-area .prompt {
+    width: 80%;
+}
+
+.prompt-area hr {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(90deg, rgba(2,0,36,0) 0%, rgba(0, 0, 0, 0.5) 20%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.5) 80%, rgba(0,212,255,0) 100%);
+}
+
+.prompt-data {
+    display: flex;
+    justify-content: end;
 }
 /* ------------------------------------------------------------- armament abilities end */
