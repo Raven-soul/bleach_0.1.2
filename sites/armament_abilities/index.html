@@ -13,7 +13,7 @@
     <link rel="icon" href="../../data/img/common/logo/logo_raven_3.png" type="image/x-icon">
 </head>
 
-<body onload="awake(2)">
+<body onload="awake(2); awakeArmamentFilters()">
     <div class="main-block">
         <header>
             <div class="stub-header">data</div>
@@ -84,73 +84,75 @@
                                         </div>
                                         <div class=" col">
                                             <div class="filter-grid-group">
-                                                <div class="grid-group-data">                                               
-                                                    <div class="filter-grid-group-data-item">
-                                                        <div class="col">
-                                                            <select name="pets" id="pet-select">
-                                                                <option value="">Please choose an option</option>
-                                                                <option value="dog">Dog</option>
-                                                                <option value="cat">Cat</option>
-                                                                <option value="hamster">Hamster</option>
-                                                                <option value="parrot">Parrot</option>
-                                                                <option value="spider">Spider</option>
-                                                                <option value="goldfish">Goldfish</option>
-                                                            </select>
-                                                        </div>                                                        
-                                                    </div>
-                                                    <div class="filter-grid-group-data-item">
-                                                        <div class="col">
-                                                            <select name="pets" id="pet-select">
-                                                                <option value="">Please choose an option</option>
-                                                                <option value="dog">Dog</option>
-                                                                <option value="cat">Cat</option>
-                                                                <option value="hamster">Hamster</option>
-                                                                <option value="parrot">Parrot</option>
-                                                                <option value="spider">Spider</option>
-                                                                <option value="goldfish">Goldfish</option>
-                                                            </select>
-                                                        </div>                                                        
-                                                    </div>
-                                                    <div class="filter-grid-group-data-item">
-                                                        <div class="col">
-                                                            <select name="pets" id="pet-select">
-                                                                <option value="">Please choose an option</option>
-                                                                <option value="dog">Dog</option>
-                                                                <option value="cat">Cat</option>
-                                                                <option value="hamster">Hamster</option>
-                                                                <option value="parrot">Parrot</option>
-                                                                <option value="spider">Spider</option>
-                                                                <option value="goldfish">Goldfish</option>
-                                                            </select>
-                                                        </div>                                                        
-                                                    </div>
-                                                    <div class="filter-grid-group-data-item">
-                                                        <div class="col">
-                                                            <select name="pets" id="pet-select">
-                                                                <option value="">Please choose an option</option>
-                                                                <option value="dog">Dog</option>
-                                                                <option value="cat">Cat</option>
-                                                                <option value="hamster">Hamster</option>
-                                                                <option value="parrot">Parrot</option>
-                                                                <option value="spider">Spider</option>
-                                                                <option value="goldfish">Goldfish</option>
-                                                            </select>
-                                                        </div>                                                        
-                                                    </div>
-                                                    <div class="filter-grid-group-data-item">
-                                                        <div class="col">
-                                                            <select name="pets" id="pet-select">
-                                                                <option value="">Please choose an option</option>
-                                                                <option value="dog">Dog</option>
-                                                                <option value="cat">Cat</option>
-                                                                <option value="hamster">Hamster</option>
-                                                                <option value="parrot">Parrot</option>
-                                                                <option value="spider">Spider</option>
-                                                                <option value="goldfish">Goldfish</option>
-                                                            </select>
-                                                        </div>                                                        
-                                                    </div>
+                                                <div class="grid-group-data"> 
                                                     
+                                                    <div class="data" hidden>
+                                                        <div class="filter-grid-group-data-item">
+                                                            <div class="col">
+                                                                <select name="pets" id="pet-select">
+                                                                    <option value="" disabled selected>Тип</option>
+                                                                    <option value="dog">Dog</option>
+                                                                    <option value="cat">Cat</option>
+                                                                    <option value="hamster">Hamster</option>
+                                                                    <option value="parrot">Parrot</option>
+                                                                    <option value="spider">Spider</option>
+                                                                    <option value="goldfish">Goldfish</option>
+                                                                </select>
+                                                            </div>                                                        
+                                                        </div>
+                                                        <div class="filter-grid-group-data-item">
+                                                            <div class="col">
+                                                                <select name="pets" id="pet-select">
+                                                                    <option value="" disabled selected>Тип</option>
+                                                                    <option value="dog">Dog</option>
+                                                                    <option value="cat">Cat</option>
+                                                                    <option value="hamster">Hamster</option>
+                                                                    <option value="parrot">Parrot</option>
+                                                                    <option value="spider">Spider</option>
+                                                                    <option value="goldfish">Goldfish</option>
+                                                                </select>
+                                                            </div>                                                        
+                                                        </div>
+                                                        <div class="filter-grid-group-data-item">
+                                                            <div class="col">
+                                                                <select name="pets" id="pet-select">
+                                                                    <option value="">Please choose an option</option>
+                                                                    <option value="dog">Dog</option>
+                                                                    <option value="cat">Cat</option>
+                                                                    <option value="hamster">Hamster</option>
+                                                                    <option value="parrot">Parrot</option>
+                                                                    <option value="spider">Spider</option>
+                                                                    <option value="goldfish">Goldfish</option>
+                                                                </select>
+                                                            </div>                                                        
+                                                        </div>
+                                                        <div class="filter-grid-group-data-item">
+                                                            <div class="col">
+                                                                <select name="pets" id="pet-select">
+                                                                    <option value="">Please choose an option</option>
+                                                                    <option value="dog">Dog</option>
+                                                                    <option value="cat">Cat</option>
+                                                                    <option value="hamster">Hamster</option>
+                                                                    <option value="parrot">Parrot</option>
+                                                                    <option value="spider">Spider</option>
+                                                                    <option value="goldfish">Goldfish</option>
+                                                                </select>
+                                                            </div>                                                        
+                                                        </div>
+                                                        <div class="filter-grid-group-data-item">
+                                                            <div class="col">
+                                                                <select name="pets" id="pet-select">
+                                                                    <option value="">Please choose an option</option>
+                                                                    <option value="dog">Dog</option>
+                                                                    <option value="cat">Cat</option>
+                                                                    <option value="hamster">Hamster</option>
+                                                                    <option value="parrot">Parrot</option>
+                                                                    <option value="spider">Spider</option>
+                                                                    <option value="goldfish">Goldfish</option>
+                                                                </select>
+                                                            </div>                                                        
+                                                        </div>
+                                                    </div>                                            
                                                 </div>
                                             </div>
                                         </div>
@@ -226,6 +228,11 @@
         <script src="../../data/js/common/repository/templateDataRepository.js"></script>
         <script src="../../data/js/common/onload.js"></script>
         <script src="../../data/js/common/UI.js"></script>
+
+        <!-- kido block -->
+        <script src="../../data/js/common/onloadCustom/onloadArmament.js"></script>
+        <script src="../../data/js/common/repository/ArmamentAbilitiesRepository.js"></script>
+        <!-- kido block -->
     </footer>
     </div>
 </body>

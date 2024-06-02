@@ -8,53 +8,72 @@
 */
 
 const castTime = {
-    none: "none",
-    bonus: "Bonus action",
-    action: "1 action",
-    reaction: "Reaction",
-    reactionTkDmg: "Reaction, which you take when you take damage from a source you can see",
-    round: "1 round"    
+    none:           "Нет",                           //"none",
+    bonus:          "Бонусное действие",             //"Bonus action",
+    action:         "Основное действие",             //"1 action",
+    reaction:       "Реакция",                       //"Reaction",
+    reactionTkDmg:  "Реакция на получение урона",    //"Reaction, which you take when you take damage from a source you can see",
+    round:          "Раунд"                          //"1 round"
 }
 
 const rng = {
-    none: "none",
-    self: "Self",
-    touch: "Touch",
-    ft5: "5 feet",
-    ft30: "30 feet",
-    ft40: "40 feet",
-    ft60: "60 feet",
-    ft80: "80 feet",
-    ft100: "100 feet",
-    ft120: "120 feet",
-    ft500: "500 feet",
-    heilinBogen: "Equal to your Heilig Bogen",
-    cone30: "Self (30-foot cone)",
-    mile1: "1 mile",
-    varies: "Varies",
-    special: "Special"
+    none:           "Нет",                           //"none",
+    self:           "На себя",                       //"Self",
+    touch:          "Касание",                       //"Touch",
+    ft5:            "5 футов",                       //"5 feet",
+    ft30:           "30 футов",                      //"30 feet",
+    ft40:           "40 футов",                      //"40 feet",
+    ft60:           "60 футов",                      //"60 feet",
+    ft80:           "80 футов",                      //"80 feet",
+    ft100:          "100 футов",                     //"100 feet",
+    ft120:          "120 футов",                     //"120 feet",
+    ft500:          "500 футов",                     //"500 feet",
+    heilinBogen:    "Дистанция святого лука",        //"Equal to your Heilig Bogen",
+    cone30:         "На себя (30-футовый конус)",    //"Self (30-foot cone)",
+    mile1:          "1 миля (5280 футов)",           //"1 mile",
+    varies:         "Вариативная",                   //"Varies",
+    special:        "Специальноя"                   //"Special"
 }
 
 const tp = {
-    acid: "Acid",
-    blood: "Blood",
-    bow: "Bow",
-    dark: "Dark",
-    defence: "Defence",
-    earth: "Earth",
-    fire: "Fire",
-    common: "Common",
-    gravity: "Gravity",
-    healing: "Healing",
-    hollow: "Hollow"
+    acid:           "Кислота",                       //"Acid",
+    blood:          "Кровь",                         //"Blood",
+    bow:            "Лук",                           //"Bow",
+    dark:           "Тьма",                          //"Dark",
+    defence:        "Защита",                        //"Defence",
+    earth:          "Земля",                         //"Earth",
+    fire:           "Огонь",                         //"Fire",
+    common:         "Общие",                         //"Common",
+    gravity:        "Гравитация",                    //"Gravity",
+    healing:        "Лечение",                       //"Healing",
+    hollow:         "Пустота"                       //"Hollow"
 }
 
 const rch = {
-    none: "none",
-    rch6: "6",
-    rch1_6: "1—6",
-    rchDay1: "1/Day",
-    rchRest_SL: "Short or Long Rest"
+    none:           "Нет",                           //"none",
+    rch6:           "6",                             //"6",
+    rch1_6:         "1-6",                           //"1—6",
+    rchDay1:        "1/День",                        //"1/Day",
+    rchRest_SL:     "Короткий или долгий отдых"     //"Short or Long Rest"
+}
+
+const columns = {
+    castTime: {
+        translate: "Время накладывания",
+        value: castTime
+    },
+    rng: {
+        translate: "Дистанция",
+        value: rng
+    },
+    tp: {
+        translate: "Тип",
+        value: tp
+    },
+    rch: {
+        translate: "Перезарядка",
+        value: rch
+    }
 }
 
 const armamentAbilitiesContent = [
