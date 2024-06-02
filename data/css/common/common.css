@@ -562,4 +562,8 @@ a.read-all:hover{
     display: flex;
     justify-content: end;
 }
+.vertical-group-name {
+    writing-mode: tb-rl;
+    transform: rotate(-180deg);
+}
 /* ------------------------------------------------------------- armament abilities end */
