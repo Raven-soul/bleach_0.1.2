@@ -57,22 +57,57 @@ const rch = {
     rchRest_SL:     "Короткий или долгий отдых"     //"Short or Long Rest"
 }
 
+const componentsCol = {
+    none:            "Нет",
+    verbal:          "Вербальный",
+    somatic:         "Соматический",
+    material:        "Материальный",
+    released:        "Высвобождение"
+}
+
+const durationCol = {
+    none:            "Нет",
+    until_sealed:    "До отмены",    
+    concentration:   "Концентрация",
+    minute1:         "1 Минута",     
+    round1:          "1 Раунд",     
+    instantaneous:   "Мгновенно",   
+    hour1:           "1 Час",     
+    minute5:         "5 Минут",
+    round2:          "1 Раунда",
+    special:         "Особенное"
+}
+
 const columns = {
     castTime: {
         translate: "Время накладывания",
-        value: castTime
+        value: castTime,
+        itemType: "value"
     },
     rng: {
         translate: "Дистанция",
-        value: rng
+        value: rng,
+        itemType: "value"
     },
     tp: {
         translate: "Тип",
-        value: tp
+        value: tp,
+        itemType: "value"
     },
     rch: {
         translate: "Перезарядка",
-        value: rch
+        value: rch,
+        itemType: "value"
+    },
+    componentsCol: {
+        translate: "Компоненты",
+        value: componentsCol,
+        itemType: "bool"
+    },
+    durationCol: {
+        translate: "Длительность",
+        value: durationCol,
+        itemType: "bool"
     }
 }
 

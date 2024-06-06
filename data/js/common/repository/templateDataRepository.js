@@ -16,7 +16,7 @@
                             </div>
                         </div>
                     </button>
-                    <div class="col menu-block-section-list menu-block-section-list-0"
+                    <div class="col menu-block-section-list menu-block-section-list-@@MENUSECTIONID@@"
                         style="display: block;">
                         <ul>
                             @@MENUSECTIONITEMLIST@@                
@@ -35,4 +35,24 @@
                         <div class="col content-data strike_line">@@MENUITEMNAME@@</div>
                     </div>
                 </a></li>
+                `;
+    
+// filter - selector
+            const selectorTemplate = 
+                `
+                <div class="filter-grid-group-data-item">
+                    <div class="col">
+                        <select name="@@SELECTORNAME@@" id="@@SELECTORID@@" onchange="doSomething()">
+                            @@SELECTORBODY@@                            
+                        </select>
+                    </div>                                                        
+                </div>
+                `;
+            const selectorDefaultItemTemplate = 
+                `
+                <option value="" disabled selected>@@DEFITEMNAME@@</option>
+                `;
+            const selectorItemTemplate = 
+                `
+                <option value="@@ITEMVALUE@@" armtype="@@ITEMTYPE@@">@@ITEMNAME@@</option>
                 `;

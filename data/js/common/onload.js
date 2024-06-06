@@ -23,9 +23,10 @@ function linkLauncher(){
 
 function menuGeneration(nestOrder){
     var menuLoadAreaBlock = $(".menu-block-load-area");
-    var summHtmlBlock = "", menuList = "";
+    var summHtmlBlock = "";
     mainMenuContent.forEach((menuArrayElement) => {
-        let menuTemp = menuBodyTemplate;        
+        let menuTemp = menuBodyTemplate;
+        var menuList = "";        
 
         menuTemp = menuTemp.replace("@@MENUSECTIONNAME@@", menuArrayElement.SectionName);
         menuTemp = menuTemp.replace(/@@MENUSECTIONID@@/g, menuArrayElement.id);
