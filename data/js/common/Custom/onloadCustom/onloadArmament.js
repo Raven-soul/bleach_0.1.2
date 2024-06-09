@@ -13,7 +13,7 @@ function filtersGeneration(){
 
         selecTemp = selecTemp.replace("@@SELECTORNAME@@", columnKey);
         selecTemp = selecTemp.replace("@@SELECTORID@@", columnKey + "_selector_id");
-        selecTemp = selecTemp.replace("@@SELECTORFUNCTION@@", "showArmamentAbilities()");
+        selecTemp = selecTemp.replace("@@SELECTORFUNCTION@@", "changeFilterArmament(this)");
 
         DefaultItemTemp = DefaultItemTemp.replace("@@DEFITEMNAME@@", columnValue.translate);
 
@@ -22,7 +22,13 @@ function filtersGeneration(){
         for(const [key, value] of Object.entries(columnValue.value)){
             let selecItemTemplate = selectorItemTemplate;
 
-            selecItemTemplate = selecItemTemplate.replace("@@ITEMVALUE@@", value);
+            if(columnValue.itemType == "bool"){
+                selecItemTemplate = selecItemTemplate.replace("@@ITEMVALUE@@", key);
+            } 
+            else {
+                selecItemTemplate = selecItemTemplate.replace("@@ITEMVALUE@@", value);
+            }
+            
             selecItemTemplate = selecItemTemplate.replace("@@ITEMNAME@@", value);
             selecItemTemplate = selecItemTemplate.replace("@@ITEMTYPE@@", columnValue.itemType);
 

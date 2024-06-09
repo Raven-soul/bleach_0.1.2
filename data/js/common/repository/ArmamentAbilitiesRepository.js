@@ -9,6 +9,7 @@
 */
 
 const castTime = {
+    cancel:         "Отменить фильтр",  
     none:           "Нет",                           //"none",
     bonus:          "Бонусное действие",             //"Bonus action",
     action:         "Основное действие",             //"1 action",
@@ -18,6 +19,7 @@ const castTime = {
 }
 
 const rng = {
+    cancel:         "Отменить фильтр",               
     none:           "Нет",                           //"none",
     self:           "На себя",                       //"Self",
     touch:          "Касание",                       //"Touch",
@@ -37,6 +39,7 @@ const rng = {
 }
 
 const tp = {
+    cancel:         "Отменить фильтр",
     acid:           "Кислота",                       //"Acid",
     blood:          "Кровь",                         //"Blood",
     bow:            "Лук",                           //"Bow",
@@ -51,6 +54,7 @@ const tp = {
 }
 
 const rch = {
+    cancel:         "Отменить фильтр",  
     none:           "Нет",                           //"none",
     rch6:           "6",                             //"6",
     rch1_6:         "1-6",                           //"1—6",
@@ -59,7 +63,7 @@ const rch = {
 }
 
 const componentsCol = {
-    none:            "Нет",
+    cancel:          "Отменить фильтр",
     verbal:          "Вербальный",
     somatic:         "Соматический",
     material:        "Материальный",
@@ -67,7 +71,7 @@ const componentsCol = {
 }
 
 const durationCol = {
-    none:            "Нет",
+    cancel:          "Отменить фильтр",
     until_sealed:    "До отмены",    
     concentration:   "Концентрация",
     minute1:         "1 Минута",     
