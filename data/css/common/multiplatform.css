@@ -162,15 +162,29 @@
     .filter-grid-group-data-item{
         width: 20%;
     }
+    .grid-abilities-item {
+        width: 25%;
+    }
 }
 @media (max-width: 1200px){
     .filter-grid-group-data-item{
         width: 25%;
     }
+    .grid-abilities-item {
+        width: 33%;
+    }
 }
-@media (max-width: 768px){
+@media (max-width: 992px) {
+    .grid-abilities-item {
+        width: 50%;
+    }
+}
+@media (max-width: 576px) {
     .filter-grid-group-data-item{
         width: 50%;
+    }
+    .grid-abilities-item{
+        width: 100%;
     }
 }
 /* ------------------------------------------------ armament_abilities end */

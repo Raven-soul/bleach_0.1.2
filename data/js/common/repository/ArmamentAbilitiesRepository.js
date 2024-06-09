@@ -5,6 +5,7 @@
 /*
     DC - Сложность спасброска
     AC - Класс доспеха
+    HD - (HealthDice) Уровень персонажа
 */
 
 const castTime = {
@@ -74,7 +75,7 @@ const durationCol = {
     instantaneous:   "Мгновенно",   
     hour1:           "1 Час",     
     minute5:         "5 Минут",
-    round2:          "1 Раунда",
+    round2:          "2 Раунда",
     special:         "Особенное"
 }
 

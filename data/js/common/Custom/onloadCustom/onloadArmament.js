@@ -13,6 +13,7 @@ function filtersGeneration(){
 
         selecTemp = selecTemp.replace("@@SELECTORNAME@@", columnKey);
         selecTemp = selecTemp.replace("@@SELECTORID@@", columnKey + "_selector_id");
+        selecTemp = selecTemp.replace("@@SELECTORFUNCTION@@", "showArmamentAbilities()");
 
         DefaultItemTemp = DefaultItemTemp.replace("@@DEFITEMNAME@@", columnValue.translate);
 

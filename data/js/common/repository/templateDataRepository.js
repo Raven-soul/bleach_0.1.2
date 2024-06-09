@@ -42,7 +42,7 @@
                 `
                 <div class="filter-grid-group-data-item">
                     <div class="col">
-                        <select name="@@SELECTORNAME@@" id="@@SELECTORID@@" onchange="doSomething()">
+                        <select name="@@SELECTORNAME@@" id="@@SELECTORID@@" onchange="@@SELECTORFUNCTION@@">
                             @@SELECTORBODY@@                            
                         </select>
                     </div>                                                        

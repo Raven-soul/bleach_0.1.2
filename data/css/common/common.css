@@ -562,8 +562,24 @@ a.read-all:hover{
     display: flex;
     justify-content: end;
 }
+
 .vertical-group-name {
     writing-mode: tb-rl;
     transform: rotate(-180deg);
+    opacity: 0.5;
+}
+
+.grid-abilities-data {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.armament-filtered-area {
+    border-bottom: 1px rgba(0, 0, 0, 0.582);
+} 
+
+.kido-info-block-data {
+    display: flex;
+    justify-content: space-between;
 }
 /* ------------------------------------------------------------- armament abilities end */
