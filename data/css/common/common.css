@@ -574,12 +574,71 @@ a.read-all:hover{
     flex-flow: row wrap;
 }
 
-.armament-filtered-area {
-    border-bottom: 1px rgba(0, 0, 0, 0.582);
-} 
+.abilities-info-block{
+    border-radius: 2px;
+    text-decoration: none;
+    color: black;
+}
 
-.kido-info-block-data {
+.abilities-info-block:hover{
+    color: black;
+}
+
+.abilities-info-block-data {
     display: flex;
     justify-content: space-between;
 }
+
+.abilities-hr-gradient {
+    margin: 0;
+    background: linear-gradient(90deg, rgba(2,0,36,0) 0%, rgba(0, 0, 0, 0.5) 20%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.5) 80%, rgba(0,212,255,0) 100%);;
+}
+
+.dot-gradient {
+    background: linear-gradient(to right, transparent 50%, #fff 50%), linear-gradient(to right, rgba(2, 0, 36, 0) 0%, rgba(0, 0, 0, 0.5) 40%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.5) 70%, rgba(0, 212, 255, 0) 100%);
+    background-size: 16px 2px, 100% 2px;
+    margin-top: 5px;
+    margin-bottom: 6px;
+}
+
+.grid-abilities-item {
+    white-space: nowrap;
+    margin-bottom: 5px;
+}
+
+.grid-abilities-item:hover {
+    border-radius: 2px;
+    background-color: rgba(20, 20, 20, 0.05);
+}
+
+.grid-abilities-item .components{
+    font-weight: 600;
+    opacity: 0.7;
+    color: gray;
+    align-self: flex-end;
+}
+
+.grid-abilities-item .name{
+    display: inline;
+}
+
+.grid-abilities-item .school-logo {
+    vertical-align: middle;
+    line-height: 100%;  
+    font-size: 10px;
+}
+
+.left-align-data {
+    overflow: hidden;
+    -webkit-mask-image: linear-gradient(270deg, transparent 8px, #141414 24px);
+    mask-image: linear-gradient(270deg, transparent 8px, #141414 24px);
+}
+/* 
+.armament-filtered-area {
+    border-bottom: 1px rgba(0, 0, 0, 0.582);
+}  */
+
+
+
+
 /* ------------------------------------------------------------- armament abilities end */
