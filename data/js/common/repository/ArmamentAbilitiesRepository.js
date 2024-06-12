@@ -8,6 +8,17 @@
     HD - (HealthDice) Уровень персонажа
 */
 
+const cost = {
+    cst0: '0',
+    cst1: '1',       
+    cst2: '2',       
+    cst3: '3',       
+    cst4: '4',
+    cst5: '5',           
+    cst6: '6',
+    cst10: '10'
+}
+
 const castTime = {
     cancel:         "Отменить фильтр",  
     none:           "Нет",                           //"none",
@@ -35,7 +46,7 @@ const rng = {
     cone30:         "На себя (30-футовый конус)",    //"Self (30-foot cone)",
     mile1:          "1 миля (5280 футов)",           //"1 mile",
     varies:         "Вариативная",                   //"Varies",
-    special:        "Специальноя"                   //"Special"
+    special:        "Специальноя"                    //"Special"
 }
 
 const tp = {
@@ -95,7 +106,7 @@ const rch = {
     rch6:           "6",                             //"6",
     rch1_6:         "1-6",                           //"1—6",
     rchDay1:        "1/День",                        //"1/Day",
-    rchRest_SL:     "Короткий или долгий отдых"     //"Short or Long Rest"
+    rchRest_SL:     "Короткий или долгий отдых"      //"Short or Long Rest"
 }
 
 const componentsCol = {
@@ -120,6 +131,11 @@ const durationCol = {
 }
 
 const columns = {
+    cost: {
+        translate: "Стоимость",
+        value: cost,
+        itemType: "value"
+    },
     castTime: {
         translate: "Время накладывания",
         value: castTime,
@@ -155,7 +171,7 @@ const columns = {
 const armamentAbilitiesContent = [
     {
         type: tp.acid,
-        cost: 1,
+        cost: cost.cst1,
         rules: true, 
         castingTime: castTime.action,
         range: "self",
@@ -190,7 +206,7 @@ const armamentAbilitiesContent = [
     }, //Acid Form 1 ------------------------------ Acid
     {
         type: tp.acid,
-        cost: 3,
+        cost: cost.cst3,
         rules: true, 
         castingTime: castTime.action,
         range: rng.self,
@@ -224,7 +240,7 @@ const armamentAbilitiesContent = [
     }, //Acidic Weapon 2
     {
         type: tp.acid,
-        cost: 0,
+        cost: cost.cst0,
         rules: false, 
         castingTime: castTime.action,
         range: rng.self,
@@ -258,7 +274,7 @@ const armamentAbilitiesContent = [
     }, //Caustic Weapon 3
     {
         type: tp.acid,
-        cost: 3,
+        cost: cost.cst3,
         rules: true, 
         castingTime: castTime.bonus,
         range: rng.self,
@@ -295,7 +311,7 @@ const armamentAbilitiesContent = [
     }, //Acid Armor 4
     {
         type: tp.acid,
-        cost: 2,
+        cost: cost.cst2,
         rules: true, 
         castingTime: castTime.action,
         range: rng.ft30,
@@ -328,7 +344,7 @@ const armamentAbilitiesContent = [
     }, //Acid Shot 5
     {
         type: tp.acid,
-        cost: 3,
+        cost: cost.cst3,
         rules: true, 
         castingTime: castTime.action,
         range: rng.self,
@@ -362,7 +378,7 @@ const armamentAbilitiesContent = [
     }, //Acid Spit 6
     {
         type: tp.acid,
-        cost: 2,
+        cost: cost.cst2,
         rules: true, 
         castingTime: castTime.action,
         range: rng.ft30,
@@ -398,7 +414,7 @@ const armamentAbilitiesContent = [
     }, //Acid Pool 7
     {
         type: tp.acid,
-        cost: 3,
+        cost: cost.cst3,
         rules: true, 
         castingTime: castTime.action,
         range: rng.ft100,
@@ -434,7 +450,7 @@ const armamentAbilitiesContent = [
     }, //Acid Rain 8
     {
         type: tp.acid,
-        cost: 4,
+        cost: cost.cst4,
         rules: true, 
         castingTime: castTime.action,
         range: rng.self,
@@ -470,7 +486,7 @@ const armamentAbilitiesContent = [
     }, //Corrosive Touch 9
     {
         type: tp.acid,
-        cost: 3,
+        cost: cost.cst3,
         rules: true, 
         castingTime: castTime.round,
         range: rng.ft100,
@@ -504,7 +520,7 @@ const armamentAbilitiesContent = [
     }, //Corrosive Attack (Ultimate) 10
     {
         type: tp.acid,
-        cost: 4,
+        cost: cost.cst4,
         rules: true, 
         castingTime: castTime.bonus,
         range: rng.self,
@@ -534,7 +550,7 @@ const armamentAbilitiesContent = [
     }, //Corrosive Form (Ascended) 11
     {
         type: tp.acid,
-        cost: 0,
+        cost: cost.cst0,
         rules: false, 
         castingTime: castTime.bonus,
         range: rng.self,
@@ -565,7 +581,7 @@ const armamentAbilitiesContent = [
     }, //Superacid (Ascended) 12
     {
         type: tp.blood,
-        cost: 1,
+        cost: cost.cst1,
         rules: true, 
         castingTime: castTime.action,
         range: rng.self,
@@ -600,7 +616,7 @@ const armamentAbilitiesContent = [
     }, //Blade of Blood 1 ------------------------- Blood
     {
         type: tp.blood,
-        cost: 2,
+        cost: cost.cst2,
         rules: true, 
         castingTime: castTime.bonus,
         range: rng.self,
@@ -635,7 +651,7 @@ const armamentAbilitiesContent = [
     }, //Bleeding Strike 2
     {
         type: tp.blood,
-        cost: 0,
+        cost: cost.cst0,
         rules: false, 
         castingTime: castTime.bonus,
         range: rng.self,
@@ -665,7 +681,7 @@ const armamentAbilitiesContent = [
     }, //Wounding Blade 3
     {
         type: tp.blood,
-        cost: 1,
+        cost: cost.cst1,
         rules: true, 
         castingTime: castTime.reaction,
         range: rng.self,
@@ -699,7 +715,7 @@ const armamentAbilitiesContent = [
     }, //Blood Shield 4
     {
         type: tp.blood,
-        cost: 2,
+        cost: cost.cst2,
         rules: true, 
         castingTime: castTime.action,
         range: rng.touch,
@@ -734,7 +750,7 @@ const armamentAbilitiesContent = [
     }, //Bloodcraft 5
     {
         type: tp.blood,
-        cost: 2,
+        cost: cost.cst2,
         rules: true, 
         castingTime: castTime.bonus,
         range: rng.self,
@@ -768,7 +784,7 @@ const armamentAbilitiesContent = [
     }, //Vampiric Strike 6
     {
         type: tp.blood,
-        cost: 2,
+        cost: cost.cst2,
         rules: true, 
         castingTime: castTime.action,
         range: rng.self,
@@ -802,7 +818,7 @@ const armamentAbilitiesContent = [
     }, //Drain Reiatsu 7
     {
         type: tp.blood,
-        cost: 2,
+        cost: cost.cst2,
         rules: true, 
         castingTime: castTime.action,
         range: rng.ft60,
@@ -837,7 +853,7 @@ const armamentAbilitiesContent = [
     }, //Blood Shot 8
     {
         type: tp.blood,
-        cost: 0,
+        cost: cost.cst0,
         rules: false, 
         castingTime: castTime.action,
         range: rng.ft60,
@@ -868,7 +884,7 @@ const armamentAbilitiesContent = [
     }, //Blood Magic 9
     {
         type: tp.blood,
-        cost: 2,
+        cost: cost.cst2,
         rules: true, 
         castingTime: castTime.action,
         range: rng.self,
@@ -904,7 +920,7 @@ const armamentAbilitiesContent = [
     }, //Blood Burst 10
     {
         type: tp.bow,
-        cost: 4,
+        cost: cost.cst4,
         rules: false, 
         castingTime:      castTime.action,
         range:            rng.self,
@@ -935,7 +951,7 @@ const armamentAbilitiesContent = [
     }, //Anticipating Shot 1 ---------------------- Heiling Bogen
     {
         type: tp.bow,
-        cost: 5,
+        cost: cost.cst5,
         rules: false, 
         castingTime:      castTime.action,
         range:            rng.self,
@@ -965,7 +981,7 @@ const armamentAbilitiesContent = [
     }, //Banishing Arrow (Master Shot) 2
     {
         type: tp.bow,
-        cost: 4,
+        cost: cost.cst4,
         rules: false, 
         castingTime:      castTime.action,
         range:            rng.self,
@@ -996,7 +1012,7 @@ const armamentAbilitiesContent = [
     }, //Beguiling Arrow 3
     {
         type: tp.bow,
-        cost: 2,
+        cost: cost.cst2,
         rules: false, 
         castingTime:      castTime.action,
         range:            rng.self,
@@ -1027,7 +1043,7 @@ const armamentAbilitiesContent = [
     }, //Bursting Arrow 4
     {
         type: tp.bow,
-        cost: 3,
+        cost: cost.cst3,
         rules: false, 
         castingTime:      castTime.action,
         range:            rng.self,
@@ -1058,7 +1074,7 @@ const armamentAbilitiesContent = [
     }, //Critical Arrow 5
     {
         type: tp.bow,
-        cost: 2,
+        cost: cost.cst2,
         rules: false, 
         castingTime:      castTime.action,
         range:            rng.self,
@@ -1089,7 +1105,7 @@ const armamentAbilitiesContent = [
     }, //Curving Arrow 6
     {
         type: tp.bow,
-        cost: 4,
+        cost: cost.cst4,
         rules: false, 
         castingTime:      castTime.action,
         range:            rng.self,
@@ -1120,7 +1136,7 @@ const armamentAbilitiesContent = [
     }, //Dazing Arrow 7
     {
         type: tp.bow,
-        cost: 4,
+        cost: cost.cst4,
         rules: false, 
         castingTime:      castTime.action,
         range:            rng.self,
@@ -1151,7 +1167,7 @@ const armamentAbilitiesContent = [
     }, //Deflecting Arrow 8
     {
         type: tp.bow,
-        cost: 4,
+        cost: cost.cst4,
         rules: false, 
         castingTime:      castTime.action,
         range:            rng.self,
@@ -1182,7 +1198,7 @@ const armamentAbilitiesContent = [
     }, //Dispelling Arrow 9
     {
         type: tp.bow,
-        cost: 2,
+        cost: cost.cst2,
         rules: false, 
         castingTime:      castTime.action,
         range:            rng.self,
@@ -1215,7 +1231,7 @@ const armamentAbilitiesContent = [
     }, //Disrupting Arrow 10
     {
         type: tp.bow,
-        cost: 3,
+        cost: cost.cst3,
         rules: false, 
         castingTime:      castTime.action,
         range:            rng.self,
@@ -1246,7 +1262,7 @@ const armamentAbilitiesContent = [
     }, //Distant Arrow 11
     {
         type: tp.bow,
-        cost: 3,
+        cost: cost.cst3,
         rules: false, 
         castingTime:      castTime.action,
         range:            rng.self,
@@ -1277,7 +1293,7 @@ const armamentAbilitiesContent = [
     }, //Distracting Arrow 12
     {
         type: tp.bow,
-        cost: 4,
+        cost: cost.cst4,
         rules: false, 
         castingTime:      castTime.action,
         range:            rng.self,
@@ -1308,7 +1324,7 @@ const armamentAbilitiesContent = [
     }, //Elemental Arrow 13
     {
         type: tp.bow,
-        cost: 5,
+        cost: cost.cst5,
         rules: false, 
         castingTime:      castTime.action,
         range:            rng.self,
@@ -1338,7 +1354,7 @@ const armamentAbilitiesContent = [
     }, //Enfeebling Arrow (Master Shot) 14
     {
         type: tp.bow,
-        cost: 5,
+        cost: cost.cst5,
         rules: false, 
         castingTime:      castTime.action,
         range:            rng.self,
@@ -1368,7 +1384,7 @@ const armamentAbilitiesContent = [
     }, //Grasping Arrow (Master Shot) 15
     {
         type: tp.bow,
-        cost: 4,
+        cost: cost.cst4,
         rules: true, 
         castingTime:      castTime.action,
         range:            rng.heilinBogen,
@@ -1400,7 +1416,7 @@ const armamentAbilitiesContent = [
     }, //Klavier 16
     {
         type: tp.bow,
-        cost: 5,
+        cost: cost.cst5,
         rules: true, 
         castingTime:      castTime.action,
         range:            rng.self,
@@ -1430,7 +1446,7 @@ const armamentAbilitiesContent = [
     }, //Licht Regen (Master Shot) 17
     {
         type: tp.bow,
-        cost: 2,
+        cost: cost.cst2,
         rules: false, 
         castingTime:      castTime.action,
         range:            rng.self,
@@ -1461,7 +1477,7 @@ const armamentAbilitiesContent = [
     }, //Piercing Arrow 18
     {
         type: tp.bow,
-        cost: 3,
+        cost: cost.cst3,
         rules: false, 
         castingTime:      castTime.action,
         range:            rng.self,
@@ -1492,7 +1508,7 @@ const armamentAbilitiesContent = [
     }, //Precise Arrow 19
     {
         type: tp.bow,
-        cost: 2,
+        cost: cost.cst2,
         rules: false, 
         castingTime:      castTime.action,
         range:            rng.self,
@@ -1523,7 +1539,7 @@ const armamentAbilitiesContent = [
     }, //Pushing Arrow 20
     {
         type: tp.bow,
-        cost: 3,
+        cost: cost.cst3,
         rules: true, 
         castingTime:      castTime.action,
         range:            rng.ft120,
@@ -1555,7 +1571,7 @@ const armamentAbilitiesContent = [
     }, //Seeking Arrow 21
     {
         type: tp.bow,
-        cost: 5,
+        cost: cost.cst5,
         rules: false, 
         castingTime:      castTime.action,
         range:            rng.self,
@@ -1585,7 +1601,7 @@ const armamentAbilitiesContent = [
     }, //Shadow Arrow (Master Shot) 22
     {
         type: tp.bow,
-        cost: 5,
+        cost: cost.cst5,
         rules: false, 
         castingTime:      castTime.action,
         range:            rng.self,
@@ -1615,7 +1631,7 @@ const armamentAbilitiesContent = [
     }, //Soul Arrow (Master Shot) 23
     {
         type: tp.bow,
-        cost: 3,
+        cost: cost.cst3,
         rules: false, 
         castingTime:      castTime.action,
         range:            rng.self,
@@ -1645,7 +1661,7 @@ const armamentAbilitiesContent = [
     }, //Stepping Shot 24
     {
         type: tp.bow,
-        cost: 5,
+        cost: cost.cst5,
         rules: false, 
         castingTime:      castTime.action,
         range:            rng.self,
@@ -1675,7 +1691,7 @@ const armamentAbilitiesContent = [
     }, //Wounding Arrow (Master Shot) 25
     {
         type: tp.dark,
-        cost: 1,
+        cost: cost.cst1,
         rules: true, 
         castingTime:      castTime.action,
         range:            rng.self,
@@ -1709,7 +1725,7 @@ const armamentAbilitiesContent = [
     }, //Necrotic Form 1 -------------------------- Dark
     {
         type: tp.dark,
-        cost: 2,
+        cost: cost.cst2,
         rules: true, 
         castingTime:      castTime.action,
         range:            rng.self,
@@ -1744,7 +1760,7 @@ const armamentAbilitiesContent = [
     }, //Dark Weapon 2
     {
         type: tp.dark,
-        cost: 0,
+        cost: cost.cst0,
         rules: false, 
         castingTime:      castTime.action,
         range:            rng.self,
@@ -1778,7 +1794,7 @@ const armamentAbilitiesContent = [
     }, //Umbral Weapon 3
     {
         type: tp.dark,
-        cost: 1,
+        cost: cost.cst1,
         rules: true, 
         castingTime:      castTime.action,
         range:            rng.self,
@@ -1815,7 +1831,7 @@ const armamentAbilitiesContent = [
     }, //Aura of Dark 4
     {
         type: tp.dark,
-        cost: 1,
+        cost: cost.cst1,
         rules: true, 
         castingTime:      castTime.action,
         range:            rng.ft30,
@@ -1854,7 +1870,7 @@ const armamentAbilitiesContent = [
     }, //Darkness 5
     {
         type: tp.dark,
-        cost: 1,
+        cost: cost.cst1,
         rules: true, 
         castingTime:      castTime.action,
         range:            rng.touch,
@@ -1889,7 +1905,7 @@ const armamentAbilitiesContent = [
     }, //Darkvision 6
     {
         type: tp.dark,
-        cost: 2,
+        cost: cost.cst2,
         rules: true, 
         castingTime:      castTime.action,
         range:            rng.ft80,
@@ -1925,7 +1941,7 @@ const armamentAbilitiesContent = [
     }, //Umbral Blast 7
     {
         type: tp.dark,
-        cost: 2,
+        cost: cost.cst2,
         rules: true, 
         castingTime:      castTime.action,
         range:            rng.ft60,
@@ -1965,7 +1981,7 @@ const armamentAbilitiesContent = [
     }, //Wall of Dark 8
     {
         type: tp.dark,
-        cost: 3,
+        cost: cost.cst3,
         rules: true, 
         castingTime:      castTime.round,
         range:            rng.self,
@@ -2002,7 +2018,7 @@ const armamentAbilitiesContent = [
     }, //Burst of Dark (Ultimate) 9
     {
         type: tp.dark,
-        cost: 4,
+        cost: cost.cst4,
         rules: true, 
         castingTime:      castTime.round,
         range:            rng.ft100,
@@ -2036,7 +2052,7 @@ const armamentAbilitiesContent = [
     }, //Black Hole (Ascended) 10
     {
         type: tp.dark,
-        cost: 2,
+        cost: cost.cst2,
         rules: false, 
         castingTime:      castTime.action,
         range:            rng.self,
@@ -2067,7 +2083,7 @@ const armamentAbilitiesContent = [
     }, //Unholy Dark (Ascended) 11
     {
         type: tp.defence,
-        cost: 2,
+        cost: cost.cst2,
         rules: true, 
         castingTime:      castTime.action,
         range:            rng.self,
@@ -2103,7 +2119,7 @@ const armamentAbilitiesContent = [
     }, //Armor 1 ----------------------------------- Defence
     {
         type: tp.defence,
-        cost: 2,
+        cost: cost.cst2,
         rules: true, 
         castingTime:      castTime.bonus,
         range:            rng.self,
@@ -2134,7 +2150,7 @@ const armamentAbilitiesContent = [
     }, //Shield 2
     {
         type: tp.defence,
-        cost: 2,
+        cost: cost.cst2,
         rules: true, 
         castingTime:      castTime.bonus,
         range:            rng.ft5,
@@ -2167,7 +2183,7 @@ const armamentAbilitiesContent = [
     }, //Shield Bash 3
     {
         type: tp.defence,
-        cost: 3,
+        cost: cost.cst3,
         rules: true, 
         castingTime:      castTime.reaction,
         range:            rng.self,
@@ -2200,7 +2216,7 @@ const armamentAbilitiesContent = [
     }, //Defensive Surge 4
     {
         type: tp.defence,
-        cost: 3,
+        cost: cost.cst3,
         rules: true, 
         castingTime:      castTime.reaction,
         range:            rng.self,
@@ -2233,7 +2249,7 @@ const armamentAbilitiesContent = [
     }, //Greater Saving Throw 5
     {
         type: tp.defence,
-        cost: 0,
+        cost: cost.cst0,
         rules: false, 
         castingTime:      castTime.action,
         range:            rng.self,
@@ -2264,7 +2280,7 @@ const armamentAbilitiesContent = [
     }, //Iron Body 6
     {
         type: tp.defence,
-        cost: 0,
+        cost: cost.cst0,
         rules: false, 
         castingTime:      castTime.action,
         range:            rng.self,
@@ -2295,7 +2311,7 @@ const armamentAbilitiesContent = [
     }, //Thornmail 7
     {
         type: tp.defence,
-        cost: 0,
+        cost: cost.cst0,
         rules: false, 
         castingTime:      castTime.action,
         range:            rng.self,
@@ -2325,7 +2341,7 @@ const armamentAbilitiesContent = [
     }, //Spell Resistance 8
     {
         type: tp.defence,
-        cost: 0,
+        cost: cost.cst0,
         rules: false, 
         castingTime:      castTime.action,
         range:            rng.self,
@@ -2356,7 +2372,7 @@ const armamentAbilitiesContent = [
     }, //Quick Defense 9
     {
         type: tp.defence,
-        cost: 4,
+        cost: cost.cst4,
         rules: true, 
         castingTime:      castTime.reaction,
         range:            rng.ft60,
@@ -2387,7 +2403,7 @@ const armamentAbilitiesContent = [
     }, //Quick Defense 10
     {
         type: tp.defence,
-        cost: 0,
+        cost: cost.cst0,
         rules: false, 
         castingTime:      castTime.action,
         range:            rng.self,
@@ -2417,7 +2433,7 @@ const armamentAbilitiesContent = [
     }, //Greater Spell Resistance (Ascended) 11
     {
         type: tp.earth,
-        cost: 1,
+        cost: cost.cst1,
         rules: true, 
         castingTime:      castTime.action,
         range:            rng.self,
@@ -2451,7 +2467,7 @@ const armamentAbilitiesContent = [
     }, //Earth Form 1 ----------------------------------- Earth
     {
         type: tp.earth,
-        cost: 2,
+        cost: cost.cst2,
         rules: true, 
         castingTime:      castTime.action,
         range:            rng.self,
@@ -2485,7 +2501,7 @@ const armamentAbilitiesContent = [
     }, //Stone Weapon 2
     {
         type: tp.earth,
-        cost: 0,
+        cost: cost.cst0,
         rules: false, 
         castingTime:      castTime.action,
         range:            rng.self,
@@ -2518,7 +2534,7 @@ const armamentAbilitiesContent = [
     }, //Granite Weapon 3
     {
         type: tp.earth,
-        cost: 1,
+        cost: cost.cst1,
         rules: true, 
         castingTime:      castTime.action,
         range:            rng.ft30,
@@ -2559,7 +2575,7 @@ const armamentAbilitiesContent = [
     }, //Mold Earth 4
     {
         type: tp.earth,
-        cost: 1,
+        cost: cost.cst1,
         rules: true, 
         castingTime:      castTime.action,
         range:            rng.self,
@@ -2598,7 +2614,7 @@ const armamentAbilitiesContent = [
     }, //Earth Shield 5
     {
         type: tp.earth,
-        cost: 1,
+        cost: cost.cst1,
         rules: true, 
         castingTime:      castTime.action,
         range:            rng.ft60,
@@ -2640,7 +2656,7 @@ const armamentAbilitiesContent = [
     }, //Wall of Stone 6
     {
         type: tp.earth,
-        cost: 2,
+        cost: cost.cst2,
         rules: true, 
         castingTime:      castTime.action,
         range:            rng.ft100,
@@ -2677,7 +2693,7 @@ const armamentAbilitiesContent = [
     }, //Earth Blast 7
     {
         type: tp.earth,
-        cost: 2,
+        cost: cost.cst2,
         rules: true, 
         castingTime:      castTime.action,
         range:            rng.self,
@@ -2713,7 +2729,7 @@ const armamentAbilitiesContent = [
     }, //Tremor 8
     {
         type: tp.earth,
-        cost: 3,
+        cost: cost.cst3,
         rules: true, 
         castingTime:      castTime.round,
         range:            rng.ft120,
@@ -2752,7 +2768,7 @@ const armamentAbilitiesContent = [
     }, //Pillars of Stone (Ultimate) 9
     {
         type: tp.earth,
-        cost: 4,
+        cost: cost.cst4,
         rules: true, 
         castingTime:      castTime.round,
         range:            rng.ft500,
@@ -2793,7 +2809,7 @@ const armamentAbilitiesContent = [
     }, //Earthquake (Ascended) 10
     {
         type: tp.earth,
-        cost: 0,
+        cost: cost.cst0,
         rules: false, 
         castingTime:      castTime.action,
         range:            rng.self,
@@ -2823,7 +2839,7 @@ const armamentAbilitiesContent = [
     }, //Bedrock (Ascended) 11
     {
         type: tp.fire,
-        cost: 1,
+        cost: cost.cst1,
         rules: true, 
         castingTime:      castTime.action,
         range:            rng.self,
@@ -2857,7 +2873,7 @@ const armamentAbilitiesContent = [
     }, // Fire Form 1 ----------------------------------- Fire
     {
         type: tp.fire,
-        cost: 2,
+        cost: cost.cst2,
         rules: true, 
         castingTime:      castTime.action,
         range:            rng.self,
@@ -2891,7 +2907,7 @@ const armamentAbilitiesContent = [
     }, // Flaming Weapon 2
     {
         type: tp.fire,
-        cost: 0,
+        cost: cost.cst0,
         rules: false, 
         castingTime:      castTime.action,
         range:            rng.self,
@@ -2923,7 +2939,7 @@ const armamentAbilitiesContent = [
     }, // Scorching Weapon 3
     {
         type: tp.fire,
-        cost: 1,
+        cost: cost.cst1,
         rules: true, 
         castingTime:      castTime.action,
         range:            rng.ft60,
@@ -2963,7 +2979,7 @@ const armamentAbilitiesContent = [
     }, //Control Flames 4
     {
         type: tp.fire,
-        cost: 1,
+        cost: cost.cst1,
         rules: true, 
         castingTime:      castTime.action,
         range:            rng.self,
@@ -3004,7 +3020,7 @@ const armamentAbilitiesContent = [
     }, //Fire Shield 5
     {
         type: tp.fire,
-        cost: 2,
+        cost: cost.cst2,
         rules: true, 
         castingTime:      castTime.action,
         range:            rng.cone30,
@@ -3040,7 +3056,7 @@ const armamentAbilitiesContent = [
     }, //Cone of Fire 6
     {
         type: tp.fire,
-        cost: 2,
+        cost: cost.cst2,
         rules: true, 
         castingTime:      castTime.action,
         range:            rng.ft60,
@@ -3080,7 +3096,7 @@ const armamentAbilitiesContent = [
     }, //Wall of Fire 7
     {
         type: tp.fire,
-        cost: 2,
+        cost: cost.cst2,
         rules: true, 
         castingTime:      castTime.action,
         range:            rng.ft60,
@@ -3116,7 +3132,7 @@ const armamentAbilitiesContent = [
     }, //Pillar of Flame 8
     {
         type: tp.fire,
-        cost: 3,
+        cost: cost.cst3,
         rules: true, 
         castingTime:      castTime.action,
         range:            rng.ft100,
@@ -3153,7 +3169,7 @@ const armamentAbilitiesContent = [
     }, //Fire Storm (Ultimate) 9
     {
         type: tp.fire,
-        cost: 4,
+        cost: cost.cst4,
         rules: true, 
         castingTime:      castTime.round,
         range:            rng.mile1,
@@ -3186,7 +3202,7 @@ const armamentAbilitiesContent = [
     }, //Meteor Swarm (Ascended) 10
     {
         type: tp.fire,
-        cost: 0,
+        cost: cost.cst0,
         rules: false, 
         castingTime:      castTime.action,
         range:            rng.self,
@@ -3216,7 +3232,7 @@ const armamentAbilitiesContent = [
     }, //Hellfire (Ascended) 11
     {
         type: tp.common,
-        cost: 0,
+        cost: cost.cst0,
         rules: true, 
         castingTime:      castTime.none,
         range:            rng.none,
@@ -3247,7 +3263,7 @@ const armamentAbilitiesContent = [
     }, //Increased Strength 1 ---------------------------------- common
     {
         type: tp.common,
-        cost: 0,
+        cost: cost.cst0,
         rules: true, 
         castingTime:      castTime.none,
         range:            rng.none,
@@ -3278,7 +3294,7 @@ const armamentAbilitiesContent = [
     }, //Increased Dexterity 2
     {
         type: tp.common,
-        cost: 0,
+        cost: cost.cst0,
         rules: true, 
         castingTime:      castTime.none,
         range:            rng.none,
@@ -3309,7 +3325,7 @@ const armamentAbilitiesContent = [
     }, //Increased Constitution 3
     {
         type: tp.common,
-        cost: 0,
+        cost: cost.cst0,
         rules: true, 
         castingTime:      castTime.none,
         range:            rng.none,
@@ -3340,7 +3356,7 @@ const armamentAbilitiesContent = [
     }, //Increased Intelligence 4
     {
         type: tp.common,
-        cost: 0,
+        cost: cost.cst0,
         rules: true, 
         castingTime:      castTime.none,
         range:            rng.none,
@@ -3371,7 +3387,7 @@ const armamentAbilitiesContent = [
     }, //Increased Wisdom 5
     {
         type: tp.common,
-        cost: 0,
+        cost: cost.cst0,
         rules: true, 
         castingTime:      castTime.none,
         range:            rng.none,
@@ -3402,7 +3418,7 @@ const armamentAbilitiesContent = [
     }, //Increased Charisma 6
     {
         type: tp.common,
-        cost: 0,
+        cost: cost.cst0,
         rules: true, 
         castingTime:      castTime.none,
         range:            rng.none,
@@ -3433,7 +3449,7 @@ const armamentAbilitiesContent = [
     }, //Increased Saving Throw 7
     {
         type: tp.common,
-        cost: 0,
+        cost: cost.cst0,
         rules: true, 
         castingTime:      castTime.none,
         range:            rng.none,
@@ -3464,7 +3480,7 @@ const armamentAbilitiesContent = [
     }, //Increased Skill 8
     {
         type: tp.common,
-        cost: 0,
+        cost: cost.cst0,
         rules: true, 
         castingTime:      castTime.none,
         range:            rng.none,
@@ -3495,7 +3511,7 @@ const armamentAbilitiesContent = [
     }, //Increased Speed 9
     {
         type: tp.common,
-        cost: 0,
+        cost: cost.cst0,
         rules: false, 
         castingTime:      castTime.none,
         range:            rng.none,
@@ -3525,7 +3541,7 @@ const armamentAbilitiesContent = [
     }, //Quick Release 10
     {
         type: tp.common,
-        cost: 0,
+        cost: cost.cst0,
         rules: false, 
         castingTime:      castTime.none,
         range:            rng.none,
@@ -3555,7 +3571,7 @@ const armamentAbilitiesContent = [
     }, //Quick Release Greater 11
     {
         type: tp.common,
-        cost: 0,
+        cost: cost.cst0,
         rules: false, 
         castingTime:      castTime.none,
         range:            rng.none,
@@ -3586,7 +3602,7 @@ const armamentAbilitiesContent = [
     }, //Increased Talent 12
     {
         type: tp.common,
-        cost: 0,
+        cost: cost.cst0,
         rules: true, 
         castingTime:      castTime.none,
         range:            rng.none,
@@ -3616,7 +3632,7 @@ const armamentAbilitiesContent = [
     }, //Increased Concentration 13
     {
         type: tp.common,
-        cost: 2,
+        cost: cost.cst2,
         rules: true, 
         castingTime:      castTime.action,
         range:            rng.ft40,
@@ -3651,7 +3667,7 @@ const armamentAbilitiesContent = [
     }, //Spirit Blast 14
     {
         type: tp.common,
-        cost: 0,
+        cost: cost.cst0,
         rules: false, 
         castingTime:      castTime.action,
         range:            rng.self,
@@ -3684,7 +3700,7 @@ const armamentAbilitiesContent = [
     }, //Increased Awareness 15
     {
         type: tp.common,
-        cost: 3,
+        cost: cost.cst3,
         rules: true, 
         castingTime:      castTime.action,
         range:            rng.self,
@@ -3718,7 +3734,7 @@ const armamentAbilitiesContent = [
     }, //Flying 16
     {
         type: tp.common,
-        cost: 0,
+        cost: cost.cst0,
         rules: false, 
         castingTime:      castTime.action,
         range:            rng.self,
@@ -3749,7 +3765,7 @@ const armamentAbilitiesContent = [
     }, //Quickened Ability (Ascended) 17
     {
         type: tp.common,
-        cost: 0,
+        cost: cost.cst0,
         rules: false, 
         castingTime:      castTime.action,
         range:            rng.self,
@@ -3780,7 +3796,7 @@ const armamentAbilitiesContent = [
     }, //Improved Ascencion (Ascended) 18
     {
         type: tp.gravity,
-        cost: 2,
+        cost: cost.cst2,
         rules: true, 
         castingTime:      castTime.action,
         range:            rng.self,
@@ -3815,7 +3831,7 @@ const armamentAbilitiesContent = [
     }, //Gravity Blade 1 ----------------------------------- gravity
     {
         type: tp.gravity,
-        cost: 2,
+        cost: cost.cst2,
         rules: true, 
         castingTime:      castTime.action,
         range:            rng.ft60,
@@ -3863,7 +3879,7 @@ const armamentAbilitiesContent = [
     }, //Control Gravity 2
     {
         type: tp.gravity,
-        cost: 0,
+        cost: cost.cst0,
         rules: false, 
         castingTime:      castTime.none,
         range:            rng.none,
@@ -3896,7 +3912,7 @@ const armamentAbilitiesContent = [
     }, //Graviton Weapon 3
     {
         type: tp.gravity,
-        cost: 4,
+        cost: cost.cst4,
         rules: true, 
         castingTime:      castTime.reactionTkDmg,
         range:            rng.self,
@@ -3931,7 +3947,7 @@ const armamentAbilitiesContent = [
     }, //Repulsion 4
     {
         type: tp.gravity,
-        cost: 3,
+        cost: cost.cst3,
         rules: true, 
         castingTime:      castTime.action,
         range:            rng.ft60,
@@ -3965,7 +3981,7 @@ const armamentAbilitiesContent = [
     }, //Gravitas 5
     {
         type: tp.gravity,
-        cost: 3,
+        cost: cost.cst3,
         rules: true, 
         castingTime:      castTime.action,
         range:            rng.self,
@@ -3999,7 +4015,7 @@ const armamentAbilitiesContent = [
     }, //Gravity Wave 6
     {
         type: tp.gravity,
-        cost: 3,
+        cost: cost.cst3,
         rules: true, 
         castingTime:      castTime.action,
         range:            rng.ft60,
@@ -4033,7 +4049,7 @@ const armamentAbilitiesContent = [
     }, //Displacer 7
     {
         type: tp.gravity,
-        cost: 3,
+        cost: cost.cst3,
         rules: true, 
         castingTime:      castTime.action,
         range:            rng.touch,
@@ -4066,7 +4082,7 @@ const armamentAbilitiesContent = [
     }, //Gravitational Pocket 8
     {
         type: tp.gravity,
-        cost: 3,
+        cost: cost.cst3,
         rules: true, 
         castingTime:      castTime.action,
         range:            rng.ft60,
@@ -4100,7 +4116,7 @@ const armamentAbilitiesContent = [
     }, //Entropy 9
     {
         type: tp.gravity,
-        cost: 2,
+        cost: cost.cst2,
         rules: true, 
         castingTime:      castTime.action,
         range:            rng.self,
@@ -4133,7 +4149,7 @@ const armamentAbilitiesContent = [
     }, //Gravity Unbound 10
     {
         type: tp.gravity,
-        cost: 5,
+        cost: cost.cst5,
         rules: true, 
         castingTime:      castTime.action,
         range:            rng.ft100,
@@ -4169,7 +4185,7 @@ const armamentAbilitiesContent = [
     }, //Singularity (Ultimate) 11
     {
         type: tp.gravity,
-        cost: 6,
+        cost: cost.cst6,
         rules: true, 
         castingTime:      castTime.action,
         range:            rng.varies,
@@ -4199,7 +4215,7 @@ const armamentAbilitiesContent = [
     }, // Gravitational Bombardment (Ascended) 12
     {
         type: tp.gravity,
-        cost: 6,
+        cost: cost.cst6,
         rules: true, 
         castingTime:      castTime.action,
         range:            rng.self,
@@ -4229,7 +4245,7 @@ const armamentAbilitiesContent = [
     }, // Falling Star (Ascended) 13
     {
         type: tp.healing,
-        cost: 0,
+        cost: cost.cst0,
         rules: false, 
         castingTime:      castTime.none,
         range:            rng.none,
@@ -4260,7 +4276,7 @@ const armamentAbilitiesContent = [
     }, // Expanded Kaido 1 --------------------------------- healing
     {
         type: tp.healing,
-        cost: 2,
+        cost: cost.cst2,
         rules: true, 
         castingTime:      castTime.action,
         range:            rng.self,
@@ -4295,7 +4311,7 @@ const armamentAbilitiesContent = [
     }, //Healing Blade 2
     {
         type: tp.healing,
-        cost: 1,
+        cost: cost.cst1,
         rules: true, 
         castingTime:      castTime.action,
         range:            rng.self,
@@ -4329,7 +4345,7 @@ const armamentAbilitiesContent = [
     }, //Improved Healing 3
     {
         type: tp.healing,
-        cost: 2,
+        cost: cost.cst2,
         rules: true, 
         castingTime:      castTime.action,
         range:            rng.special,
@@ -4360,7 +4376,7 @@ const armamentAbilitiesContent = [
     }, //Healing Touch 4
     {
         type: tp.healing,
-        cost: 0,
+        cost: cost.cst0,
         rules: false, 
         castingTime:      castTime.action,
         range:            rng.special,
@@ -4399,7 +4415,7 @@ const armamentAbilitiesContent = [
     }, //Healing Factor 5
     {
         type: tp.healing,
-        cost: 1,
+        cost: cost.cst1,
         rules: true, 
         castingTime:      castTime.action,
         range:            rng.ft60,
@@ -4435,7 +4451,7 @@ const armamentAbilitiesContent = [
     }, //Panoply of Healing 6
     {
         type: tp.healing,
-        cost: 3,
+        cost: cost.cst3,
         rules: true, 
         castingTime:      castTime.action,
         range:            rng.self,
@@ -4468,7 +4484,7 @@ const armamentAbilitiesContent = [
     }, //Pain Release 7
     {
         type: tp.healing,
-        cost: 4,
+        cost: cost.cst4,
         rules: true, 
         castingTime:      castTime.hour1,
         range:            rng.touch,
@@ -4502,7 +4518,7 @@ const armamentAbilitiesContent = [
     }, //Resurrection (Ultimate) 8
     {
         type: tp.healing,
-        cost: 4,
+        cost: cost.cst4,
         rules: true, 
         castingTime:      castTime.action,
         range:            rng.ft60,
@@ -4538,7 +4554,7 @@ const armamentAbilitiesContent = [
     }, //Circle of Life (Ascended) 9
     {
         type: tp.healing,
-        cost: 0,
+        cost: cost.cst0,
         rules: false, 
         castingTime:      castTime.none,
         range:            rng.none,
@@ -4568,7 +4584,7 @@ const armamentAbilitiesContent = [
     }, //Supreme Healing (Ascended) 10
     {
         type: tp.hollow,
-        cost: 0,
+        cost: cost.cst0,
         rules: false, 
         castingTime:      castTime.none,
         range:            rng.none,
@@ -4599,7 +4615,7 @@ const armamentAbilitiesContent = [
     }, // Ability Increase 1 ------------------------------- hollow
     {
         type: tp.hollow,
-        cost: 4,
+        cost: cost.cst4,
         rules: false, 
         castingTime:      castTime.none,
         range:            rng.none,
@@ -4629,7 +4645,7 @@ const armamentAbilitiesContent = [
     }, //Aggressive 2
     {
         type: tp.hollow,
-        cost: 0,
+        cost: cost.cst0,
         rules: false, 
         castingTime:      castTime.none,
         range:            rng.none,
@@ -4659,7 +4675,7 @@ const armamentAbilitiesContent = [
     },  //Ambusher 3
     {
         type: tp.hollow,
-        cost: 0,
+        cost: cost.cst0,
         rules: false, 
         castingTime:      castTime.none,
         range:            rng.none,
@@ -4689,7 +4705,7 @@ const armamentAbilitiesContent = [
     }, // Amphibious 4
     {
         type: tp.hollow,
-        cost: 4,
+        cost: cost.cst4,
         rules: true, 
         castingTime:      castTime.reaction,
         range:            rng.ft60,
@@ -4722,7 +4738,7 @@ const armamentAbilitiesContent = [
     }, // Arcane Ward 5
     {
         type: tp.hollow,
-        cost: 0,
+        cost: cost.cst0,
         rules: false, 
         castingTime:      castTime.none,
         range:            rng.none,
@@ -4752,7 +4768,7 @@ const armamentAbilitiesContent = [
     }, // Armadura 6
     {
         type: tp.hollow,
-        cost: 0,
+        cost: cost.cst0,
         rules: false, 
         castingTime:      castTime.none,
         range:            rng.none,
@@ -4782,7 +4798,7 @@ const armamentAbilitiesContent = [
     }, // Assassinate 7
     {
         type: tp.hollow,
-        cost: 0,
+        cost: cost.cst0,
         rules: false, 
         castingTime:      castTime.none,
         range:            rng.none,
@@ -4812,7 +4828,7 @@ const armamentAbilitiesContent = [
     }, // Avoidance 8
     {
         type: tp.hollow,
-        cost: 0,
+        cost: cost.cst0,
         rules: false, 
         castingTime:      castTime.none,
         range:            rng.none,
@@ -4842,7 +4858,7 @@ const armamentAbilitiesContent = [
     }, // Awakened Mind 9
     {
         type: tp.hollow,
-        cost: 2,
+        cost: cost.cst2,
         rules: true, 
         castingTime:      castTime.bonus,
         range:            rng.ft60,
@@ -4877,7 +4893,7 @@ const armamentAbilitiesContent = [
     }, // Bala 10
     {
         type: tp.hollow,
-        cost: 2,
+        cost: cost.cst2,
         rules: false, 
         castingTime:      castTime.none,
         range:            rng.none,
@@ -4907,7 +4923,7 @@ const armamentAbilitiesContent = [
     }, // Battle Command 11
     {
         type: tp.hollow,
-        cost: 2,
+        cost: cost.cst2,
         rules: true, 
         castingTime:      castTime.none,
         range:            rng.none,
@@ -4937,7 +4953,7 @@ const armamentAbilitiesContent = [
     }, // Battle Command 12
     {
         type: tp.hollow,
-        cost: 0,
+        cost: cost.cst0,
         rules: false, 
         castingTime:      castTime.none,
         range:            rng.none,
@@ -4967,7 +4983,7 @@ const armamentAbilitiesContent = [
     }, // Berserk 13
     {
         type: tp.hollow,
-        cost: 0,
+        cost: cost.cst0,
         rules: false, 
         castingTime:      castTime.none,
         range:            rng.none,
@@ -4998,7 +5014,7 @@ const armamentAbilitiesContent = [
     }, // Bite 14
     {
         type: tp.hollow,
-        cost: 0,
+        cost: cost.cst0,
         rules: false, 
         castingTime:      castTime.none,
         range:            rng.none,
@@ -5028,7 +5044,7 @@ const armamentAbilitiesContent = [
     }, //Blood Frenzy 15
     {
         type: tp.hollow,
-        cost: 4,
+        cost: cost.cst4,
         rules: true, 
         castingTime:      castTime.action,
         range:            rng.self,
@@ -5064,7 +5080,7 @@ const armamentAbilitiesContent = [
     }, // Breath Weapon 16
     {
         type: tp.hollow,
-        cost: 0,
+        cost: cost.cst0,
         rules: false, 
         castingTime:      castTime.none,
         range:            rng.none,
@@ -5094,7 +5110,7 @@ const armamentAbilitiesContent = [
     }, // Brute 17
     {
         type: tp.hollow,
-        cost: 0,
+        cost: cost.cst0,
         rules: false, 
         castingTime:      castTime.none,
         range:            rng.none,
@@ -5124,7 +5140,7 @@ const armamentAbilitiesContent = [
     }, // Burrow 18
     {
         type: tp.hollow,
-        cost: 6,
+        cost: cost.cst6,
         rules: true, 
         castingTime:      castTime.action,
         range:            rng.self,
@@ -5160,7 +5176,7 @@ const armamentAbilitiesContent = [
     }, // Cero 19
     {
         type: tp.hollow,
-        cost: 10,
+        cost: cost.cst10,
         rules: true, 
         castingTime:      castTime.action,
         range:            rng.self,
@@ -5191,7 +5207,7 @@ const armamentAbilitiesContent = [
     }, // Cero Oscuras 20
     {
         type: tp.hollow,
-        cost: 0,
+        cost: cost.cst0,
         rules: false, 
         castingTime:      castTime.none,
         range:            rng.none,
@@ -5221,7 +5237,7 @@ const armamentAbilitiesContent = [
     }, // Chameleon Skin 21
     {
         type: tp.hollow,
-        cost: 0,
+        cost: cost.cst0,
         rules: false, 
         castingTime:      castTime.none,
         range:            rng.none,
@@ -5251,7 +5267,7 @@ const armamentAbilitiesContent = [
     }, // Charge 22
     {
         type: tp.hollow,
-        cost: 0,
+        cost: cost.cst0,
         rules: false, 
         castingTime:      castTime.none,
         range:            rng.none,
@@ -5282,7 +5298,7 @@ const armamentAbilitiesContent = [
     }, // Charm 23
     {
         type: tp.hollow,
-        cost: 4,
+        cost: cost.cst4,
         rules: true, 
         castingTime:      castTime.bonus,
         range:            rng.self,
@@ -5312,7 +5328,7 @@ const armamentAbilitiesContent = [
     }, // Cognition Synchronization 24
     {
         type: tp.hollow,
-        cost: 0,
+        cost: cost.cst0,
         rules: false, 
         castingTime:      castTime.none,
         range:            rng.none,
@@ -5342,7 +5358,7 @@ const armamentAbilitiesContent = [
     }, // Crushing Leap 25
     {
         type: tp.hollow,
-        cost: 4,
+        cost: cost.cst4,
         rules: false, 
         castingTime:      castTime.none,
         range:            rng.none,
@@ -5373,7 +5389,7 @@ const armamentAbilitiesContent = [
     }, // Curse 26
     {
         type: tp.hollow,
-        cost: 0,
+        cost: cost.cst0,
         rules: false, 
         castingTime:      castTime.none,
         range:            rng.none,
@@ -5403,7 +5419,7 @@ const armamentAbilitiesContent = [
     }, // Decrease Recharge 27
     {
         type: tp.hollow,
-        cost: 4,
+        cost: cost.cst4,
         rules: false, 
         castingTime:      castTime.none,
         range:            rng.none,
@@ -5433,7 +5449,7 @@ const armamentAbilitiesContent = [
     }, // Deflect Attack 28
     {
         type: tp.hollow,
-        cost: 4,
+        cost: cost.cst4,
         rules: false, 
         castingTime:      castTime.none,
         range:            rng.none,
@@ -5463,7 +5479,7 @@ const armamentAbilitiesContent = [
     }, // Deflect Missiles 29
     {
         type: tp.hollow,
-        cost: 6,
+        cost: cost.cst6,
         rules: false, 
         castingTime:      castTime.none,
         range:            rng.none,
@@ -5493,7 +5509,7 @@ const armamentAbilitiesContent = [
     }, // Descorrer 30
     {
         type: tp.hollow,
-        cost: 0,
+        cost: cost.cst0,
         rules: false, 
         castingTime:      castTime.none,
         range:            rng.none,
@@ -5523,7 +5539,7 @@ const armamentAbilitiesContent = [
     }, // Devil's Sight 31
     {
         type: tp.hollow,
-        cost: 0,
+        cost: cost.cst0,
         rules: false, 
         castingTime:      castTime.none,
         range:            rng.none,
@@ -5554,7 +5570,7 @@ const armamentAbilitiesContent = [
     }, // Displacement 32
     {
         type: tp.hollow,
-        cost: 2,
+        cost: cost.cst2,
         rules: false, 
         castingTime:      castTime.none,
         range:            rng.none,
@@ -5584,7 +5600,7 @@ const armamentAbilitiesContent = [
     }, // Dive Attack 33
     {
         type: tp.hollow,
-        cost: 0,
+        cost: cost.cst0,
         rules: false, 
         castingTime:      castTime.none,
         range:            rng.none,
@@ -5614,7 +5630,7 @@ const armamentAbilitiesContent = [
     }, // Earth Glide 34
     {
         type: tp.hollow,
-        cost: 6,
+        cost: cost.cst6,
         rules: false, 
         castingTime:      castTime.none,
         range:            rng.none,
@@ -5646,7 +5662,7 @@ const armamentAbilitiesContent = [
     }, // Eat Memories 35
     {
         type: tp.hollow,
-        cost: 0,
+        cost: cost.cst0,
         rules: false, 
         castingTime:      castTime.none,
         range:            rng.none,
@@ -5676,7 +5692,7 @@ const armamentAbilitiesContent = [
     }, // Elemental Absorption 36
     {
         type: tp.hollow,
-        cost: 0,
+        cost: cost.cst0,
         rules: false, 
         castingTime:      castTime.none,
         range:            rng.none,
@@ -5707,7 +5723,7 @@ const armamentAbilitiesContent = [
     }, // Elemental resistance 37
     {
         type: tp.hollow,
-        cost: 0,
+        cost: cost.cst0,
         rules: false, 
         castingTime:      castTime.none,
         range:            rng.none,
@@ -5737,7 +5753,7 @@ const armamentAbilitiesContent = [
     }, // Elusive 38
     {
         type: tp.hollow,
-        cost: 0,
+        cost: cost.cst0,
         rules: false, 
         castingTime:      castTime.none,
         range:            rng.none,
@@ -5767,7 +5783,7 @@ const armamentAbilitiesContent = [
     }, // Enigmatic Mind 39
     {
         type: tp.hollow,
-        cost: 4,
+        cost: cost.cst4,
         rules: false, 
         castingTime:      castTime.none,
         range:            rng.none,
@@ -5797,7 +5813,7 @@ const armamentAbilitiesContent = [
     }, // Enlarge 40
     {
         type: tp.hollow,
-        cost: 0,
+        cost: cost.cst0,
         rules: false, 
         castingTime:      castTime.none,
         range:            rng.none,
@@ -5827,7 +5843,7 @@ const armamentAbilitiesContent = [
     }, // Extra Skill 41
     {
         type: tp.hollow,
-        cost: 0,
+        cost: cost.cst0,
         rules: false, 
         castingTime:      castTime.none,
         range:            rng.none,
@@ -5857,7 +5873,7 @@ const armamentAbilitiesContent = [
     }, // Fear Frenzy 42
     {
         type: tp.hollow,
-        cost: 0,
+        cost: cost.cst0,
         rules: false, 
         castingTime:      castTime.none,
         range:            rng.none,
@@ -5887,7 +5903,7 @@ const armamentAbilitiesContent = [
     }, // Fey Ancestry 43
     {
         type: tp.hollow,
-        cost: 0,
+        cost: cost.cst0,
         rules: false, 
         castingTime:      castTime.none,
         range:            rng.none,

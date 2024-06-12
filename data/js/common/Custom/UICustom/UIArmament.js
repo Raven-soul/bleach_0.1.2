@@ -8,36 +8,35 @@ function changeFilterArmament(element) {
 }
 
 function selectAllFilters() {
-    alert("data");
-}
-
-async function showArmamentAbilities() {
-    var KAItemGridBlock = $(".grid-abilities-data");
-    var summHtmlBlock = "";
-
-    for(const [abilitiesId, abilitiesValue] of Object.entries(armamentAbilitiesContent)){
-        let itemTemp = KAGridItemTemplate;
-        
-        itemTemp = itemTemp.replace("@@ITEMLINK@@", "#");
-        itemTemp = itemTemp.replace("@@ITEMLEVEL@@", abilitiesValue.cost);
-        itemTemp = itemTemp.replace("@@ITEMSCHOOLLOGO@@", abilitiesValue.type.ico);
-        itemTemp = itemTemp.replace("@@ITEMNAME@@", abilitiesValue.name);
-
-        var componentsSum = '';
-
-        if(abilitiesValue.components.verbal)   {componentsSum = "В";}
-            else {componentsSum = ".";} 
-        if(abilitiesValue.components.somatic)  {componentsSum += "С";}
-            else {componentsSum += ".";} 
-        if(abilitiesValue.components.material) {componentsSum += "М";}
-            else {componentsSum += ".";} 
-        if(abilitiesValue.components.released) {componentsSum += "Р";}
-            else {componentsSum += ".";} 
-
-        itemTemp = itemTemp.replace("@@ITEMCOMPONENTS@@", componentsSum);
-        
-        summHtmlBlock = summHtmlBlock + itemTemp;
+    let filters = {
+        tp: tp,
+        cost: cost,
+        castingTime: castTime
     }
-
-    KAItemGridBlock.html( summHtmlBlock );
 }
+
+// type: tp.acid,
+//         cost: 1,
+//         rules: true, 
+//         castingTime: castTime.action,
+//         range: "self",
+//         components: {
+//             verbal: true,
+//             somatic: true,
+//             material: false,
+//             released: true
+//         },
+//         duration: {
+//             until_sealed: true,
+//             concentration: false,
+//             minute1: false,
+//             round1: false,
+//             instantaneous: false,
+//             hour1:         /**/ false,
+//             minute5:       /**/ false,
+//             round2:        /**/ false,
+//             special:       /**/ false
+//         },
+//         recharge: rch.none,
+//         name: "Кислотная форма [Acid Form]", 
+//         requirements: "",
