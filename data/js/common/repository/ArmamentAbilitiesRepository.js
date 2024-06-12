@@ -39,18 +39,54 @@ const rng = {
 }
 
 const tp = {
-    cancel:         "Отменить фильтр",
-    acid:           "Кислота",                       //"Acid",
-    blood:          "Кровь",                         //"Blood",
-    bow:            "Лук",                           //"Bow",
-    dark:           "Тьма",                          //"Dark",
-    defence:        "Защита",                        //"Defence",
-    earth:          "Земля",                         //"Earth",
-    fire:           "Огонь",                         //"Fire",
-    common:         "Общие",                         //"Common",
-    gravity:        "Гравитация",                    //"Gravity",
-    healing:        "Лечение",                       //"Healing",
-    hollow:         "Пустота"                       //"Hollow"
+    cancel: {
+        name: "Отменить фильтр",
+        ico: ''
+    },
+    acid: {
+        name: "Кислота",
+        ico: '<i class="fa-solid fa-soap"></i>'
+    },                                               //"Acid",
+    blood: {
+        name: "Кровь",
+        ico: '<i class="fa-solid fa-droplet"></i>'
+    },                                               //"Blood",
+    bow: {
+        name: "Лук",
+        ico: '<i class="fa-solid fa-down-left-and-up-right-to-center"></i>'
+    },                                               //"Bow",
+    dark: {
+        name: "Тьма",
+        ico: '<i class="fa-solid fa-location-pin"></i>'
+    },                                               //"Dark",
+    defence: {
+        name: "Защита",
+        ico: '<i class="fa-solid fa-shield-halved"></i>'
+    },                                               //"Defence",
+    earth: {
+        name: "Земля",
+        ico: '<i class="fa-regular fa-gem"></i>'
+    },                                               //"Earth",
+    fire: {
+        name: "Огонь",
+        ico: '<i class="fa-solid fa-fire"></i>'
+    },                                               //"Fire",
+    common: {
+        name: "Общие",
+        ico: '<i class="fa-solid fa-group-arrows-rotate"></i>'
+    },                                               //"Common",
+    gravity: {
+        name: "Гравитация",
+        ico: '<i class="fa-solid fa-tent-arrows-down"></i>'
+    },                                               //"Gravity",
+    healing: {
+        name: "Лечение",
+        ico: '<i class="fa-solid fa-heart-pulse"></i>'
+    },                                              //"Healing",
+    hollow: {
+        name: "Пустота",
+        ico: '<i class="fa-solid fa-moon"></i>'
+    }                                               //"Hollow"
 }
 
 const rch = {

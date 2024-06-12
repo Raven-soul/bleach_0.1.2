@@ -1,5 +1,6 @@
 function awakeArmamentFilters(){
     filtersGeneration();
+    showArmamentAbilities();
 }
 
 function filtersGeneration(){
@@ -26,10 +27,21 @@ function filtersGeneration(){
                 selecItemTemplate = selecItemTemplate.replace("@@ITEMVALUE@@", key);
             } 
             else {
-                selecItemTemplate = selecItemTemplate.replace("@@ITEMVALUE@@", value);
+                if(columnValue.translate == "Тип"){
+                    selecItemTemplate = selecItemTemplate.replace("@@ITEMVALUE@@", value.name);
+                }
+                else {
+                    selecItemTemplate = selecItemTemplate.replace("@@ITEMVALUE@@", value);
+                }                
             }
             
-            selecItemTemplate = selecItemTemplate.replace("@@ITEMNAME@@", value);
+            if(columnValue.translate == "Тип"){
+                selecItemTemplate = selecItemTemplate.replace("@@ITEMNAME@@", value.name);
+            }
+            else {
+                selecItemTemplate = selecItemTemplate.replace("@@ITEMNAME@@", value);
+            }  
+            
             selecItemTemplate = selecItemTemplate.replace("@@ITEMTYPE@@", columnValue.itemType);
 
             selectList = selectList + selecItemTemplate;

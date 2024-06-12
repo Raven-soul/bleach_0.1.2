@@ -56,3 +56,25 @@
                 `
                 <option value="@@ITEMVALUE@@" armtype="@@ITEMTYPE@@">@@ITEMNAME@@</option>
                 `;
+
+//kido-armament grid item
+            const KAGridItemTemplate = 
+                `
+                <div class="grid-abilities-item px-1">
+                    <a href="@@ITEMLINK@@" class="abilities-info-block">                                                                                
+                        <div class="row abilities-info-block-data">
+                            <div class="col left-align-data">                                                                                            
+                                <span class="level">
+                                    <span class="gray-font">[</span>@@ITEMLEVEL@@<span class="gray-font">]</span>
+                                </span>
+                                <span class="school-logo">
+                                    @@ITEMSCHOOLLOGO@@                                                                                   
+                                </span>
+                                <span class="name">@@ITEMNAME@@</span>
+                            </div>
+                            <div class="col-auto components">@@ITEMCOMPONENTS@@</div>
+                        </div>  
+                        <hr class="abilities-hr-gradient">                                                                                
+                    </a>
+                </div>
+                `;
