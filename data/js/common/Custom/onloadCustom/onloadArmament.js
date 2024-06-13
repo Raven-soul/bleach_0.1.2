@@ -14,7 +14,7 @@ function filtersGeneration(){
 
         selecTemp = selecTemp.replace("@@SELECTORNAME@@", columnKey);
         selecTemp = selecTemp.replace("@@SELECTORID@@", columnKey + "_selector_id");
-        selecTemp = selecTemp.replace("@@SELECTORFUNCTION@@", "changeFilterArmament(this)");
+        selecTemp = selecTemp.replace("@@SELECTORFUNCTION@@", "changeFilter(this)"); //changeFilterArmament(this)");
 
         DefaultItemTemp = DefaultItemTemp.replace("@@DEFITEMNAME@@", columnValue.translate);
 
@@ -23,7 +23,7 @@ function filtersGeneration(){
         for(const [key, value] of Object.entries(columnValue.value)){
             let selecItemTemplate = selectorItemTemplate;
 
-            if(columnValue.itemType == "bool"){
+            if(columnValue.itemType == "bool" || key == "discard"){
                 selecItemTemplate = selecItemTemplate.replace("@@ITEMVALUE@@", key);
             } 
             else {
@@ -58,29 +58,33 @@ function filtersGeneration(){
 async function showArmamentAbilities() {
     var KAItemGridBlock = $(".grid-abilities-data");
     var summHtmlBlock = "";
+    let filter = getFilter();
 
     for(const [abilitiesId, abilitiesValue] of Object.entries(armamentAbilitiesContent)){
-        let itemTemp = KAGridItemTemplate;
-        
-        itemTemp = itemTemp.replace("@@ITEMLINK@@", "#");
-        itemTemp = itemTemp.replace("@@ITEMLEVEL@@", abilitiesValue.cost);
-        itemTemp = itemTemp.replace("@@ITEMSCHOOLLOGO@@", abilitiesValue.type.ico);
-        itemTemp = itemTemp.replace("@@ITEMNAME@@", abilitiesValue.name);
+        if(checkFilter(filter, abilitiesValue)){    
 
-        var componentsSum = '';
+            let itemTemp = KAGridItemTemplate;
+            
+            itemTemp = itemTemp.replace("@@ITEMLINK@@", "#");
+            itemTemp = itemTemp.replace("@@ITEMLEVEL@@", abilitiesValue.cost);
+            itemTemp = itemTemp.replace("@@ITEMSCHOOLLOGO@@", abilitiesValue.type.ico);
+            itemTemp = itemTemp.replace("@@ITEMNAME@@", abilitiesValue.name);
 
-        if(abilitiesValue.components.verbal)   {componentsSum = "В";}
-            else {componentsSum = ".";} 
-        if(abilitiesValue.components.somatic)  {componentsSum += "С";}
-            else {componentsSum += ".";} 
-        if(abilitiesValue.components.material) {componentsSum += "М";}
-            else {componentsSum += ".";} 
-        if(abilitiesValue.components.released) {componentsSum += "Р";}
-            else {componentsSum += ".";} 
+            var componentsSum = '';
 
-        itemTemp = itemTemp.replace("@@ITEMCOMPONENTS@@", componentsSum);
-        
-        summHtmlBlock = summHtmlBlock + itemTemp;
+            if(abilitiesValue.components.verbal)   {componentsSum = "В";}
+                else {componentsSum = ".";} 
+            if(abilitiesValue.components.somatic)  {componentsSum += "С";}
+                else {componentsSum += ".";} 
+            if(abilitiesValue.components.material) {componentsSum += "М";}
+                else {componentsSum += ".";} 
+            if(abilitiesValue.components.released) {componentsSum += "Р";}
+                else {componentsSum += ".";} 
+
+            itemTemp = itemTemp.replace("@@ITEMCOMPONENTS@@", componentsSum);
+            
+            summHtmlBlock = summHtmlBlock + itemTemp;
+        }
     }
 
     KAItemGridBlock.html( summHtmlBlock );

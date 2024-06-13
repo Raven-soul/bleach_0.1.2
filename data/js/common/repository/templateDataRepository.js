@@ -50,7 +50,7 @@
                 `;
             const selectorDefaultItemTemplate = 
                 `
-                <option value="" disabled selected>@@DEFITEMNAME@@</option>
+                <option value="all" disabled selected>@@DEFITEMNAME@@</option>
                 `;
             const selectorItemTemplate = 
                 `

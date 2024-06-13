@@ -7,12 +7,62 @@ function changeFilterArmament(element) {
     alert(data);
 }
 
-function selectAllFilters() {
-    let filters = {
-        tp: tp,
-        cost: cost,
-        castingTime: castTime
+function getFilter() {
+    var filter = new Map();
+    var filterTags = $(".filter-grid-group-data-item select");
+
+    for (var i = 0; i < filterTags.length; i++) {
+        filter.set(filterTags[i].getAttribute("id").split('_')[0], filterTags[i].options[filterTags[i].selectedIndex].value);
     }
+
+    return filter;
+}
+
+function checkFilter(filter = new Map(), abilitiesValue) {
+    var result = true;
+
+    if (filter.get('cost') == 'all') { }
+        else if (filter.get('cost') == abilitiesValue.cost) { }
+        else result = false;
+    if (filter.get('castTime') == 'all') { }
+        else if (filter.get('castTime') == abilitiesValue.castTime) { }
+        else result = false;
+    if (filter.get('rng') == 'all') { }
+        else if (filter.get('rng') == abilitiesValue.range) { }
+        else result = false;
+    if (filter.get('tp') == 'all') { }
+        else if (filter.get('tp') == abilitiesValue.type.name) { }
+        else result = false;
+    if (filter.get('rch') == 'all') { }
+        else if (filter.get('rch') == abilitiesValue.recharge) { }
+        else result = false;
+    if (filter.get('componentsCol') == 'all') { }
+        else if (filter.get('componentsCol') == "verbal"        && abilitiesValue.components.verbal == true) { }
+        else if (filter.get('componentsCol') == "somatic"       && abilitiesValue.components.somatic == true) { }
+        else if (filter.get('componentsCol') == "material"      && abilitiesValue.components.material == true) { }
+        else if (filter.get('componentsCol') == "released"      && abilitiesValue.components.released == true) { }
+        else result = false;
+    if (filter.get('durationCol') == 'all') { }
+        else if (filter.get('durationCol') == "until_sealed"    && abilitiesValue.duration.until_sealed == true) { }
+        else if (filter.get('durationCol') == "concentration"   && abilitiesValue.duration.concentration == true) { }
+        else if (filter.get('durationCol') == "minute1"         && abilitiesValue.duration.minute1 == true) { }
+        else if (filter.get('durationCol') == "round1"          && abilitiesValue.duration.round1 == true) { }
+        else if (filter.get('durationCol') == "instantaneous"   && abilitiesValue.duration.instantaneous == true) { }
+        else if (filter.get('durationCol') == "hour1"           && abilitiesValue.duration.hour1 == true) { }
+        else if (filter.get('durationCol') == "minute5"         && abilitiesValue.duration.minute5 == true) { }
+        else if (filter.get('durationCol') == "round2"          && abilitiesValue.duration.round2 == true) { }
+        else if (filter.get('durationCol') == "special"         && abilitiesValue.duration.special == true) { }
+        else result = false;
+    
+    return result;
+}
+
+function changeFilter(element){
+    if(element.options[element.selectedIndex].value == "discard"){
+        element.selectedIndex = 0;
+    }
+
+    showArmamentAbilities();
 }
 
 // type: tp.acid,

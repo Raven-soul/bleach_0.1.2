@@ -9,18 +9,19 @@
 */
 
 const cost = {
-    cst0: '0',
-    cst1: '1',       
-    cst2: '2',       
-    cst3: '3',       
-    cst4: '4',
-    cst5: '5',           
-    cst6: '6',
-    cst10: '10'
+    discard: "Отменить фильтр",
+    cst0:   '0',
+    cst1:   '1',       
+    cst2:   '2',       
+    cst3:   '3',       
+    cst4:   '4',
+    cst5:   '5',           
+    cst6:   '6',
+    cst10:  '10'
 }
 
 const castTime = {
-    cancel:         "Отменить фильтр",  
+    discard:        "Отменить фильтр",  
     none:           "Нет",                           //"none",
     bonus:          "Бонусное действие",             //"Bonus action",
     action:         "Основное действие",             //"1 action",
@@ -30,7 +31,7 @@ const castTime = {
 }
 
 const rng = {
-    cancel:         "Отменить фильтр",               
+    discard:        "Отменить фильтр",               
     none:           "Нет",                           //"none",
     self:           "На себя",                       //"Self",
     touch:          "Касание",                       //"Touch",
@@ -50,9 +51,9 @@ const rng = {
 }
 
 const tp = {
-    cancel: {
+    discard: {
         name: "Отменить фильтр",
-        ico: ''
+        ico: null
     },
     acid: {
         name: "Кислота",
@@ -101,7 +102,7 @@ const tp = {
 }
 
 const rch = {
-    cancel:         "Отменить фильтр",  
+    discard:        "Отменить фильтр",  
     none:           "Нет",                           //"none",
     rch6:           "6",                             //"6",
     rch1_6:         "1-6",                           //"1—6",
@@ -110,7 +111,7 @@ const rch = {
 }
 
 const componentsCol = {
-    cancel:          "Отменить фильтр",
+    discard:         "Отменить фильтр",
     verbal:          "Вербальный",
     somatic:         "Соматический",
     material:        "Материальный",
@@ -118,7 +119,7 @@ const componentsCol = {
 }
 
 const durationCol = {
-    cancel:          "Отменить фильтр",
+    discard:         "Отменить фильтр",
     until_sealed:    "До отмены",    
     concentration:   "Концентрация",
     minute1:         "1 Минута",     
