@@ -175,7 +175,7 @@ const armamentAbilitiesContent = [
         cost: cost.cst1,
         rules: true, 
         castingTime: castTime.action,
-        range: "self",
+        range: rng.self,
         components: {
             verbal: true,
             somatic: true,

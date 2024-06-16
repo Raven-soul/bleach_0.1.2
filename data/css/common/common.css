@@ -642,7 +642,24 @@ a.read-all:hover{
     border-bottom: 1px rgba(0, 0, 0, 0.582);
 }  */
 
+.armament-data {
+    margin-bottom: 20px;
+}
 
+.armament-data .name {
+    font-weight: 600;
+    font-size: 30px;
+}
 
+.armament-data .cost-type {
+    font-style: italic;
+}
 
+.armament-data .param {
+    font-weight: 600;
+}
+
+.armament-data .half-gray {
+    color: rgba(0, 0, 0, 0.7);
+}
 /* ------------------------------------------------------------- armament abilities end */
