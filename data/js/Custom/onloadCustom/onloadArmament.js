@@ -1,13 +1,18 @@
 function awakeArmamentFilters(){
     filtersGeneration();
+    promptTypeLoader();
     showArmamentAbilities();
+}
+
+function awakeArmamentItem(){
+    showArmamentAbilitieItem();
 }
 
 function filtersGeneration(){
     var filtersLoadAreaBlock = $(".grid-group-data");
     var summHtmlBlock = "";
 
-    for(const [columnKey, columnValue] of Object.entries(columns)){
+    for(const [columnKey, columnValue] of Object.entries(armamentAbilitiescolumns)){
         let selecTemp = selectorTemplate;
         let DefaultItemTemp = selectorDefaultItemTemplate;
         var selectList = "";
@@ -55,6 +60,18 @@ function filtersGeneration(){
     filtersLoadAreaBlock.html( summHtmlBlock );
 }
 
+function promptTypeLoader() {
+    var promptTypeBlock = $(".prompt-type");
+    var summHtmlBlock = "";
+
+    for(const [typeKey, typeValue] of Object.entries(armamentAbilitiescolumns.tp.value)){
+        if(typeKey != "discard"){
+            summHtmlBlock += "<span>" + typeValue.ico + " - " + typeValue.name + "</span>";
+        }        
+    }
+    promptTypeBlock.html( summHtmlBlock );
+}
+
 async function showArmamentAbilities() {
     var KAItemGridBlock = $(".grid-abilities-data");
     var summHtmlBlock = "";
@@ -65,7 +82,7 @@ async function showArmamentAbilities() {
 
             let itemTemp = KAGridItemTemplate;
             
-            itemTemp = itemTemp.replace("@@ITEMLINK@@", "#");
+            itemTemp = itemTemp.replace("@@ITEMLINK@@", "armament_page/ability_item.html?id=" + abilitiesId);
             itemTemp = itemTemp.replace("@@ITEMLEVEL@@", abilitiesValue.cost);
             itemTemp = itemTemp.replace("@@ITEMSCHOOLLOGO@@", abilitiesValue.type.ico);
             itemTemp = itemTemp.replace("@@ITEMNAME@@", abilitiesValue.name);
@@ -88,4 +105,13 @@ async function showArmamentAbilities() {
     }
 
     KAItemGridBlock.html( summHtmlBlock );
+}
+
+function showArmamentAbilitieItem() {
+    var URLParamsData = new URLSearchParams(window.location.search)
+    let Abilityid = URLParamsData.get('id');
+    let Ability = armamentAbilitiesContent[Abilityid];
+
+    var nameBlock = $(".chapter-title-label");
+    nameBlock.html( Ability.name + " - Способности вооружения" );
 }

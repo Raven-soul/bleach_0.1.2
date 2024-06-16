@@ -131,7 +131,7 @@ const durationCol = {
     special:         "Особенное"
 }
 
-const columns = {
+const armamentAbilitiescolumns = {
     cost: {
         translate: "Стоимость",
         value: cost,
