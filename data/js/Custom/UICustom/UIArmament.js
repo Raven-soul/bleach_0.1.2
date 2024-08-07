@@ -20,7 +20,6 @@ function getFilter() {
 
 function checkFilter(filter = new Map(), abilitiesValue) {
     var result = true;
-
     if (filter.get('cost') == 'all') { }
         else if (filter.get('cost') == abilitiesValue.cost) { }
         else result = false;
@@ -46,14 +45,23 @@ function checkFilter(filter = new Map(), abilitiesValue) {
         else if (filter.get('durationCol') == "until_sealed"    && abilitiesValue.duration.until_sealed == true) { }
         else if (filter.get('durationCol') == "concentration"   && abilitiesValue.duration.concentration == true) { }
         else if (filter.get('durationCol') == "minute1"         && abilitiesValue.duration.minute1 == true) { }
+        else if (filter.get('durationCol') == "minute2"         && abilitiesValue.duration.minute2 == true) { }
+        else if (filter.get('durationCol') == "minute5"         && abilitiesValue.duration.minute5 == true) { }
+        else if (filter.get('durationCol') == "minute10"        && abilitiesValue.duration.minute10 == true) { }
         else if (filter.get('durationCol') == "round1"          && abilitiesValue.duration.round1 == true) { }
+        else if (filter.get('durationCol') == "round2"          && abilitiesValue.duration.round2 == true) { }
+        else if (filter.get('durationCol') == "round5"          && abilitiesValue.duration.round5 == true) { }
         else if (filter.get('durationCol') == "instantaneous"   && abilitiesValue.duration.instantaneous == true) { }
         else if (filter.get('durationCol') == "hour1"           && abilitiesValue.duration.hour1 == true) { }
-        else if (filter.get('durationCol') == "minute5"         && abilitiesValue.duration.minute5 == true) { }
-        else if (filter.get('durationCol') == "round2"          && abilitiesValue.duration.round2 == true) { }
         else if (filter.get('durationCol') == "special"         && abilitiesValue.duration.special == true) { }
+        else if (filter.get('durationCol') == "day2"          && abilitiesValue.duration.day2 == true) { }
         else result = false;
-    
+    if (filter.get('knd') == 'all') { }
+        else if (filter.get('knd') == abilitiesValue.abKind) { }
+        else result = false;
+    if (filter.get('hd') == 'all') { }
+        else if (filter.get('hd') == abilitiesValue.hdHollow) { }
+        else result = false;
     return result;
 }
 
